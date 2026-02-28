@@ -27,7 +27,7 @@ class TemporalEncoder(nn.Module):
     """
 
     def __init__(self, output_dim: int = 256,
-                 pretrained_name: str = "MCG-NJU/videomae-small",
+                 pretrained_name: str = "MCG-NJU/videomae-small-finetuned-kinetics",
                  freeze_backbone: bool = False):
         super().__init__()
         from transformers import VideoMAEModel, VideoMAEConfig

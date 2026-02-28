@@ -1,0 +1,205 @@
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:108: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+wandb: Currently logged in as: taminul. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.25.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/siu856569517/Taminul/co2_farm/wandb/run-20260228_150931-2dy5sbcq
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fusion
+wandb: ⭐️ View project at https://wandb.ai/taminul/rumiformer
+wandb: 🚀 View run at https://wandb.ai/taminul/rumiformer/runs/2dy5sbcq
+============================================================
+  RumiFormer — Stage 3: ATF Fusion Training
+============================================================
+  project_root: /home/siu856569517/Taminul/co2_farm
+  annotations_csv: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+  clips_csv: /home/siu856569517/Taminul/co2_farm/annotations/clips.csv
+  checkpoint_dir: /home/siu856569517/Taminul/co2_farm/outputs/checkpoints
+  log_dir: /home/siu856569517/Taminul/co2_farm/outputs/logs
+  seed: 42
+  precision: bf16
+  num_workers: 8
+  pin_memory: True
+  use_compile: True
+  gradient_checkpointing: False
+  optimizer: adamw
+  weight_decay: 0.01
+  resume_from: None
+  save_every_n_epochs: 1
+  save_every_n_steps: None
+  keep_last_n_checkpoints: 3
+  use_wandb: True
+  wandb_project: rumiformer
+  wandb_run_name: None
+  log_every_n_steps: 10
+  show_eta: True
+  stage_name: fusion
+  epochs: 15
+  lr: 0.0001
+  batch_size: 16
+  ce_weight: 1.0
+  conf_l2_weight: 0.01
+  feature_dim: 256
+  stage4_channels: 512
+  num_classes: 3
+  segmentation_checkpoint: None
+  temporal_checkpoint: None
+============================================================
+World size: 1 GPUs
+Train: 3734 frames, Val: 1402 frames
+Loaded segmentation checkpoint: outputs/checkpoints/segmentation/segmentation_latest.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E00 S00010] loss=1.1420 ce=1.1370 conf_B=0.500 conf_C=0.500 lr=5.00e-06 ETA=47m 22s
+  [E00 S00020] loss=1.1261 ce=1.1211 conf_B=0.500 conf_C=0.500 lr=1.00e-05 ETA=27m 15s
+  [E00 S00030] loss=1.0826 ce=1.0776 conf_B=0.500 conf_C=0.500 lr=1.50e-05 ETA=20m 30s
+  [E00 S00040] loss=1.0099 ce=1.0049 conf_B=0.500 conf_C=0.500 lr=2.00e-05 ETA=17m 10s
+  [E00 S00050] loss=0.9571 ce=0.9521 conf_B=0.500 conf_C=0.500 lr=2.50e-05 ETA=15m 06s
+  [E00 S00060] loss=0.9628 ce=0.9578 conf_B=0.500 conf_C=0.500 lr=3.00e-05 ETA=13m 43s
+  [E00 S00070] loss=0.8487 ce=0.8438 conf_B=0.500 conf_C=0.500 lr=3.50e-05 ETA=12m 45s
+  [E00 S00080] loss=0.8518 ce=0.8468 conf_B=0.500 conf_C=0.500 lr=4.00e-05 ETA=12m 01s
+  [E00 S00090] loss=0.8489 ce=0.8439 conf_B=0.500 conf_C=0.500 lr=4.50e-05 ETA=11m 26s
+  [E00 S00100] loss=0.9750 ce=0.9700 conf_B=0.499 conf_C=0.501 lr=5.00e-05 ETA=10m 59s
+  [E00 S00110] loss=0.6073 ce=0.6023 conf_B=0.499 conf_C=0.501 lr=5.50e-05 ETA=10m 35s
+  [E00 S00120] loss=0.7933 ce=0.7883 conf_B=0.499 conf_C=0.501 lr=6.00e-05 ETA=10m 15s
+  [E00 S00130] loss=0.7849 ce=0.7799 conf_B=0.499 conf_C=0.501 lr=6.50e-05 ETA=9m 58s
+  [E00 S00140] loss=0.9877 ce=0.9827 conf_B=0.499 conf_C=0.501 lr=7.00e-05 ETA=9m 43s
+  [E00 S00150] loss=0.5466 ce=0.5416 conf_B=0.499 conf_C=0.501 lr=7.50e-05 ETA=9m 30s
+  [E00 S00160] loss=0.6906 ce=0.6856 conf_B=0.498 conf_C=0.502 lr=8.00e-05 ETA=9m 18s
+  [E00 S00170] loss=0.5896 ce=0.5846 conf_B=0.498 conf_C=0.502 lr=8.50e-05 ETA=9m 09s
+  [E00 S00180] loss=0.5344 ce=0.5294 conf_B=0.498 conf_C=0.502 lr=9.00e-05 ETA=8m 59s
+  [E00 S00190] loss=0.5273 ce=0.5223 conf_B=0.497 conf_C=0.503 lr=9.50e-05 ETA=8m 51s
+  [E00 S00200] loss=0.7079 ce=0.7029 conf_B=0.497 conf_C=0.503 lr=1.00e-04 ETA=8m 44s
+  [E00 S00210] loss=0.4328 ce=0.4278 conf_B=0.496 conf_C=0.504 lr=1.00e-04 ETA=8m 36s
+  [E00 S00220] loss=0.5182 ce=0.5132 conf_B=0.496 conf_C=0.504 lr=1.00e-04 ETA=8m 30s
+  [E00 S00230] loss=0.4543 ce=0.4493 conf_B=0.496 conf_C=0.504 lr=1.00e-04 ETA=8m 23s
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:195: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 00] train_loss=0.8124 train_acc=0.5157 val_loss=1.0395 acc=0.5157 BalAcc=0.5434 MacroF1=0.4970 Kappa=0.2836 AUC=0.6723
+[Checkpoint] Saved: fusion_epoch0000_step000233.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E01 S00240] loss=0.7293 ce=0.7243 conf_B=0.495 conf_C=0.504 lr=1.00e-04 ETA=11m 08s
+  [E01 S00250] loss=0.2684 ce=0.2634 conf_B=0.495 conf_C=0.505 lr=9.99e-05 ETA=10m 56s
+  [E01 S00260] loss=0.3896 ce=0.3846 conf_B=0.495 conf_C=0.505 lr=9.99e-05 ETA=10m 44s
+  [E01 S00270] loss=0.3947 ce=0.3897 conf_B=0.495 conf_C=0.505 lr=9.99e-05 ETA=10m 33s
+  [E01 S00280] loss=0.4570 ce=0.4520 conf_B=0.495 conf_C=0.505 lr=9.99e-05 ETA=10m 23s
+  [E01 S00290] loss=0.6009 ce=0.5959 conf_B=0.495 conf_C=0.505 lr=9.98e-05 ETA=10m 13s
+  [E01 S00300] loss=0.1571 ce=0.1521 conf_B=0.494 conf_C=0.506 lr=9.98e-05 ETA=10m 04s
+  [E01 S00310] loss=0.2071 ce=0.2021 conf_B=0.494 conf_C=0.506 lr=9.97e-05 ETA=9m 55s
+  [E01 S00320] loss=0.6661 ce=0.6611 conf_B=0.494 conf_C=0.506 lr=9.97e-05 ETA=9m 47s
+  [E01 S00330] loss=0.4154 ce=0.4104 conf_B=0.494 conf_C=0.506 lr=9.96e-05 ETA=9m 39s
+  [E01 S00340] loss=0.4385 ce=0.4335 conf_B=0.494 conf_C=0.506 lr=9.96e-05 ETA=9m 32s
+  [E01 S00350] loss=0.3769 ce=0.3719 conf_B=0.494 conf_C=0.506 lr=9.95e-05 ETA=9m 25s
+  [E01 S00360] loss=0.2101 ce=0.2050 conf_B=0.493 conf_C=0.507 lr=9.94e-05 ETA=9m 19s
+  [E01 S00370] loss=0.3575 ce=0.3525 conf_B=0.493 conf_C=0.507 lr=9.93e-05 ETA=9m 12s
+  [E01 S00380] loss=0.1744 ce=0.1694 conf_B=0.493 conf_C=0.507 lr=9.93e-05 ETA=9m 06s
+  [E01 S00390] loss=0.3290 ce=0.3240 conf_B=0.493 conf_C=0.507 lr=9.92e-05 ETA=9m 00s
+  [E01 S00400] loss=0.4287 ce=0.4237 conf_B=0.493 conf_C=0.507 lr=9.91e-05 ETA=8m 54s
+  [E01 S00410] loss=0.1547 ce=0.1497 conf_B=0.493 conf_C=0.507 lr=9.90e-05 ETA=8m 49s
+  [E01 S00420] loss=0.1332 ce=0.1282 conf_B=0.493 conf_C=0.507 lr=9.89e-05 ETA=8m 44s
+  [E01 S00430] loss=0.2393 ce=0.2343 conf_B=0.493 conf_C=0.507 lr=9.88e-05 ETA=8m 38s
+  [E01 S00440] loss=0.0445 ce=0.0395 conf_B=0.493 conf_C=0.507 lr=9.87e-05 ETA=8m 33s
+  [E01 S00450] loss=0.1220 ce=0.1170 conf_B=0.493 conf_C=0.507 lr=9.86e-05 ETA=8m 29s
+  [E01 S00460] loss=0.3717 ce=0.3667 conf_B=0.492 conf_C=0.508 lr=9.85e-05 ETA=8m 24s
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:195: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 01] train_loss=0.3034 train_acc=0.5621 val_loss=1.2851 acc=0.5621 BalAcc=0.5790 MacroF1=0.5470 Kappa=0.3473 AUC=0.8100
+[Checkpoint] Saved: fusion_epoch0001_step000466.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E02 S00470] loss=0.0822 ce=0.0772 conf_B=0.492 conf_C=0.508 lr=9.84e-05 ETA=9m 31s
+  [E02 S00480] loss=0.0986 ce=0.0936 conf_B=0.492 conf_C=0.508 lr=9.82e-05 ETA=9m 25s
+  [E02 S00490] loss=0.0313 ce=0.0263 conf_B=0.492 conf_C=0.508 lr=9.81e-05 ETA=9m 19s
+  [E02 S00500] loss=0.0897 ce=0.0847 conf_B=0.492 conf_C=0.508 lr=9.80e-05 ETA=9m 13s
+  [E02 S00510] loss=0.1216 ce=0.1166 conf_B=0.492 conf_C=0.508 lr=9.78e-05 ETA=9m 08s
+  [E02 S00520] loss=0.0427 ce=0.0377 conf_B=0.492 conf_C=0.508 lr=9.77e-05 ETA=9m 03s
+  [E02 S00530] loss=0.4298 ce=0.4248 conf_B=0.492 conf_C=0.508 lr=9.75e-05 ETA=8m 57s
+  [E02 S00540] loss=0.1990 ce=0.1940 conf_B=0.492 conf_C=0.508 lr=9.74e-05 ETA=8m 52s
+  [E02 S00550] loss=0.1357 ce=0.1307 conf_B=0.492 conf_C=0.508 lr=9.72e-05 ETA=8m 48s
+  [E02 S00560] loss=0.1511 ce=0.1461 conf_B=0.492 conf_C=0.508 lr=9.71e-05 ETA=8m 43s
+  [E02 S00570] loss=0.0330 ce=0.0280 conf_B=0.492 conf_C=0.508 lr=9.69e-05 ETA=8m 38s
+  [E02 S00580] loss=0.0324 ce=0.0274 conf_B=0.492 conf_C=0.508 lr=9.68e-05 ETA=8m 34s
+  [E02 S00590] loss=0.1711 ce=0.1661 conf_B=0.492 conf_C=0.508 lr=9.66e-05 ETA=8m 30s
+  [E02 S00600] loss=0.0566 ce=0.0516 conf_B=0.492 conf_C=0.508 lr=9.64e-05 ETA=8m 25s
+  [E02 S00610] loss=0.0444 ce=0.0394 conf_B=0.492 conf_C=0.508 lr=9.62e-05 ETA=8m 21s
+  [E02 S00620] loss=0.2030 ce=0.1980 conf_B=0.492 conf_C=0.508 lr=9.60e-05 ETA=8m 17s
+  [E02 S00630] loss=0.3561 ce=0.3511 conf_B=0.491 conf_C=0.509 lr=9.59e-05 ETA=8m 13s
+  [E02 S00640] loss=0.1383 ce=0.1333 conf_B=0.491 conf_C=0.509 lr=9.57e-05 ETA=8m 10s
+  [E02 S00650] loss=0.0765 ce=0.0715 conf_B=0.491 conf_C=0.509 lr=9.55e-05 ETA=8m 06s
+  [E02 S00660] loss=0.0570 ce=0.0520 conf_B=0.491 conf_C=0.509 lr=9.53e-05 ETA=8m 02s
+  [E02 S00670] loss=0.7101 ce=0.7051 conf_B=0.491 conf_C=0.509 lr=9.51e-05 ETA=7m 59s
+  [E02 S00680] loss=0.0350 ce=0.0300 conf_B=0.491 conf_C=0.509 lr=9.49e-05 ETA=7m 55s
+  [E02 S00690] loss=0.1222 ce=0.1172 conf_B=0.491 conf_C=0.509 lr=9.46e-05 ETA=7m 51s
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:195: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 02] train_loss=0.1441 train_acc=0.5849 val_loss=2.3531 acc=0.5849 BalAcc=0.6229 MacroF1=0.5042 Kappa=0.3920 AUC=0.7821
+[Checkpoint] Saved: fusion_epoch0002_step000699.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E03 S00700] loss=0.1301 ce=0.1251 conf_B=0.491 conf_C=0.509 lr=9.44e-05 ETA=8m 32s
+  [E03 S00710] loss=0.0408 ce=0.0358 conf_B=0.491 conf_C=0.509 lr=9.42e-05 ETA=8m 28s
+  [E03 S00720] loss=0.0351 ce=0.0300 conf_B=0.491 conf_C=0.509 lr=9.40e-05 ETA=8m 24s
+  [E03 S00730] loss=0.1146 ce=0.1096 conf_B=0.491 conf_C=0.509 lr=9.38e-05 ETA=8m 20s
+  [E03 S00740] loss=0.0277 ce=0.0227 conf_B=0.491 conf_C=0.509 lr=9.35e-05 ETA=8m 16s
+  [E03 S00750] loss=0.2886 ce=0.2836 conf_B=0.491 conf_C=0.509 lr=9.33e-05 ETA=8m 12s
+  [E03 S00760] loss=0.0633 ce=0.0583 conf_B=0.491 conf_C=0.509 lr=9.30e-05 ETA=8m 09s
+  [E03 S00770] loss=0.1657 ce=0.1607 conf_B=0.491 conf_C=0.509 lr=9.28e-05 ETA=8m 05s
+  [E03 S00780] loss=0.1072 ce=0.1022 conf_B=0.491 conf_C=0.509 lr=9.25e-05 ETA=8m 01s
+  [E03 S00790] loss=0.0528 ce=0.0478 conf_B=0.491 conf_C=0.509 lr=9.23e-05 ETA=7m 57s
+  [E03 S00800] loss=0.5129 ce=0.5079 conf_B=0.491 conf_C=0.509 lr=9.20e-05 ETA=7m 54s
+  [E03 S00810] loss=0.0333 ce=0.0283 conf_B=0.491 conf_C=0.509 lr=9.18e-05 ETA=7m 50s
+  [E03 S00820] loss=0.0960 ce=0.0910 conf_B=0.491 conf_C=0.509 lr=9.15e-05 ETA=7m 47s
+  [E03 S00830] loss=0.1257 ce=0.1207 conf_B=0.491 conf_C=0.509 lr=9.12e-05 ETA=7m 44s
+  [E03 S00840] loss=0.0241 ce=0.0191 conf_B=0.490 conf_C=0.509 lr=9.10e-05 ETA=7m 40s
+  [E03 S00850] loss=0.1439 ce=0.1389 conf_B=0.490 conf_C=0.510 lr=9.07e-05 ETA=7m 37s
+  [E03 S00860] loss=0.0399 ce=0.0349 conf_B=0.490 conf_C=0.509 lr=9.04e-05 ETA=7m 34s
+  [E03 S00870] loss=0.0222 ce=0.0172 conf_B=0.490 conf_C=0.510 lr=9.01e-05 ETA=7m 31s
+  [E03 S00880] loss=0.0469 ce=0.0419 conf_B=0.490 conf_C=0.510 lr=8.99e-05 ETA=7m 28s
+  [E03 S00890] loss=0.1528 ce=0.1477 conf_B=0.490 conf_C=0.510 lr=8.96e-05 ETA=7m 25s
+  [E03 S00900] loss=0.4419 ce=0.4369 conf_B=0.490 conf_C=0.510 lr=8.93e-05 ETA=7m 21s
+  [E03 S00910] loss=0.0346 ce=0.0296 conf_B=0.490 conf_C=0.510 lr=8.90e-05 ETA=7m 19s
+  [E03 S00920] loss=0.0389 ce=0.0339 conf_B=0.490 conf_C=0.510 lr=8.87e-05 ETA=7m 16s
+  [E03 S00930] loss=0.0162 ce=0.0112 conf_B=0.490 conf_C=0.510 lr=8.84e-05 ETA=7m 13s
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:195: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 03] train_loss=0.1131 train_acc=0.5506 val_loss=2.1719 acc=0.5506 BalAcc=0.5890 MacroF1=0.4513 Kappa=0.3463 AUC=0.8526
+[Checkpoint] Saved: fusion_epoch0003_step000932.pt
+[Checkpoint] Deleted old: fusion_epoch0000_step000233.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E04 S00940] loss=0.1940 ce=0.1890 conf_B=0.490 conf_C=0.510 lr=8.81e-05 ETA=7m 40s
+  [E04 S00950] loss=0.1034 ce=0.0984 conf_B=0.490 conf_C=0.510 lr=8.78e-05 ETA=7m 37s
+  [E04 S00960] loss=0.0152 ce=0.0102 conf_B=0.490 conf_C=0.510 lr=8.74e-05 ETA=7m 34s
+  [E04 S00970] loss=0.0151 ce=0.0101 conf_B=0.490 conf_C=0.510 lr=8.71e-05 ETA=7m 31s
+  [E04 S00980] loss=0.2153 ce=0.2103 conf_B=0.490 conf_C=0.510 lr=8.68e-05 ETA=7m 28s
+  [E04 S00990] loss=0.0546 ce=0.0496 conf_B=0.490 conf_C=0.510 lr=8.65e-05 ETA=7m 24s
+  [E04 S01000] loss=0.0474 ce=0.0424 conf_B=0.490 conf_C=0.510 lr=8.61e-05 ETA=7m 21s
+  [E04 S01010] loss=0.0162 ce=0.0112 conf_B=0.490 conf_C=0.510 lr=8.58e-05 ETA=7m 18s
+  [E04 S01020] loss=0.1048 ce=0.0998 conf_B=0.490 conf_C=0.510 lr=8.55e-05 ETA=7m 15s
+  [E04 S01030] loss=0.1973 ce=0.1923 conf_B=0.490 conf_C=0.510 lr=8.51e-05 ETA=7m 12s
+  [E04 S01040] loss=0.0793 ce=0.0743 conf_B=0.490 conf_C=0.510 lr=8.48e-05 ETA=7m 09s
+  [E04 S01050] loss=0.0307 ce=0.0257 conf_B=0.490 conf_C=0.510 lr=8.45e-05 ETA=7m 06s
+  [E04 S01060] loss=0.0172 ce=0.0122 conf_B=0.490 conf_C=0.510 lr=8.41e-05 ETA=7m 03s
+  [E04 S01070] loss=0.0272 ce=0.0222 conf_B=0.490 conf_C=0.510 lr=8.38e-05 ETA=7m 00s
+  [E04 S01080] loss=0.0133 ce=0.0083 conf_B=0.490 conf_C=0.510 lr=8.34e-05 ETA=6m 57s
+  [E04 S01090] loss=0.0942 ce=0.0892 conf_B=0.490 conf_C=0.510 lr=8.31e-05 ETA=6m 55s
+  [E04 S01100] loss=0.2354 ce=0.2304 conf_B=0.490 conf_C=0.510 lr=8.27e-05 ETA=6m 52s
+  [E04 S01110] loss=0.4076 ce=0.4026 conf_B=0.490 conf_C=0.510 lr=8.23e-05 ETA=6m 49s
+  [E04 S01120] loss=0.0607 ce=0.0557 conf_B=0.490 conf_C=0.510 lr=8.20e-05 ETA=6m 46s
+  [E04 S01130] loss=0.0367 ce=0.0317 conf_B=0.490 conf_C=0.510 lr=8.16e-05 ETA=6m 44s
+  [E04 S01140] loss=0.0760 ce=0.0710 conf_B=0.490 conf_C=0.510 lr=8.12e-05 ETA=6m 41s
+  [E04 S01150] loss=0.0340 ce=0.0290 conf_B=0.490 conf_C=0.510 lr=8.09e-05 ETA=6m 39s
+  [E04 S01160] loss=0.0159 ce=0.0109 conf_B=0.490 conf_C=0.510 lr=8.05e-05 ETA=6m 36s
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:195: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 04] train_loss=0.0764 train_acc=0.6562 val_loss=1.0907 acc=0.6562 BalAcc=0.6643 MacroF1=0.6526 Kappa=0.4810 AUC=0.8301
+[Checkpoint] Saved: fusion_epoch0004_step001165.pt
+[Checkpoint] Deleted old: fusion_epoch0001_step000466.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_fusion.py:145: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):

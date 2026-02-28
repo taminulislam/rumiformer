@@ -1,0 +1,356 @@
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:166: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+wandb: Currently logged in as: taminul. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.25.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/siu856569517/Taminul/co2_farm/wandb/run-20260228_150436-mt17gyd4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run temporal
+wandb: ⭐️ View project at https://wandb.ai/taminul/rumiformer
+wandb: 🚀 View run at https://wandb.ai/taminul/rumiformer/runs/mt17gyd4
+============================================================
+  RumiFormer — Stage 2: Temporal Encoder Training
+============================================================
+  project_root: /home/siu856569517/Taminul/co2_farm
+  annotations_csv: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+  clips_csv: /home/siu856569517/Taminul/co2_farm/annotations/clips.csv
+  checkpoint_dir: /home/siu856569517/Taminul/co2_farm/outputs/checkpoints
+  log_dir: /home/siu856569517/Taminul/co2_farm/outputs/logs
+  seed: 42
+  precision: bf16
+  num_workers: 8
+  pin_memory: True
+  use_compile: True
+  gradient_checkpointing: True
+  optimizer: adamw
+  weight_decay: 0.01
+  resume_from: None
+  save_every_n_epochs: 1
+  save_every_n_steps: None
+  keep_last_n_checkpoints: 3
+  use_wandb: True
+  wandb_project: rumiformer
+  wandb_run_name: None
+  log_every_n_steps: 10
+  show_eta: True
+  stage_name: temporal
+  substage_2a_epochs: 8
+  substage_2a_lr: 5e-05
+  substage_2b_epochs: 12
+  substage_2b_lr: 1e-05
+  clip_img_size: (224, 224)
+  clip_length: 16
+  batch_size: 8
+  gradient_accumulation: 4
+  label_smoothing: 0.1
+  num_classes: 3
+  warmup_steps: 200
+  temporal_output_dim: 256
+  videomae_pretrained: MCG-NJU/videomae-small-finetuned-kinetics
+============================================================
+World size: 1 GPUs
+Train: 444 clips, Val: 169 clips
+
+--- Sub-stage 2a: Freeze backbone ---
+Trainable: 99,843 / 21,979,011
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E00 S00010] loss=1.1982 acc=0.3500 lr=5.00e-07 ETA=3m 46s elapsed=0m 05s
+  [E00 S00020] loss=1.1286 acc=0.3563 lr=1.25e-06 ETA=2m 12s elapsed=0m 06s
+  [E00 S00030] loss=1.3370 acc=0.3500 lr=1.75e-06 ETA=1m 52s elapsed=0m 08s
+  [E00 S00040] loss=1.2548 acc=0.3187 lr=2.50e-06 ETA=1m 37s elapsed=0m 09s
+  [E00 S00050] loss=1.1976 acc=0.2975 lr=3.00e-06 ETA=1m 25s elapsed=0m 10s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 00] train_loss=1.2235 train_acc=0.3023 val_loss=1.1301 acc=0.3787 BalAcc=0.3333 MacroF1=0.1831 Kappa=0.0000 AUC=0.3054
+[Checkpoint] Saved: temporal_2a_epoch0000_step000055.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E01 S00060] loss=1.2794 acc=0.3250 lr=3.50e-06 ETA=1m 56s elapsed=0m 18s
+  [E01 S00070] loss=1.1479 acc=0.3500 lr=4.00e-06 ETA=1m 44s elapsed=0m 19s
+  [E01 S00080] loss=1.2163 acc=0.3150 lr=4.75e-06 ETA=1m 36s elapsed=0m 21s
+  [E01 S00090] loss=1.2319 acc=0.3071 lr=5.25e-06 ETA=1m 29s elapsed=0m 22s
+  [E01 S00100] loss=1.1464 acc=0.3167 lr=6.00e-06 ETA=1m 22s elapsed=0m 24s
+  [E01 S00110] loss=1.2192 acc=0.3023 lr=6.50e-06 ETA=1m 15s elapsed=0m 25s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 01] train_loss=1.2101 train_acc=0.3023 val_loss=1.1204 acc=0.3787 BalAcc=0.3333 MacroF1=0.1831 Kappa=0.0000 AUC=0.3012
+[Checkpoint] Saved: temporal_2a_epoch0001_step000110.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E02 S00120] loss=1.3229 acc=0.2750 lr=7.00e-06 ETA=1m 27s elapsed=0m 32s
+  [E02 S00130] loss=1.2582 acc=0.3063 lr=7.75e-06 ETA=1m 20s elapsed=0m 33s
+  [E02 S00140] loss=1.0218 acc=0.3375 lr=8.25e-06 ETA=1m 15s elapsed=0m 35s
+  [E02 S00150] loss=1.1723 acc=0.3094 lr=9.00e-06 ETA=1m 11s elapsed=0m 36s
+  [E02 S00160] loss=1.1663 acc=0.3025 lr=9.50e-06 ETA=1m 06s elapsed=0m 37s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 02] train_loss=1.1838 train_acc=0.3023 val_loss=1.1074 acc=0.3787 BalAcc=0.3333 MacroF1=0.1831 Kappa=0.0000 AUC=0.2932
+[Checkpoint] Saved: temporal_2a_epoch0002_step000165.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E03 S00170] loss=1.0144 acc=0.4250 lr=1.00e-05 ETA=1m 11s elapsed=0m 44s
+  [E03 S00180] loss=1.1722 acc=0.3167 lr=1.05e-05 ETA=1m 06s elapsed=0m 46s
+  [E03 S00190] loss=1.1763 acc=0.2900 lr=1.13e-05 ETA=1m 02s elapsed=0m 47s
+  [E03 S00200] loss=1.2742 acc=0.2964 lr=1.17e-05 ETA=0m 59s elapsed=0m 49s
+  [E03 S00210] loss=1.2162 acc=0.2917 lr=1.25e-05 ETA=0m 55s elapsed=0m 50s
+  [E03 S00220] loss=1.0668 acc=0.3000 lr=1.30e-05 ETA=0m 52s elapsed=0m 52s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 03] train_loss=1.1551 train_acc=0.3000 val_loss=1.1010 acc=0.3787 BalAcc=0.3333 MacroF1=0.1839 Kappa=0.0005 AUC=0.2917
+[Checkpoint] Saved: temporal_2a_epoch0003_step000220.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0000_step000055.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E04 S00230] loss=1.2563 acc=0.2750 lr=1.35e-05 ETA=0m 54s elapsed=0m 59s
+  [E04 S00240] loss=1.1934 acc=0.2812 lr=1.42e-05 ETA=0m 50s elapsed=1m 01s
+  [E04 S00250] loss=1.1377 acc=0.3125 lr=1.47e-05 ETA=0m 47s elapsed=1m 02s
+  [E04 S00260] loss=1.0854 acc=0.3156 lr=1.55e-05 ETA=0m 44s elapsed=1m 04s
+  [E04 S00270] loss=1.0988 acc=0.3050 lr=1.60e-05 ETA=0m 40s elapsed=1m 05s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 04] train_loss=1.1270 train_acc=0.3000 val_loss=1.1038 acc=0.2899 BalAcc=0.2774 MacroF1=0.2317 Kappa=-0.1026 AUC=0.2826
+[Checkpoint] Saved: temporal_2a_epoch0004_step000275.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0001_step000110.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E05 S00280] loss=1.1569 acc=0.2500 lr=1.65e-05 ETA=0m 41s elapsed=1m 12s
+  [E05 S00290] loss=1.0899 acc=0.2333 lr=1.70e-05 ETA=0m 38s elapsed=1m 13s
+  [E05 S00300] loss=1.1076 acc=0.2250 lr=1.78e-05 ETA=0m 35s elapsed=1m 15s
+  [E05 S00310] loss=1.1333 acc=0.2393 lr=1.82e-05 ETA=0m 32s elapsed=1m 16s
+  [E05 S00320] loss=1.0995 acc=0.2194 lr=1.90e-05 ETA=0m 29s elapsed=1m 18s
+  [E05 S00330] loss=1.1075 acc=0.2068 lr=1.95e-05 ETA=0m 26s elapsed=1m 18s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 05] train_loss=1.1109 train_acc=0.2068 val_loss=1.1064 acc=0.1183 BalAcc=0.1076 MacroF1=0.1168 Kappa=-0.3209 AUC=0.2812
+[Checkpoint] Saved: temporal_2a_epoch0005_step000330.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0002_step000165.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E06 S00340] loss=1.1039 acc=0.1625 lr=2.00e-05 ETA=0m 25s elapsed=1m 26s
+  [E06 S00350] loss=1.1075 acc=0.1688 lr=2.07e-05 ETA=0m 22s elapsed=1m 27s
+  [E06 S00360] loss=1.0847 acc=0.1583 lr=2.13e-05 ETA=0m 19s elapsed=1m 29s
+  [E06 S00370] loss=1.1005 acc=0.1562 lr=2.20e-05 ETA=0m 17s elapsed=1m 30s
+  [E06 S00380] loss=1.1259 acc=0.1650 lr=2.25e-05 ETA=0m 14s elapsed=1m 31s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 06] train_loss=1.1042 train_acc=0.1705 val_loss=1.1090 acc=0.2781 BalAcc=0.3133 MacroF1=0.1451 Kappa=-0.0274 AUC=0.2969
+[Checkpoint] Saved: temporal_2a_epoch0006_step000385.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0003_step000220.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+  [E07 S00390] loss=1.1022 acc=0.2500 lr=2.30e-05 ETA=0m 12s elapsed=1m 38s
+  [E07 S00400] loss=1.0715 acc=0.3000 lr=2.35e-05 ETA=0m 10s elapsed=1m 40s
+  [E07 S00410] loss=1.1111 acc=0.3450 lr=2.42e-05 ETA=0m 07s elapsed=1m 41s
+  [E07 S00420] loss=1.0945 acc=0.3571 lr=2.48e-05 ETA=0m 04s elapsed=1m 43s
+  [E07 S00430] loss=1.0449 acc=0.3667 lr=2.55e-05 ETA=0m 02s elapsed=1m 44s
+  [E07 S00440] loss=1.0754 acc=0.3705 lr=2.60e-05 ETA=0m 00s elapsed=1m 45s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 07] train_loss=1.0968 train_acc=0.3705 val_loss=1.1224 acc=0.2959 BalAcc=0.3333 MacroF1=0.1522 Kappa=0.0000 AUC=0.3326
+[Checkpoint] Saved: temporal_2a_epoch0007_step000440.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0004_step000275.pt
+
+--- Sub-stage 2b: Full fine-tune ---
+Trainable: 21,979,011 / 21,979,011
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E08 S00450] loss=1.0624 acc=0.3875 lr=1.00e-07 ETA=0m 01s elapsed=0m 03s
+  [E08 S00460] loss=1.1089 acc=0.3438 lr=2.50e-07 ETA=0m 02s elapsed=0m 04s
+  [E08 S00470] loss=1.0396 acc=0.3542 lr=3.50e-07 ETA=0m 02s elapsed=0m 06s
+  [E08 S00480] loss=1.0673 acc=0.3812 lr=5.00e-07 ETA=0m 02s elapsed=0m 07s
+  [E08 S00490] loss=1.0520 acc=0.3825 lr=6.00e-07 ETA=0m 03s elapsed=0m 08s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 08] train_loss=1.0866 train_acc=0.3841 val_loss=1.1138 acc=0.2959 BalAcc=0.3333 MacroF1=0.1522 Kappa=0.0000 AUC=0.4933
+[Checkpoint] Saved: temporal_2b_epoch0008_step000495.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0005_step000330.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E09 S00500] loss=1.0449 acc=0.4250 lr=7.00e-07 ETA=0m 05s elapsed=0m 16s
+  [E09 S00510] loss=1.0823 acc=0.3333 lr=8.00e-07 ETA=0m 05s elapsed=0m 17s
+  [E09 S00520] loss=1.0568 acc=0.4050 lr=9.50e-07 ETA=0m 05s elapsed=0m 19s
+  [E09 S00530] loss=1.1122 acc=0.4250 lr=1.05e-06 ETA=0m 05s elapsed=0m 20s
+  [E09 S00540] loss=1.0450 acc=0.4500 lr=1.20e-06 ETA=0m 04s elapsed=0m 22s
+  [E09 S00550] loss=1.0868 acc=0.4500 lr=1.30e-06 ETA=0m 04s elapsed=0m 23s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 09] train_loss=1.0779 train_acc=0.4500 val_loss=1.1139 acc=0.2840 BalAcc=0.3200 MacroF1=0.1475 Kappa=-0.0173 AUC=0.5646
+[Checkpoint] Saved: temporal_2b_epoch0009_step000550.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0006_step000385.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E10 S00560] loss=1.0643 acc=0.4750 lr=1.40e-06 ETA=0m 05s elapsed=0m 31s
+  [E10 S00570] loss=1.0591 acc=0.4250 lr=1.55e-06 ETA=0m 05s elapsed=0m 31s
+  [E10 S00580] loss=1.1133 acc=0.4292 lr=1.65e-06 ETA=0m 04s elapsed=0m 33s
+  [E10 S00590] loss=1.0619 acc=0.4219 lr=1.80e-06 ETA=0m 04s elapsed=0m 35s
+  [E10 S00600] loss=1.0809 acc=0.4150 lr=1.90e-06 ETA=0m 03s elapsed=0m 36s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 10] train_loss=1.0695 train_acc=0.4114 val_loss=1.1142 acc=0.2959 BalAcc=0.3333 MacroF1=0.1522 Kappa=0.0000 AUC=0.6622
+[Checkpoint] Saved: temporal_2b_epoch0010_step000605.pt
+[Checkpoint] Deleted old: temporal_2a_epoch0007_step000440.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E11 S00610] loss=1.0928 acc=0.3750 lr=2.00e-06 ETA=0m 03s elapsed=0m 44s
+  [E11 S00620] loss=0.9577 acc=0.3667 lr=2.10e-06 ETA=0m 02s elapsed=0m 45s
+  [E11 S00630] loss=1.0300 acc=0.4000 lr=2.25e-06 ETA=0m 02s elapsed=0m 47s
+  [E11 S00640] loss=1.0334 acc=0.4214 lr=2.35e-06 ETA=0m 01s elapsed=0m 48s
+  [E11 S00650] loss=1.0235 acc=0.4417 lr=2.50e-06 ETA=0m 00s elapsed=0m 50s
+  [E11 S00660] loss=1.0576 acc=0.4318 lr=2.60e-06 ETA=0m 00s elapsed=0m 51s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 11] train_loss=1.0528 train_acc=0.4318 val_loss=1.1081 acc=0.2959 BalAcc=0.3333 MacroF1=0.1522 Kappa=0.0000 AUC=0.7200
+[Checkpoint] Saved: temporal_2b_epoch0011_step000660.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0008_step000495.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E12 S00670] loss=1.0288 acc=0.3875 lr=2.70e-06 ETA=59m 59s elapsed=1m 00s
+  [E12 S00680] loss=0.9740 acc=0.4375 lr=2.85e-06 ETA=59m 58s elapsed=1m 01s
+  [E12 S00690] loss=1.0310 acc=0.4417 lr=2.95e-06 ETA=59m 57s elapsed=1m 02s
+  [E12 S00700] loss=1.0391 acc=0.4594 lr=3.10e-06 ETA=59m 56s elapsed=1m 04s
+  [E12 S00710] loss=1.0396 acc=0.4775 lr=3.20e-06 ETA=59m 55s elapsed=1m 05s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 12] train_loss=1.0205 train_acc=0.5023 val_loss=1.0911 acc=0.2959 BalAcc=0.3333 MacroF1=0.1522 Kappa=0.0000 AUC=0.7710
+[Checkpoint] Saved: temporal_2b_epoch0012_step000715.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0009_step000550.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E13 S00720] loss=0.9519 acc=0.6250 lr=3.30e-06 ETA=59m 53s elapsed=1m 13s
+  [E13 S00730] loss=0.9287 acc=0.6583 lr=3.40e-06 ETA=59m 52s elapsed=1m 14s
+  [E13 S00740] loss=0.7338 acc=0.6050 lr=3.55e-06 ETA=59m 51s elapsed=1m 16s
+  [E13 S00750] loss=0.8299 acc=0.5821 lr=3.65e-06 ETA=59m 50s elapsed=1m 18s
+  [E13 S00760] loss=0.6537 acc=0.6250 lr=3.80e-06 ETA=59m 49s elapsed=1m 19s
+  [E13 S00770] loss=0.6647 acc=0.6636 lr=3.90e-06 ETA=59m 48s elapsed=1m 20s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 13] train_loss=0.8306 train_acc=0.6636 val_loss=0.9078 acc=0.6213 BalAcc=0.6136 MacroF1=0.5386 Kappa=0.4374 AUC=0.9073
+[Checkpoint] Saved: temporal_2b_epoch0013_step000770.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0010_step000605.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E14 S00780] loss=0.5958 acc=0.8750 lr=4.00e-06 ETA=59m 46s elapsed=1m 28s
+  [E14 S00790] loss=0.6973 acc=0.8625 lr=4.15e-06 ETA=59m 45s elapsed=1m 29s
+  [E14 S00800] loss=0.7138 acc=0.8833 lr=4.25e-06 ETA=59m 43s elapsed=1m 31s
+  [E14 S00810] loss=0.5329 acc=0.8719 lr=4.40e-06 ETA=59m 42s elapsed=1m 33s
+  [E14 S00820] loss=0.4880 acc=0.8750 lr=4.50e-06 ETA=59m 41s elapsed=1m 34s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 14] train_loss=0.5692 train_acc=0.8750 val_loss=0.9673 acc=0.6391 BalAcc=0.6267 MacroF1=0.5205 Kappa=0.4477 AUC=0.9133
+[Checkpoint] Saved: temporal_2b_epoch0014_step000825.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0011_step000660.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E15 S00830] loss=0.5622 acc=0.9750 lr=4.60e-06 ETA=59m 39s elapsed=1m 41s
+  [E15 S00840] loss=0.4614 acc=0.9250 lr=4.70e-06 ETA=59m 37s elapsed=1m 42s
+  [E15 S00850] loss=0.3437 acc=0.9250 lr=4.85e-06 ETA=59m 36s elapsed=1m 44s
+  [E15 S00860] loss=0.5978 acc=0.9143 lr=4.95e-06 ETA=59m 35s elapsed=1m 45s
+  [E15 S00870] loss=0.4500 acc=0.9222 lr=5.10e-06 ETA=59m 34s elapsed=1m 47s
+  [E15 S00880] loss=0.3558 acc=0.9227 lr=5.20e-06 ETA=59m 33s elapsed=1m 47s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 15] train_loss=0.4586 train_acc=0.9227 val_loss=0.9244 acc=0.6272 BalAcc=0.6180 MacroF1=0.5277 Kappa=0.4423 AUC=0.9031
+[Checkpoint] Saved: temporal_2b_epoch0015_step000880.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0012_step000715.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E16 S00890] loss=0.4923 acc=0.9625 lr=5.30e-06 ETA=59m 29s elapsed=1m 56s
+  [E16 S00900] loss=0.5220 acc=0.9625 lr=5.45e-06 ETA=59m 28s elapsed=1m 57s
+  [E16 S00910] loss=0.3062 acc=0.9625 lr=5.55e-06 ETA=59m 27s elapsed=1m 59s
+  [E16 S00920] loss=0.3876 acc=0.9719 lr=5.70e-06 ETA=59m 25s elapsed=2m 00s
+  [E16 S00930] loss=0.3618 acc=0.9775 lr=5.80e-06 ETA=59m 24s elapsed=2m 01s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 16] train_loss=0.3820 train_acc=0.9795 val_loss=0.9825 acc=0.6686 BalAcc=0.6576 MacroF1=0.5737 Kappa=0.4934 AUC=0.8873
+[Checkpoint] Saved: temporal_2b_epoch0016_step000935.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0013_step000770.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E17 S00940] loss=0.3257 acc=1.0000 lr=5.90e-06 ETA=59m 21s elapsed=2m 08s
+  [E17 S00950] loss=0.3141 acc=1.0000 lr=6.00e-06 ETA=59m 20s elapsed=2m 10s
+  [E17 S00960] loss=0.3167 acc=1.0000 lr=6.15e-06 ETA=59m 18s elapsed=2m 11s
+  [E17 S00970] loss=0.3835 acc=0.9964 lr=6.25e-06 ETA=59m 17s elapsed=2m 13s
+  [E17 S00980] loss=0.3008 acc=0.9972 lr=6.40e-06 ETA=59m 16s elapsed=2m 14s
+  [E17 S00990] loss=0.3109 acc=0.9977 lr=6.50e-06 ETA=59m 14s elapsed=2m 15s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 17] train_loss=0.3354 train_acc=0.9977 val_loss=1.2819 acc=0.6450 BalAcc=0.6333 MacroF1=0.5489 Kappa=0.4495 AUC=0.8058
+[Checkpoint] Saved: temporal_2b_epoch0017_step000990.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0014_step000825.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E18 S01000] loss=0.2953 acc=0.9875 lr=6.60e-06 ETA=59m 11s elapsed=2m 23s
+  [E18 S01010] loss=0.3732 acc=0.9875 lr=6.75e-06 ETA=59m 10s elapsed=2m 24s
+  [E18 S01020] loss=0.3967 acc=0.9875 lr=6.85e-06 ETA=59m 08s elapsed=2m 25s
+  [E18 S01030] loss=0.2966 acc=0.9844 lr=7.00e-06 ETA=59m 07s elapsed=2m 27s
+  [E18 S01040] loss=0.3027 acc=0.9875 lr=7.10e-06 ETA=59m 05s elapsed=2m 28s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 18] train_loss=0.3285 train_acc=0.9886 val_loss=1.0087 acc=0.6154 BalAcc=0.6101 MacroF1=0.5345 Kappa=0.4190 AUC=0.8725
+[Checkpoint] Saved: temporal_2b_epoch0018_step001045.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0015_step000880.pt
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:52: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E19 S01050] loss=0.3243 acc=1.0000 lr=7.20e-06 ETA=59m 02s elapsed=2m 35s
+  [E19 S01060] loss=0.3103 acc=1.0000 lr=7.30e-06 ETA=59m 00s elapsed=2m 37s
+  [E19 S01070] loss=0.2967 acc=1.0000 lr=7.45e-06 ETA=58m 59s elapsed=2m 38s
+  [E19 S01080] loss=0.3010 acc=1.0000 lr=7.55e-06 ETA=58m 57s elapsed=2m 40s
+  [E19 S01090] loss=0.3751 acc=1.0000 lr=7.70e-06 ETA=58m 56s elapsed=2m 41s
+  [E19 S01100] loss=0.3114 acc=1.0000 lr=7.80e-06 ETA=58m 54s elapsed=2m 42s
+/home/siu856569517/Taminul/co2_farm/src/train/train_temporal.py:97: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:       train/acc ▃▃▂▂▂▃▃▂▂▂▂▂▁▁▂▃▃▃▂▃▄▃▃▃▃▄▅▅▇▇▇▇████████
+wandb:      train/loss ▇██▇█▆▆█▇▆▇▇▆▆▆▆▆▆▆▆▆▆▅▆▆▆▅▃▄▂▂▂▃▁▁▁▂▁▁▁
+wandb:        train/lr ▁▁▂▂▃▃▄▄▅▅▆▆▇▇██▁▁▁▁▁▁▂▂▂▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃
+wandb:     val/AUC_ROC ▁▁▁▁▁▁▁▂▃▄▅▆▆████▇█▇
+wandb: val/BalancedAcc ▄▄▄▄▃▁▄▄▄▄▄▄▄▇█▇██▇█
+wandb:  val/CohenKappa ▄▄▄▄▃▁▄▄▄▄▄▄▄█████▇█
+wandb:     val/MacroF1 ▂▂▂▂▃▁▁▂▂▁▂▂▂▇▇▇██▇█
+wandb:         val/acc ▄▄▄▄▃▁▃▃▃▃▃▃▃▇█▇██▇█
+wandb:        val/loss ▅▅▅▅▅▅▅▅▅▅▅▅▄▁▂▁▂█▃▇
+wandb: 
+wandb: Run summary:
+wandb:       train/acc 1.0
+wandb:      train/loss 0.31136
+wandb:        train/lr 1e-05
+wandb:     val/AUC_ROC 0.8669
+wandb: val/BalancedAcc 0.64
+wandb:  val/CohenKappa 0.45924
+wandb:     val/MacroF1 0.55058
+wandb:         val/acc 0.65089
+wandb:        val/loss 1.24492
+wandb: 
+wandb: 🚀 View run temporal at: https://wandb.ai/taminul/rumiformer/runs/mt17gyd4
+wandb: ️⚡ View job at https://wandb.ai/taminul/rumiformer/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjkxMzg1Mzg4Nw==/version_details/v1
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260228_150436-mt17gyd4/logs
+  [Epoch 19] train_loss=0.3120 train_acc=1.0000 val_loss=1.2449 acc=0.6509 BalAcc=0.6400 MacroF1=0.5506 Kappa=0.4592 AUC=0.8669
+[Checkpoint] Saved: temporal_2b_epoch0019_step001100.pt
+[Checkpoint] Deleted old: temporal_2b_epoch0016_step000935.pt
+
+Stage 2 complete.

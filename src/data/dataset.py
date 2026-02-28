@@ -69,7 +69,7 @@ class ThermalFrameDataset(Dataset):
         image = cv2.resize(image, (self.img_size[1], self.img_size[0]))
 
         if self.augment:
-            image, mask, overlay = self.augmentor(image, mask, overlay, seed=idx)
+            image, mask, overlay = self.augmentor(image, mask, overlay)
 
         # Binarize mask
         mask = ((mask > 127).astype(np.float32))

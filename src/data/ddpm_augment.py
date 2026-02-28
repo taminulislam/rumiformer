@@ -121,7 +121,7 @@ class UpBlock(nn.Module):
     def __init__(self, in_ch: int, out_ch: int, embed_dim: int):
         super().__init__()
         self.up = nn.ConvTranspose2d(in_ch, in_ch, 4, stride=2, padding=1)
-        self.res = ResBlock(in_ch + out_ch, out_ch, embed_dim)  # concat skip
+        self.res = ResBlock(in_ch * 2, out_ch, embed_dim)  # concat: up(in_ch) + skip(in_ch)
 
     def forward(self, x: torch.Tensor, skip: torch.Tensor,
                 emb: torch.Tensor) -> torch.Tensor:
@@ -208,8 +208,9 @@ def q_sample(x_0: torch.Tensor, t: torch.Tensor,
              diffusion_params: dict, noise: torch.Tensor = None) -> tuple:
     if noise is None:
         noise = torch.randn_like(x_0)
-    sqrt_alpha = diffusion_params["sqrt_alphas_cumprod"][t][:, None, None, None]
-    sqrt_one_minus_alpha = diffusion_params["sqrt_one_minus_alphas_cumprod"][t][:, None, None, None]
+    device = x_0.device
+    sqrt_alpha = diffusion_params["sqrt_alphas_cumprod"].to(device)[t][:, None, None, None]
+    sqrt_one_minus_alpha = diffusion_params["sqrt_one_minus_alphas_cumprod"].to(device)[t][:, None, None, None]
     x_t = sqrt_alpha * x_0 + sqrt_one_minus_alpha * noise
     return x_t, noise
 

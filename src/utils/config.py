@@ -57,9 +57,9 @@ class SegmentationConfig(BaseTrainConfig):
     # Sub-stages
     # 1a: freeze backbone, train TGAA gates + decode head
     # 1b: unfreeze all, full fine-tune
-    substage_1a_epochs: int = 15
+    substage_1a_epochs: int = 10
     substage_1a_lr: float = 6e-5
-    substage_1b_epochs: int = 30
+    substage_1b_epochs: int = 15
     substage_1b_lr: float = 1e-5
 
     # Data
@@ -85,9 +85,9 @@ class TemporalConfig(BaseTrainConfig):
     stage_name: str = "temporal"
 
     # Sub-stages
-    substage_2a_epochs: int = 15
+    substage_2a_epochs: int = 8
     substage_2a_lr: float = 5e-5
-    substage_2b_epochs: int = 25
+    substage_2b_epochs: int = 12
     substage_2b_lr: float = 1e-5
 
     # Data
@@ -99,10 +99,11 @@ class TemporalConfig(BaseTrainConfig):
     # Loss
     label_smoothing: float = 0.1
     num_classes: int = 3
+    warmup_steps: int = 200
 
     # Model
     temporal_output_dim: int = 256
-    videomae_pretrained: str = "MCG-NJU/videomae-small"
+    videomae_pretrained: str = "MCG-NJU/videomae-small-finetuned-kinetics"
 
     gradient_checkpointing: bool = True
 
@@ -112,9 +113,9 @@ class FusionConfig(BaseTrainConfig):
     """Stage 3: ATF fusion training."""
     stage_name: str = "fusion"
 
-    epochs: int = 30
+    epochs: int = 15
     lr: float = 1e-4
-    batch_size: int = 64
+    batch_size: int = 16
 
     # Loss
     ce_weight: float = 1.0
@@ -135,7 +136,7 @@ class LLaVAConfig(BaseTrainConfig):
     """Stage 4: LoRA LLaVA fine-tuning."""
     stage_name: str = "llava"
 
-    epochs: int = 10
+    epochs: int = 5
     lora_lr: float = 2e-4
     projection_lr: float = 1e-4
     batch_size: int = 4
@@ -167,7 +168,7 @@ class EndToEndConfig(BaseTrainConfig):
     """Stage 5: End-to-end fine-tuning."""
     stage_name: str = "e2e"
 
-    epochs: int = 15
+    epochs: int = 8
     batch_size: int = 8
 
     # Differential learning rates
@@ -196,7 +197,7 @@ class DDPMConfig(BaseTrainConfig):
     """Stage 6: DDPM augmentation training."""
     stage_name: str = "ddpm"
 
-    epochs: int = 200
+    epochs: int = 80
     lr: float = 1e-4
     batch_size: int = 64
 

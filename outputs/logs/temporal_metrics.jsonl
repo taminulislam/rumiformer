@@ -1,0 +1,130 @@
+{"step": 10, "train/loss": 1.1981770992279053, "train/acc": 0.35, "train/lr": 5.000000000000001e-07}
+{"step": 20, "train/loss": 1.1286132335662842, "train/acc": 0.35625, "train/lr": 1.25e-06}
+{"step": 30, "train/loss": 1.3370280265808105, "train/acc": 0.35, "train/lr": 1.7500000000000002e-06}
+{"step": 40, "train/loss": 1.254785180091858, "train/acc": 0.31875, "train/lr": 2.5e-06}
+{"step": 50, "train/loss": 1.1975910663604736, "train/acc": 0.2975, "train/lr": 3e-06}
+{"step": 55, "val/loss": 1.1300522170283578, "val/acc": 0.378698224852071, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.18311874105865522, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.30535670448402646}
+{"step": 60, "train/loss": 1.2794432640075684, "train/acc": 0.325, "train/lr": 3.5000000000000004e-06}
+{"step": 70, "train/loss": 1.147851586341858, "train/acc": 0.35, "train/lr": 4.000000000000001e-06}
+{"step": 80, "train/loss": 1.2163411378860474, "train/acc": 0.315, "train/lr": 4.75e-06}
+{"step": 90, "train/loss": 1.2318683862686157, "train/acc": 0.30714285714285716, "train/lr": 5.25e-06}
+{"step": 100, "train/loss": 1.1464192867279053, "train/acc": 0.31666666666666665, "train/lr": 6e-06}
+{"step": 110, "train/loss": 1.2192057371139526, "train/acc": 0.30227272727272725, "train/lr": 6.5000000000000004e-06}
+{"step": 110, "val/loss": 1.1204441623254255, "val/acc": 0.378698224852071, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.18311874105865522, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.3011742382359643}
+{"step": 120, "train/loss": 1.3228840827941895, "train/acc": 0.275, "train/lr": 7.000000000000001e-06}
+{"step": 130, "train/loss": 1.2582356929779053, "train/acc": 0.30625, "train/lr": 7.75e-06}
+{"step": 140, "train/loss": 1.0217610597610474, "train/acc": 0.3375, "train/lr": 8.25e-06}
+{"step": 150, "train/loss": 1.1722980737686157, "train/acc": 0.309375, "train/lr": 9e-06}
+{"step": 160, "train/loss": 1.1663410663604736, "train/acc": 0.3025, "train/lr": 9.5e-06}
+{"step": 165, "val/loss": 1.1073508343913339, "val/acc": 0.378698224852071, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.18311874105865522, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.29318896478048956}
+{"step": 170, "train/loss": 1.0144368410110474, "train/acc": 0.425, "train/lr": 1e-05}
+{"step": 180, "train/loss": 1.1722004413604736, "train/acc": 0.31666666666666665, "train/lr": 1.05e-05}
+{"step": 190, "train/loss": 1.1762531995773315, "train/acc": 0.29, "train/lr": 1.125e-05}
+{"step": 200, "train/loss": 1.2742350101470947, "train/acc": 0.29642857142857143, "train/lr": 1.175e-05}
+{"step": 210, "train/loss": 1.216162085533142, "train/acc": 0.2916666666666667, "train/lr": 1.25e-05}
+{"step": 220, "train/loss": 1.0668456554412842, "train/acc": 0.3, "train/lr": 1.3000000000000001e-05}
+{"step": 220, "val/loss": 1.1010113277218558, "val/acc": 0.378698224852071, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.1839080459770115, "val/CohenKappa": 0.0005069280162217638, "val/AUC_ROC": 0.29170251553571985}
+{"step": 230, "train/loss": 1.25634765625, "train/acc": 0.275, "train/lr": 1.3500000000000001e-05}
+{"step": 240, "train/loss": 1.1934406757354736, "train/acc": 0.28125, "train/lr": 1.4249999999999999e-05}
+{"step": 250, "train/loss": 1.137711524963379, "train/acc": 0.3125, "train/lr": 1.475e-05}
+{"step": 260, "train/loss": 1.0854166746139526, "train/acc": 0.315625, "train/lr": 1.55e-05}
+{"step": 270, "train/loss": 1.0987629890441895, "train/acc": 0.305, "train/lr": 1.6000000000000003e-05}
+{"step": 275, "val/loss": 1.103802659294822, "val/acc": 0.28994082840236685, "val/BalancedAcc": 0.2773674242424242, "val/MacroF1": 0.2317210348706412, "val/CohenKappa": -0.10259337791551149, "val/AUC_ROC": 0.282588418740702}
+{"step": 280, "train/loss": 1.1568684577941895, "train/acc": 0.25, "train/lr": 1.65e-05}
+{"step": 290, "train/loss": 1.089941382408142, "train/acc": 0.23333333333333334, "train/lr": 1.7000000000000003e-05}
+{"step": 300, "train/loss": 1.1075520515441895, "train/acc": 0.225, "train/lr": 1.775e-05}
+{"step": 310, "train/loss": 1.1332844495773315, "train/acc": 0.2392857142857143, "train/lr": 1.825e-05}
+{"step": 320, "train/loss": 1.0994791984558105, "train/acc": 0.21944444444444444, "train/lr": 1.9e-05}
+{"step": 330, "train/loss": 1.1074544191360474, "train/acc": 0.20681818181818182, "train/lr": 1.9500000000000003e-05}
+{"step": 330, "val/loss": 1.1063580025326123, "val/acc": 0.11834319526627218, "val/BalancedAcc": 0.10757575757575759, "val/MacroF1": 0.11684411684411684, "val/CohenKappa": -0.32086655476290393, "val/AUC_ROC": 0.2811801604613137}
+{"step": 340, "train/loss": 1.1039388179779053, "train/acc": 0.1625, "train/lr": 2e-05}
+{"step": 350, "train/loss": 1.1074869632720947, "train/acc": 0.16875, "train/lr": 2.075e-05}
+{"step": 360, "train/loss": 1.0846679210662842, "train/acc": 0.15833333333333333, "train/lr": 2.125e-05}
+{"step": 370, "train/loss": 1.1004557609558105, "train/acc": 0.15625, "train/lr": 2.2000000000000003e-05}
+{"step": 380, "train/loss": 1.1259114742279053, "train/acc": 0.165, "train/lr": 2.25e-05}
+{"step": 385, "val/loss": 1.1089976700869473, "val/acc": 0.2781065088757396, "val/BalancedAcc": 0.3133333333333333, "val/MacroF1": 0.14506172839506173, "val/CohenKappa": -0.027355623100303816, "val/AUC_ROC": 0.29688831732852633}
+{"step": 390, "train/loss": 1.1022460460662842, "train/acc": 0.25, "train/lr": 2.3000000000000003e-05}
+{"step": 400, "train/loss": 1.0714517831802368, "train/acc": 0.3, "train/lr": 2.35e-05}
+{"step": 410, "train/loss": 1.1111165285110474, "train/acc": 0.345, "train/lr": 2.425e-05}
+{"step": 420, "train/loss": 1.0944987535476685, "train/acc": 0.35714285714285715, "train/lr": 2.4750000000000002e-05}
+{"step": 430, "train/loss": 1.0449055433273315, "train/acc": 0.36666666666666664, "train/lr": 2.5500000000000003e-05}
+{"step": 440, "train/loss": 1.0754231214523315, "train/acc": 0.3704545454545455, "train/lr": 2.6000000000000002e-05}
+{"step": 440, "val/loss": 1.1223936080932617, "val/acc": 0.2958579881656805, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.15220700152207, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.33258185710488336}
+{"step": 450, "train/loss": 1.0624349117279053, "train/acc": 0.3875, "train/lr": 1.0000000000000001e-07}
+{"step": 460, "train/loss": 1.1089354753494263, "train/acc": 0.34375, "train/lr": 2.5000000000000004e-07}
+{"step": 470, "train/loss": 1.0396158695220947, "train/acc": 0.3541666666666667, "train/lr": 3.5000000000000004e-07}
+{"step": 480, "train/loss": 1.0673013925552368, "train/acc": 0.38125, "train/lr": 5.000000000000001e-07}
+{"step": 490, "train/loss": 1.0519530773162842, "train/acc": 0.3825, "train/lr": 6.000000000000001e-07}
+{"step": 495, "val/loss": 1.1137561825188724, "val/acc": 0.2958579881656805, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.15220700152207, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.4932840359030375}
+{"step": 500, "train/loss": 1.044921875, "train/acc": 0.425, "train/lr": 7.000000000000001e-07}
+{"step": 510, "train/loss": 1.0823079347610474, "train/acc": 0.3333333333333333, "train/lr": 8.000000000000001e-07}
+{"step": 520, "train/loss": 1.0568033456802368, "train/acc": 0.405, "train/lr": 9.500000000000001e-07}
+{"step": 530, "train/loss": 1.1121907234191895, "train/acc": 0.425, "train/lr": 1.0500000000000001e-06}
+{"step": 540, "train/loss": 1.045019507408142, "train/acc": 0.45, "train/lr": 1.2000000000000002e-06}
+{"step": 550, "train/loss": 1.0868326425552368, "train/acc": 0.45, "train/lr": 1.3e-06}
+{"step": 550, "val/loss": 1.113881227645007, "val/acc": 0.28402366863905326, "val/BalancedAcc": 0.32, "val/MacroF1": 0.14746543778801843, "val/CohenKappa": -0.017312571513855124, "val/AUC_ROC": 0.5646380741291732}
+{"step": 560, "train/loss": 1.064322829246521, "train/acc": 0.475, "train/lr": 1.4000000000000001e-06}
+{"step": 570, "train/loss": 1.0591471195220947, "train/acc": 0.425, "train/lr": 1.5500000000000002e-06}
+{"step": 580, "train/loss": 1.11328125, "train/acc": 0.42916666666666664, "train/lr": 1.6500000000000003e-06}
+{"step": 590, "train/loss": 1.0618977546691895, "train/acc": 0.421875, "train/lr": 1.8000000000000001e-06}
+{"step": 600, "train/loss": 1.0808918476104736, "train/acc": 0.415, "train/lr": 1.9000000000000002e-06}
+{"step": 605, "val/loss": 1.114195634018291, "val/acc": 0.2958579881656805, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.15220700152207, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.6622357391920085}
+{"step": 610, "train/loss": 1.092757225036621, "train/acc": 0.375, "train/lr": 2.0000000000000003e-06}
+{"step": 620, "train/loss": 0.9577473402023315, "train/acc": 0.36666666666666664, "train/lr": 2.1000000000000002e-06}
+{"step": 630, "train/loss": 1.0299642086029053, "train/acc": 0.4, "train/lr": 2.25e-06}
+{"step": 640, "train/loss": 1.0333821773529053, "train/acc": 0.42142857142857143, "train/lr": 2.35e-06}
+{"step": 650, "train/loss": 1.0235025882720947, "train/acc": 0.44166666666666665, "train/lr": 2.5e-06}
+{"step": 660, "train/loss": 1.0576335191726685, "train/acc": 0.4318181818181818, "train/lr": 2.6e-06}
+{"step": 660, "val/loss": 1.1081365238536487, "val/acc": 0.2958579881656805, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.15220700152207, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.7199662438739453}
+{"step": 670, "train/loss": 1.0287760496139526, "train/acc": 0.3875, "train/lr": 2.7000000000000004e-06}
+{"step": 680, "train/loss": 0.9739745855331421, "train/acc": 0.4375, "train/lr": 2.85e-06}
+{"step": 690, "train/loss": 1.0310384035110474, "train/acc": 0.44166666666666665, "train/lr": 2.95e-06}
+{"step": 700, "train/loss": 1.0391438007354736, "train/acc": 0.459375, "train/lr": 3.1000000000000004e-06}
+{"step": 710, "train/loss": 1.03955078125, "train/acc": 0.4775, "train/lr": 3.2000000000000003e-06}
+{"step": 715, "val/loss": 1.091121418909593, "val/acc": 0.2958579881656805, "val/BalancedAcc": 0.3333333333333333, "val/MacroF1": 0.15220700152207, "val/CohenKappa": 0.0, "val/AUC_ROC": 0.7710207280679416}
+{"step": 720, "train/loss": 0.9519368410110474, "train/acc": 0.625, "train/lr": 3.3000000000000006e-06}
+{"step": 730, "train/loss": 0.928662121295929, "train/acc": 0.6583333333333333, "train/lr": 3.4000000000000005e-06}
+{"step": 740, "train/loss": 0.7337727546691895, "train/acc": 0.605, "train/lr": 3.5500000000000003e-06}
+{"step": 750, "train/loss": 0.8299316167831421, "train/acc": 0.5821428571428572, "train/lr": 3.65e-06}
+{"step": 760, "train/loss": 0.6536783576011658, "train/acc": 0.625, "train/lr": 3.8000000000000005e-06}
+{"step": 770, "train/loss": 0.6647298336029053, "train/acc": 0.6636363636363637, "train/lr": 3.900000000000001e-06}
+{"step": 770, "val/loss": 0.9078058356588538, "val/acc": 0.621301775147929, "val/BalancedAcc": 0.6135984848484849, "val/MacroF1": 0.5386335125448029, "val/CohenKappa": 0.4374284822636014, "val/AUC_ROC": 0.9073355765751278}
+{"step": 780, "train/loss": 0.5958333015441895, "train/acc": 0.875, "train/lr": 4.000000000000001e-06}
+{"step": 790, "train/loss": 0.6972981691360474, "train/acc": 0.8625, "train/lr": 4.15e-06}
+{"step": 800, "train/loss": 0.713793933391571, "train/acc": 0.8833333333333333, "train/lr": 4.25e-06}
+{"step": 810, "train/loss": 0.5329101085662842, "train/acc": 0.871875, "train/lr": 4.4e-06}
+{"step": 820, "train/loss": 0.48800456523895264, "train/acc": 0.875, "train/lr": 4.5e-06}
+{"step": 825, "val/loss": 0.9672784791751341, "val/acc": 0.6390532544378699, "val/BalancedAcc": 0.6266666666666666, "val/MacroF1": 0.5204906204906204, "val/CohenKappa": 0.4477420046070606, "val/AUC_ROC": 0.9133251633986927}
+{"step": 830, "train/loss": 0.562182605266571, "train/acc": 0.975, "train/lr": 4.600000000000001e-06}
+{"step": 840, "train/loss": 0.46142578125, "train/acc": 0.925, "train/lr": 4.7e-06}
+{"step": 850, "train/loss": 0.3437092900276184, "train/acc": 0.925, "train/lr": 4.85e-06}
+{"step": 860, "train/loss": 0.5978434085845947, "train/acc": 0.9142857142857143, "train/lr": 4.95e-06}
+{"step": 870, "train/loss": 0.4500325620174408, "train/acc": 0.9222222222222223, "train/lr": 5.1e-06}
+{"step": 880, "train/loss": 0.3557942807674408, "train/acc": 0.9227272727272727, "train/lr": 5.2e-06}
+{"step": 880, "val/loss": 0.9243748526681553, "val/acc": 0.6272189349112426, "val/BalancedAcc": 0.6179545454545455, "val/MacroF1": 0.52770930890969, "val/CohenKappa": 0.4423026557016395, "val/AUC_ROC": 0.9031453047726267}
+{"step": 890, "train/loss": 0.49227702617645264, "train/acc": 0.9625, "train/lr": 5.300000000000001e-06}
+{"step": 900, "train/loss": 0.5219889283180237, "train/acc": 0.9625, "train/lr": 5.450000000000001e-06}
+{"step": 910, "train/loss": 0.30622559785842896, "train/acc": 0.9625, "train/lr": 5.550000000000001e-06}
+{"step": 920, "train/loss": 0.3876139521598816, "train/acc": 0.971875, "train/lr": 5.7e-06}
+{"step": 930, "train/loss": 0.36182862520217896, "train/acc": 0.9775, "train/lr": 5.8e-06}
+{"step": 935, "val/loss": 0.982460542158647, "val/acc": 0.6686390532544378, "val/BalancedAcc": 0.6575757575757576, "val/MacroF1": 0.573695628143481, "val/CohenKappa": 0.4933618843683084, "val/AUC_ROC": 0.8872620918383302}
+{"step": 940, "train/loss": 0.32571613788604736, "train/acc": 1.0, "train/lr": 5.9e-06}
+{"step": 950, "train/loss": 0.31409913301467896, "train/acc": 1.0, "train/lr": 6e-06}
+{"step": 960, "train/loss": 0.3167073726654053, "train/acc": 1.0, "train/lr": 6.15e-06}
+{"step": 970, "train/loss": 0.3834879696369171, "train/acc": 0.9964285714285714, "train/lr": 6.25e-06}
+{"step": 980, "train/loss": 0.3008463382720947, "train/acc": 0.9972222222222222, "train/lr": 6.4000000000000006e-06}
+{"step": 990, "train/loss": 0.3108561038970947, "train/acc": 0.9977272727272727, "train/lr": 6.5000000000000004e-06}
+{"step": 990, "val/loss": 1.2819048017263412, "val/acc": 0.6449704142011834, "val/BalancedAcc": 0.6333333333333333, "val/MacroF1": 0.5489406576550666, "val/CohenKappa": 0.4495114006514659, "val/AUC_ROC": 0.8057933436532507}
+{"step": 1000, "train/loss": 0.2952718138694763, "train/acc": 0.9875, "train/lr": 6.600000000000001e-06}
+{"step": 1010, "train/loss": 0.3732462525367737, "train/acc": 0.9875, "train/lr": 6.750000000000001e-06}
+{"step": 1020, "train/loss": 0.39666748046875, "train/acc": 0.9875, "train/lr": 6.850000000000001e-06}
+{"step": 1030, "train/loss": 0.2965535521507263, "train/acc": 0.984375, "train/lr": 7e-06}
+{"step": 1040, "train/loss": 0.3026570677757263, "train/acc": 0.9875, "train/lr": 7.100000000000001e-06}
+{"step": 1045, "val/loss": 1.0086869597434998, "val/acc": 0.6153846153846154, "val/BalancedAcc": 0.610094696969697, "val/MacroF1": 0.5344508358206989, "val/CohenKappa": 0.4190289824412947, "val/AUC_ROC": 0.8725255820031362}
+{"step": 1050, "train/loss": 0.32429200410842896, "train/acc": 1.0, "train/lr": 7.2000000000000005e-06}
+{"step": 1060, "train/loss": 0.31027424335479736, "train/acc": 1.0, "train/lr": 7.3e-06}
+{"step": 1070, "train/loss": 0.2966715693473816, "train/acc": 1.0, "train/lr": 7.450000000000001e-06}
+{"step": 1080, "train/loss": 0.30101320147514343, "train/acc": 1.0, "train/lr": 7.5500000000000006e-06}
+{"step": 1090, "train/loss": 0.37507325410842896, "train/acc": 1.0, "train/lr": 7.7e-06}
+{"step": 1100, "train/loss": 0.3113606870174408, "train/acc": 1.0, "train/lr": 7.800000000000002e-06}
+{"step": 1100, "val/loss": 1.2449169578877362, "val/acc": 0.650887573964497, "val/BalancedAcc": 0.64, "val/MacroF1": 0.5505834371813753, "val/CohenKappa": 0.4592439937089864, "val/AUC_ROC": 0.8669021791332163}
