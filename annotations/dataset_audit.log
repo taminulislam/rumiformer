@@ -1,0 +1,109 @@
+============================================================
+RumiFormer Dataset Fix - Step 1.2
+============================================================
+
+--- Before Fixes ---
+
+--- Final Dataset Audit ---
+  SEQ_0483: images=12 masks=12 overlays=12 [OK]
+  SEQ_0484: images=27 masks=27 overlays=27 [OK]
+  SEQ_0486: images=11 masks=11 overlays=11 [OK]
+  SEQ_0488: images=45 masks=45 overlays=45 [OK]
+  SEQ_0490: images=12 masks=13 overlays=12 [MISMATCH]
+  SEQ_0491: images=0 masks=49 overlays=49 [MISMATCH]
+  SEQ_0492: images=0 masks=89 overlays=89 [MISMATCH]
+  SEQ_0493: images=0 masks=24 overlays=24 [MISMATCH]
+  SEQ_0495: images=133 masks=133 overlays=133 [OK]
+  SEQ_0496: images=287 masks=287 overlays=287 [OK]
+  SEQ_0497: images=363 masks=363 overlays=363 [OK]
+  SEQ_0498: images=529 masks=528 overlays=528 [MISMATCH]
+  SEQ_0499: images=483 masks=483 overlays=483 [OK]
+  SEQ_0500: images=468 masks=468 overlays=468 [OK]
+  SEQ_0501: images=527 masks=527 overlays=527 [OK]
+  SEQ_0502: images=14 masks=14 overlays=14 [OK]
+  SEQ_0503: images=455 masks=455 overlays=455 [OK]
+  SEQ_0504: images=349 masks=349 overlays=349 [OK]
+  SEQ_0505: images=112 masks=112 overlays=112 [OK]
+  SEQ_0506: images=323 masks=321 overlays=321 [MISMATCH]
+  SEQ_0507: images=492 masks=492 overlays=492 [OK]
+  SEQ_0508: images=524 masks=524 overlays=524 [OK]
+  SEQ_0509: images=444 masks=444 overlays=444 [OK]
+  SEQ_0510: images=184 masks=184 overlays=184 [OK]
+  TOTAL: images=5794 masks=5954 overlays=5953
+
+--- Renaming frames/ -> images/ ---
+[RENAME] SEQ_0491: frames/ -> images/
+[RENAME] SEQ_0492: frames/ -> images/
+[RENAME] SEQ_0493: frames/ -> images/
+
+--- Fixing SEQ_0490 orphaned masks ---
+[COUNT] SEQ_0490 after fix: images=12 masks=13
+
+--- Fixing SEQ_0498 orphaned images ---
+[DELETE] SEQ_0498: removed orphaned image SEQ_0498_frame_00881.png
+[COUNT] SEQ_0498 after fix: images=528 masks=528 overlays=528
+
+--- Fixing SEQ_0506 orphaned images ---
+[DELETE] SEQ_0506: removed orphaned image SEQ_0506_frame_00066.png
+[DELETE] SEQ_0506: removed orphaned image SEQ_0506_frame_00095.png
+[COUNT] SEQ_0506 after fix: images=321 masks=321 overlays=321
+
+--- Binarizing masks ---
+[BINARIZE] Checked 5953 masks, fixed 0 with intermediate values
+
+--- After Fixes ---
+
+--- Final Dataset Audit ---
+  SEQ_0483: images=12 masks=12 overlays=12 [OK]
+  SEQ_0484: images=27 masks=27 overlays=27 [OK]
+  SEQ_0486: images=11 masks=11 overlays=11 [OK]
+  SEQ_0488: images=45 masks=45 overlays=45 [OK]
+  SEQ_0490: images=12 masks=13 overlays=12 [MISMATCH]
+  SEQ_0491: images=49 masks=49 overlays=49 [OK]
+  SEQ_0492: images=89 masks=89 overlays=89 [OK]
+  SEQ_0493: images=24 masks=24 overlays=24 [OK]
+  SEQ_0495: images=133 masks=133 overlays=133 [OK]
+  SEQ_0496: images=287 masks=287 overlays=287 [OK]
+  SEQ_0497: images=363 masks=363 overlays=363 [OK]
+  SEQ_0498: images=528 masks=528 overlays=528 [OK]
+  SEQ_0499: images=483 masks=483 overlays=483 [OK]
+  SEQ_0500: images=468 masks=468 overlays=468 [OK]
+  SEQ_0501: images=527 masks=527 overlays=527 [OK]
+  SEQ_0502: images=14 masks=14 overlays=14 [OK]
+  SEQ_0503: images=455 masks=455 overlays=455 [OK]
+  SEQ_0504: images=349 masks=349 overlays=349 [OK]
+  SEQ_0505: images=112 masks=112 overlays=112 [OK]
+  SEQ_0506: images=321 masks=321 overlays=321 [OK]
+  SEQ_0507: images=492 masks=492 overlays=492 [OK]
+  SEQ_0508: images=524 masks=524 overlays=524 [OK]
+  SEQ_0509: images=444 masks=444 overlays=444 [OK]
+  SEQ_0510: images=184 masks=184 overlays=184 [OK]
+  TOTAL: images=5953 masks=5954 overlays=5953
+[DELETE] SEQ_0490: removed stray session.json from masks/
+
+--- Final Audit (post-session.json fix) ---
+  SEQ_0483: images=12 masks=12 overlays=12 [OK]
+  SEQ_0484: images=27 masks=27 overlays=27 [OK]
+  SEQ_0486: images=11 masks=11 overlays=11 [OK]
+  SEQ_0488: images=45 masks=45 overlays=45 [OK]
+  SEQ_0490: images=12 masks=12 overlays=12 [OK]
+  SEQ_0491: images=49 masks=49 overlays=49 [OK]
+  SEQ_0492: images=89 masks=89 overlays=89 [OK]
+  SEQ_0493: images=24 masks=24 overlays=24 [OK]
+  SEQ_0495: images=133 masks=133 overlays=133 [OK]
+  SEQ_0496: images=287 masks=287 overlays=287 [OK]
+  SEQ_0497: images=363 masks=363 overlays=363 [OK]
+  SEQ_0498: images=528 masks=528 overlays=528 [OK]
+  SEQ_0499: images=483 masks=483 overlays=483 [OK]
+  SEQ_0500: images=468 masks=468 overlays=468 [OK]
+  SEQ_0501: images=527 masks=527 overlays=527 [OK]
+  SEQ_0502: images=14 masks=14 overlays=14 [OK]
+  SEQ_0503: images=455 masks=455 overlays=455 [OK]
+  SEQ_0504: images=349 masks=349 overlays=349 [OK]
+  SEQ_0505: images=112 masks=112 overlays=112 [OK]
+  SEQ_0506: images=321 masks=321 overlays=321 [OK]
+  SEQ_0507: images=492 masks=492 overlays=492 [OK]
+  SEQ_0508: images=524 masks=524 overlays=524 [OK]
+  SEQ_0509: images=444 masks=444 overlays=444 [OK]
+  SEQ_0510: images=184 masks=184 overlays=184 [OK]
+  TOTAL: images=5953 masks=5953 overlays=5953

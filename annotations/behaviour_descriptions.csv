@@ -1,0 +1,1001 @@
+frame_id,seq_id,class_id,description
+SEQ_0510_frame_00416,510,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 3.0% of the thermal field, centered at (100, 113)."
+SEQ_0496_frame_00198,496,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 6.4% of the frame.
+SEQ_0497_frame_00537,497,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0498_frame_00536,498,0,The cow displays vigorous digestive processing. Gas dispersion index of 45.6 indicates active eructation events.
+SEQ_0484_frame_00170,484,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 23.8% spatial coverage.
+SEQ_0496_frame_00377,496,0,"Pronounced gas plume detected at coordinates (185, 202) with a dispersion of 35.4, consistent with active rumination."
+SEQ_0498_frame_00918,498,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 1.2% of the field.
+SEQ_0497_frame_00389,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 117 and maximum of 216.
+SEQ_0498_frame_01364,498,0,The animal is in an active rumination phase. Gas coverage of 2.9% with moderate thermal signature suggests high forage consumption.
+SEQ_0498_frame_00798,498,0,"High metabolic output detected: the gas plume extends over 4.6% of the observation area, indicating robust digestive function."
+SEQ_0493_frame_interp_00005,493,0,"Elevated eructation activity observed. The thermal emission centroid at (158, 134) reflects continuous gas release typical of high forage diet."
+SEQ_0497_frame_00784,497,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 65.7.
+SEQ_0498_frame_01317,498,0,Thermal imaging confirms high metabolic state: 12.0% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0492_frame_00604,492,0,The subject is actively ruminating with visible gas emission covering 3.5% of the thermal field at moderate intensity.
+SEQ_0498_frame_00923,498,0,High forage intake evident: gas dispersion of 44.7 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0497_frame_00053,497,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (163, 116) and 9.2% coverage."
+SEQ_0488_frame_00043,488,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 53.4 units.
+SEQ_0498_frame_00452,498,0,Significant methane release detected. The high forage diet correlates with 26.2% gas coverage and 1 distinct emission region(s).
+SEQ_0491_frame_00093,491,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 8.0% field coverage.
+SEQ_0498_frame_00830,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 31.5 and peak intensity of 230."
+SEQ_0488_frame_00006,488,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 25.2% of the thermal field, centered at (123, 92)."
+SEQ_0495_frame_00519,495,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 12.6% of the frame.
+SEQ_0486_frame_interp_00038,486,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0497_frame_00805,497,0,The cow displays vigorous digestive processing. Gas dispersion index of 66.8 indicates active eructation events.
+SEQ_0498_frame_00683,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 17.2% spatial coverage.
+SEQ_0497_frame_00371,497,0,"Pronounced gas plume detected at coordinates (160, 160) with a dispersion of 37.7, consistent with active rumination."
+SEQ_0496_frame_00314,496,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 14.8% of the field.
+SEQ_0510_frame_00694,510,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 108 and maximum of 165.
+SEQ_0498_frame_00249,498,0,The animal is in an active rumination phase. Gas coverage of 3.2% with moderate thermal signature suggests high forage consumption.
+SEQ_0498_frame_01725,498,0,"High metabolic output detected: the gas plume extends over 28.2% of the observation area, indicating robust digestive function."
+SEQ_0497_frame_00900,497,0,"Elevated eructation activity observed. The thermal emission centroid at (226, 158) reflects continuous gas release typical of high forage diet."
+SEQ_0496_frame_00357,496,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 54.7.
+SEQ_0496_frame_00536,496,0,Thermal imaging confirms high metabolic state: 24.5% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0497_frame_00484,497,0,The subject is actively ruminating with visible gas emission covering 19.7% of the thermal field at moderate intensity.
+SEQ_0497_frame_00853,497,0,High forage intake evident: gas dispersion of 51.2 and 2 emission zone(s) indicate sustained digestive processing.
+SEQ_0497_frame_00432,497,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (177, 120) and 6.5% coverage."
+SEQ_0496_frame_00036,496,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 41.5 units.
+SEQ_0483_frame_interp_00019,483,0,Significant methane release detected. The high forage diet correlates with 27.8% gas coverage and 1 distinct emission region(s).
+SEQ_0491_frame_interp_00017,491,0,Behavioural state: active rumination. Gas emission parameters indicate low metabolic throughput with 9.1% field coverage.
+SEQ_0483_frame_interp_00017,483,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 46.3 and peak intensity of 243."
+SEQ_0488_frame_interp_00014,488,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 15.5% of the thermal field, centered at (174, 97)."
+SEQ_0510_frame_00436,510,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 14.0% of the frame.
+SEQ_0498_frame_00010,498,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0492_frame_00546,492,0,The cow displays vigorous digestive processing. Gas dispersion index of 18.4 indicates active eructation events.
+SEQ_0492_frame_00518,492,0,High forage feeding state confirmed: thermal overlay reveals low emission intensity with 0.2% spatial coverage.
+SEQ_0486_frame_interp_00005,486,0,"Pronounced gas plume detected at coordinates (137, 173) with a dispersion of 40.4, consistent with active rumination."
+SEQ_0491_frame_00048,491,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 5.7% of the field.
+SEQ_0498_frame_00443,498,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 117 and maximum of 228.
+SEQ_0498_frame_01882,498,0,The animal is in an active rumination phase. Gas coverage of 16.5% with moderate thermal signature suggests high forage consumption.
+SEQ_0496_frame_00349,496,0,"High metabolic output detected: the gas plume extends over 35.4% of the observation area, indicating robust digestive function."
+SEQ_0490_frame_interp_00012,490,0,"Elevated eructation activity observed. The thermal emission centroid at (172, 188) reflects continuous gas release typical of high forage diet."
+SEQ_0491_frame_interp_00030,491,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 22.0.
+SEQ_0498_frame_01294,498,0,Thermal imaging confirms high metabolic state: 9.0% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0497_frame_00096,497,0,The subject is actively ruminating with visible gas emission covering 15.0% of the thermal field at moderate intensity.
+SEQ_0497_frame_00351,497,0,High forage intake evident: gas dispersion of 35.0 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0492_frame_00374,492,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (174, 96) and 3.1% coverage."
+SEQ_0498_frame_02089,498,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 49.1 units.
+SEQ_0498_frame_01270,498,0,Significant methane release detected. The high forage diet correlates with 3.6% gas coverage and 1 distinct emission region(s).
+SEQ_0496_frame_00208,496,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 7.2% field coverage.
+SEQ_0495_frame_00495,495,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 58.0 and peak intensity of 176."
+SEQ_0496_frame_00100,496,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 4.2% of the thermal field, centered at (187, 126)."
+SEQ_0498_frame_01393,498,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 19.4% of the frame.
+SEQ_0496_frame_00351,496,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0498_frame_00750,498,0,The cow displays vigorous digestive processing. Gas dispersion index of 43.2 indicates active eructation events.
+SEQ_0498_frame_00719,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 11.7% spatial coverage.
+SEQ_0498_frame_01422,498,0,"Pronounced gas plume detected at coordinates (145, 121) with a dispersion of 67.9, consistent with active rumination."
+SEQ_0493_frame_interp_00025,493,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 0.7% of the field.
+SEQ_0510_frame_00215,510,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 106 and maximum of 182.
+SEQ_0510_frame_00751,510,0,The animal is in an active rumination phase. Gas coverage of 4.5% with moderate thermal signature suggests high forage consumption.
+SEQ_0496_frame_00603,496,0,"High metabolic output detected: the gas plume extends over 5.6% of the observation area, indicating robust digestive function."
+SEQ_0492_frame_00624,492,0,"Elevated eructation activity observed. The thermal emission centroid at (160, 117) reflects continuous gas release typical of high forage diet."
+SEQ_0498_frame_02009,498,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 38.4.
+SEQ_0495_frame_00621,495,0,Thermal imaging confirms high metabolic state: 31.0% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0495_frame_00250,495,0,The subject is actively ruminating with visible gas emission covering 17.6% of the thermal field at moderate intensity.
+SEQ_0493_frame_interp_00028,493,0,High forage intake evident: gas dispersion of 54.9 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0488_frame_interp_00009,488,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (129, 114) and 19.1% coverage."
+SEQ_0498_frame_01295,498,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 41.5 units.
+SEQ_0496_frame_00516,496,0,Significant methane release detected. The high forage diet correlates with 8.8% gas coverage and 1 distinct emission region(s).
+SEQ_0496_frame_00634,496,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 8.2% field coverage.
+SEQ_0484_frame_interp_00047,484,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 50.8 and peak intensity of 185."
+SEQ_0510_frame_00598,510,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 4.2% of the thermal field, centered at (137, 137)."
+SEQ_0498_frame_01893,498,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 27.7% of the frame.
+SEQ_0496_frame_00073,496,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0488_frame_00038,488,0,The cow displays vigorous digestive processing. Gas dispersion index of 26.7 indicates active eructation events.
+SEQ_0510_frame_00075,510,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 2.0% spatial coverage.
+SEQ_0491_frame_00089,491,0,"Pronounced gas plume detected at coordinates (161, 163) with a dispersion of 22.1, consistent with active rumination."
+SEQ_0490_frame_00066,490,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 0.4% of the field.
+SEQ_0498_frame_02029,498,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 117 and maximum of 236.
+SEQ_0492_frame_00513,492,0,The animal is in an active rumination phase. Gas coverage of 3.8% with moderate thermal signature suggests high forage consumption.
+SEQ_0496_frame_00326,496,0,"High metabolic output detected: the gas plume extends over 19.5% of the observation area, indicating robust digestive function."
+SEQ_0498_frame_01272,498,0,"Elevated eructation activity observed. The thermal emission centroid at (160, 111) reflects continuous gas release typical of high forage diet."
+SEQ_0484_frame_interp_00048,484,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 48.2.
+SEQ_0488_frame_interp_00019,488,0,Thermal imaging confirms high metabolic state: 24.2% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0496_frame_00112,496,0,The subject is actively ruminating with visible gas emission covering 15.3% of the thermal field at moderate intensity.
+SEQ_0510_frame_00133,510,0,High forage intake evident: gas dispersion of 18.0 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0498_frame_01048,498,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (191, 172) and 21.3% coverage."
+SEQ_0496_frame_00193,496,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 38.4 units.
+SEQ_0491_frame_interp_00020,491,0,Significant methane release detected. The high forage diet correlates with 10.3% gas coverage and 1 distinct emission region(s).
+SEQ_0510_frame_00379,510,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 7.9% field coverage.
+SEQ_0498_frame_01873,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 68.3 and peak intensity of 143."
+SEQ_0496_frame_00467,496,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 5.3% of the thermal field, centered at (189, 98)."
+SEQ_0492_frame_00476,492,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 2.6% of the frame.
+SEQ_0497_frame_00560,497,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0492_frame_00350,492,0,The cow displays vigorous digestive processing. Gas dispersion index of 34.4 indicates active eructation events.
+SEQ_0495_frame_00194,495,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 7.1% spatial coverage.
+SEQ_0495_frame_00128,495,0,"Pronounced gas plume detected at coordinates (224, 125) with a dispersion of 61.3, consistent with active rumination."
+SEQ_0510_frame_00271,510,0,The subject's metabolic profile indicates peak digestive activity. 2 separate emission zone(s) are visible across 7.9% of the field.
+SEQ_0491_frame_interp_00010,491,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 80 and maximum of 168.
+SEQ_0498_frame_01279,498,0,The animal is in an active rumination phase. Gas coverage of 22.0% with moderate thermal signature suggests high forage consumption.
+SEQ_0491_frame_interp_00003,491,0,"High metabolic output detected: the gas plume extends over 6.1% of the observation area, indicating robust digestive function."
+SEQ_0495_frame_00307,495,0,"Elevated eructation activity observed. The thermal emission centroid at (225, 183) reflects continuous gas release typical of high forage diet."
+SEQ_0498_frame_01914,498,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 39.9.
+SEQ_0498_frame_00133,498,0,Thermal imaging confirms high metabolic state: 20.5% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0498_frame_00422,498,0,The subject is actively ruminating with visible gas emission covering 4.7% of the thermal field at moderate intensity.
+SEQ_0496_frame_00029,496,0,High forage intake evident: gas dispersion of 48.4 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0498_frame_00854,498,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (229, 139) and 14.3% coverage."
+SEQ_0498_frame_01753,498,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 33.1 units.
+SEQ_0495_frame_00282,495,0,Significant methane release detected. The high forage diet correlates with 5.9% gas coverage and 1 distinct emission region(s).
+SEQ_0497_frame_00204,497,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 2.6% field coverage.
+SEQ_0498_frame_00888,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 41.3 and peak intensity of 216."
+SEQ_0496_frame_00399,496,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 9.9% of the thermal field, centered at (186, 187)."
+SEQ_0488_frame_00042,488,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 18.8% of the frame.
+SEQ_0492_frame_00519,492,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0498_frame_01797,498,0,The cow displays vigorous digestive processing. Gas dispersion index of 35.8 indicates active eructation events.
+SEQ_0498_frame_01012,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 14.7% spatial coverage.
+SEQ_0498_frame_01864,498,0,"Pronounced gas plume detected at coordinates (250, 160) with a dispersion of 56.1, consistent with active rumination."
+SEQ_0497_frame_00775,497,0,The subject's metabolic profile indicates peak digestive activity. 2 separate emission zone(s) are visible across 17.5% of the field.
+SEQ_0497_frame_00007,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 112 and maximum of 224.
+SEQ_0497_frame_00177,497,0,The animal is in an active rumination phase. Gas coverage of 17.0% with moderate thermal signature suggests high forage consumption.
+SEQ_0490_frame_00049,490,0,"High metabolic output detected: the gas plume extends over 4.1% of the observation area, indicating robust digestive function."
+SEQ_0510_frame_00173,510,0,"Elevated eructation activity observed. The thermal emission centroid at (110, 133) reflects continuous gas release typical of high forage diet."
+SEQ_0493_frame_00009,493,0,The bovine demonstrates active gastric fermentation with 2 gas cluster(s) and a spatial dispersion of 24.0.
+SEQ_0486_frame_interp_00027,486,0,Thermal imaging confirms high metabolic state: 17.2% gas coverage with low emission intensity across the monitored region.
+SEQ_0510_frame_00837,510,0,The subject is actively ruminating with visible gas emission covering 10.7% of the thermal field at moderate intensity.
+SEQ_0510_frame_00702,510,0,High forage intake evident: gas dispersion of 20.7 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0497_frame_00164,497,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (164, 108) and 9.9% coverage."
+SEQ_0484_frame_interp_00029,484,0,Active eructation state: the thermal plume shows low intensity with a spatial spread of 40.0 units.
+SEQ_0491_frame_interp_00014,491,0,Significant methane release detected. The high forage diet correlates with 14.6% gas coverage and 1 distinct emission region(s).
+SEQ_0498_frame_00734,498,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 2.8% field coverage.
+SEQ_0498_frame_01815,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 56.3 and peak intensity of 126."
+SEQ_0498_frame_01243,498,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 14.7% of the thermal field, centered at (106, 79)."
+SEQ_0496_frame_00089,496,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 5.4% of the frame.
+SEQ_0497_frame_00216,497,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0486_frame_interp_00011,486,0,The cow displays vigorous digestive processing. Gas dispersion index of 28.1 indicates active eructation events.
+SEQ_0497_frame_00240,497,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 30.5% spatial coverage.
+SEQ_0498_frame_00932,498,0,"Pronounced gas plume detected at coordinates (179, 48) with a dispersion of 81.0, consistent with active rumination."
+SEQ_0484_frame_interp_00025,484,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 33.2% of the field.
+SEQ_0498_frame_02062,498,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 114 and maximum of 225.
+SEQ_0495_frame_00122,495,0,The animal is in an active rumination phase. Gas coverage of 8.8% with moderate thermal signature suggests high forage consumption.
+SEQ_0497_frame_00416,497,0,"High metabolic output detected: the gas plume extends over 8.2% of the observation area, indicating robust digestive function."
+SEQ_0498_frame_00232,498,0,"Elevated eructation activity observed. The thermal emission centroid at (174, 109) reflects continuous gas release typical of high forage diet."
+SEQ_0496_frame_00099,496,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 37.3.
+SEQ_0497_frame_00188,497,0,Thermal imaging confirms high metabolic state: 31.8% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0497_frame_00364,497,0,The subject is actively ruminating with visible gas emission covering 17.1% of the thermal field at moderate intensity.
+SEQ_0498_frame_01256,498,0,High forage intake evident: gas dispersion of 31.3 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0498_frame_01716,498,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (160, 163) and 26.9% coverage."
+SEQ_0490_frame_interp_00026,490,0,Active eructation state: the thermal plume shows low intensity with a spatial spread of 32.5 units.
+SEQ_0498_frame_01737,498,0,Significant methane release detected. The high forage diet correlates with 23.6% gas coverage and 1 distinct emission region(s).
+SEQ_0495_frame_00035,495,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 13.6% field coverage.
+SEQ_0493_frame_00030,493,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 20.7 and peak intensity of 151."
+SEQ_0498_frame_01370,498,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 7.0% of the thermal field, centered at (182, 74)."
+SEQ_0510_frame_00289,510,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 7.5% of the frame.
+SEQ_0497_frame_00588,497,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0495_frame_00577,495,0,The cow displays vigorous digestive processing. Gas dispersion index of 60.9 indicates active eructation events.
+SEQ_0498_frame_01697,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 2.3% spatial coverage.
+SEQ_0510_frame_00019,510,0,"Pronounced gas plume detected at coordinates (121, 166) with a dispersion of 34.2, consistent with active rumination."
+SEQ_0510_frame_00424,510,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 10.3% of the field.
+SEQ_0497_frame_00260,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 107 and maximum of 121.
+SEQ_0497_frame_00033,497,0,The animal is in an active rumination phase. Gas coverage of 18.2% with moderate thermal signature suggests high forage consumption.
+SEQ_0493_frame_interp_00014,493,0,"High metabolic output detected: the gas plume extends over 5.6% of the observation area, indicating robust digestive function."
+SEQ_0510_frame_00462,510,0,"Elevated eructation activity observed. The thermal emission centroid at (112, 136) reflects continuous gas release typical of high forage diet."
+SEQ_0510_frame_00219,510,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 26.1.
+SEQ_0486_frame_interp_00028,486,0,Thermal imaging confirms high metabolic state: 16.4% gas coverage with low emission intensity across the monitored region.
+SEQ_0510_frame_00097,510,0,The subject is actively ruminating with visible gas emission covering 7.4% of the thermal field at moderate intensity.
+SEQ_0495_frame_00195,495,0,High forage intake evident: gas dispersion of 77.8 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0486_frame_interp_00007,486,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (137, 172) and 16.5% coverage."
+SEQ_0498_frame_02130,498,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 35.6 units.
+SEQ_0496_frame_00535,496,0,Significant methane release detected. The high forage diet correlates with 27.6% gas coverage and 1 distinct emission region(s).
+SEQ_0491_frame_00058,491,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 6.2% field coverage.
+SEQ_0486_frame_interp_00006,486,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 40.4 and peak intensity of 164."
+SEQ_0492_frame_00598,492,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 4.8% of the thermal field, centered at (149, 108)."
+SEQ_0495_frame_00439,495,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 12.8% of the frame.
+SEQ_0510_frame_00823,510,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0510_frame_00708,510,0,The cow displays vigorous digestive processing. Gas dispersion index of 41.5 indicates active eructation events.
+SEQ_0497_frame_00578,497,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 32.2% spatial coverage.
+SEQ_0498_frame_00101,498,0,"Pronounced gas plume detected at coordinates (199, 152) with a dispersion of 53.3, consistent with active rumination."
+SEQ_0495_frame_00567,495,0,The subject's metabolic profile indicates peak digestive activity. 2 separate emission zone(s) are visible across 15.1% of the field.
+SEQ_0496_frame_00461,496,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 118 and maximum of 216.
+SEQ_0484_frame_interp_00002,484,0,The animal is in an active rumination phase. Gas coverage of 9.8% with moderate thermal signature suggests high forage consumption.
+SEQ_0496_frame_00492,496,0,"High metabolic output detected: the gas plume extends over 13.5% of the observation area, indicating robust digestive function."
+SEQ_0510_frame_00182,510,0,"Elevated eructation activity observed. The thermal emission centroid at (136, 159) reflects continuous gas release typical of high forage diet."
+SEQ_0498_frame_01316,498,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 72.8.
+SEQ_0498_frame_01224,498,0,Thermal imaging confirms high metabolic state: 9.5% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0498_frame_00387,498,0,The subject is actively ruminating with visible gas emission covering 11.5% of the thermal field at moderate intensity.
+SEQ_0496_frame_00228,496,0,High forage intake evident: gas dispersion of 50.7 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0491_frame_00074,491,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (185, 185) and 8.5% coverage."
+SEQ_0498_frame_01588,498,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 32.5 units.
+SEQ_0496_frame_00551,496,0,Significant methane release detected. The high forage diet correlates with 18.1% gas coverage and 1 distinct emission region(s).
+SEQ_0497_frame_00736,497,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 12.8% field coverage.
+SEQ_0496_frame_00447,496,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 81.4 and peak intensity of 211."
+SEQ_0497_frame_00298,497,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 20.5% of the thermal field, centered at (165, 151)."
+SEQ_0483_frame_interp_00046,483,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 5.5% of the frame.
+SEQ_0491_frame_00152,491,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0510_frame_00832,510,0,The cow displays vigorous digestive processing. Gas dispersion index of 22.0 indicates active eructation events.
+SEQ_0493_frame_interp_00023,493,0,High forage feeding state confirmed: thermal overlay reveals low emission intensity with 2.6% spatial coverage.
+SEQ_0483_frame_interp_00010,483,0,"Pronounced gas plume detected at coordinates (144, 143) with a dispersion of 31.8, consistent with active rumination."
+SEQ_0495_frame_00655,495,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 8.1% of the field.
+SEQ_0498_frame_00414,498,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 118 and maximum of 229.
+SEQ_0497_frame_00217,497,0,The animal is in an active rumination phase. Gas coverage of 21.6% with moderate thermal signature suggests high forage consumption.
+SEQ_0510_frame_00428,510,0,"High metabolic output detected: the gas plume extends over 6.1% of the observation area, indicating robust digestive function."
+SEQ_0497_frame_00510,497,0,"Elevated eructation activity observed. The thermal emission centroid at (199, 139) reflects continuous gas release typical of high forage diet."
+SEQ_0491_frame_00033,491,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 14.5.
+SEQ_0498_frame_01840,498,0,Thermal imaging confirms high metabolic state: 13.7% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0483_frame_interp_00036,483,0,The subject is actively ruminating with visible gas emission covering 7.2% of the thermal field at moderate intensity.
+SEQ_0497_frame_00299,497,0,High forage intake evident: gas dispersion of 43.3 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0496_frame_00740,496,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (132, 85) and 23.8% coverage."
+SEQ_0492_frame_00618,492,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 23.3 units.
+SEQ_0497_frame_00554,497,0,Significant methane release detected. The high forage diet correlates with 26.1% gas coverage and 1 distinct emission region(s).
+SEQ_0498_frame_01421,498,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 21.6% field coverage.
+SEQ_0488_frame_00032,488,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 56.7 and peak intensity of 153."
+SEQ_0497_frame_00862,497,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 8.2% of the thermal field, centered at (211, 100)."
+SEQ_0496_frame_00414,496,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 17.2% of the frame.
+SEQ_0488_frame_interp_00023,488,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0495_frame_00057,495,0,The cow displays vigorous digestive processing. Gas dispersion index of 59.2 indicates active eructation events.
+SEQ_0497_frame_00366,497,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 18.1% spatial coverage.
+SEQ_0498_frame_00461,498,0,"Pronounced gas plume detected at coordinates (229, 141) with a dispersion of 56.8, consistent with active rumination."
+SEQ_0498_frame_01627,498,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 17.9% of the field.
+SEQ_0497_frame_00235,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 106 and maximum of 130.
+SEQ_0486_frame_interp_00000,486,0,The animal is in an active rumination phase. Gas coverage of 7.6% with moderate thermal signature suggests high forage consumption.
+SEQ_0510_frame_00205,510,0,"High metabolic output detected: the gas plume extends over 3.8% of the observation area, indicating robust digestive function."
+SEQ_0491_frame_interp_00024,491,0,"Elevated eructation activity observed. The thermal emission centroid at (196, 187) reflects continuous gas release typical of high forage diet."
+SEQ_0510_frame_00550,510,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 33.4.
+SEQ_0496_frame_00393,496,0,Thermal imaging confirms high metabolic state: 10.9% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0510_frame_00343,510,0,The subject is actively ruminating with visible gas emission covering 12.3% of the thermal field at moderate intensity.
+SEQ_0496_frame_00147,496,0,High forage intake evident: gas dispersion of 48.6 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0493_frame_00022,493,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (171, 105) and 1.3% coverage."
+SEQ_0496_frame_00469,496,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 79.4 units.
+SEQ_0497_frame_00746,497,0,Significant methane release detected. The high forage diet correlates with 20.6% gas coverage and 2 distinct emission region(s).
+SEQ_0510_frame_00442,510,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 8.1% field coverage.
+SEQ_0497_frame_00696,497,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 40.8 and peak intensity of 210."
+SEQ_0496_frame_00183,496,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 11.9% of the thermal field, centered at (208, 156)."
+SEQ_0510_frame_00875,510,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 5.5% of the frame.
+SEQ_0495_frame_00129,495,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0491_frame_00075,491,0,The cow displays vigorous digestive processing. Gas dispersion index of 25.6 indicates active eructation events.
+SEQ_0496_frame_00400,496,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 11.8% spatial coverage.
+SEQ_0484_frame_00144,484,0,"Pronounced gas plume detected at coordinates (101, 135) with a dispersion of 45.5, consistent with active rumination."
+SEQ_0497_frame_00088,497,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 19.4% of the field.
+SEQ_0490_frame_interp_00041,490,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 81 and maximum of 130.
+SEQ_0497_frame_00620,497,0,The animal is in an active rumination phase. Gas coverage of 3.6% with moderate thermal signature suggests high forage consumption.
+SEQ_0498_frame_01039,498,0,"High metabolic output detected: the gas plume extends over 6.2% of the observation area, indicating robust digestive function."
+SEQ_0498_frame_00896,498,0,"Elevated eructation activity observed. The thermal emission centroid at (231, 180) reflects continuous gas release typical of high forage diet."
+SEQ_0498_frame_00875,498,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 51.8.
+SEQ_0498_frame_01705,498,0,Thermal imaging confirms high metabolic state: 8.7% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0486_frame_00130,486,0,The subject is actively ruminating with visible gas emission covering 10.1% of the thermal field at moderate intensity.
+SEQ_0492_frame_00116,492,0,High forage intake evident: gas dispersion of 32.7 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0510_frame_00779,510,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (118, 97) and 4.3% coverage."
+SEQ_0483_frame_interp_00013,483,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 36.0 units.
+SEQ_0498_frame_01811,498,0,Significant methane release detected. The high forage diet correlates with 19.0% gas coverage and 1 distinct emission region(s).
+SEQ_0510_frame_00178,510,0,Behavioural state: active rumination. Gas emission parameters indicate low metabolic throughput with 6.4% field coverage.
+SEQ_0496_frame_00091,496,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 47.5 and peak intensity of 201."
+SEQ_0498_frame_01262,498,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 4.1% of the thermal field, centered at (123, 55)."
+SEQ_0496_frame_00167,496,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 11.3% of the frame.
+SEQ_0495_frame_00664,495,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0510_frame_00635,510,0,The cow displays vigorous digestive processing. Gas dispersion index of 39.3 indicates active eructation events.
+SEQ_0498_frame_01344,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 7.2% spatial coverage.
+SEQ_0498_frame_00897,498,0,"Pronounced gas plume detected at coordinates (256, 185) with a dispersion of 48.1, consistent with active rumination."
+SEQ_0493_frame_interp_00011,493,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 1.3% of the field.
+SEQ_0497_frame_00536,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 113 and maximum of 184.
+SEQ_0496_frame_00201,496,0,The animal is in an active rumination phase. Gas coverage of 4.4% with moderate thermal signature suggests high forage consumption.
+SEQ_0493_frame_00035,493,0,"High metabolic output detected: the gas plume extends over 3.0% of the observation area, indicating robust digestive function."
+SEQ_0495_frame_00578,495,0,"Elevated eructation activity observed. The thermal emission centroid at (153, 91) reflects continuous gas release typical of high forage diet."
+SEQ_0510_frame_00375,510,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 22.3.
+SEQ_0498_frame_01989,498,0,Thermal imaging confirms high metabolic state: 35.2% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0491_frame_interp_00021,491,0,The subject is actively ruminating with visible gas emission covering 10.5% of the thermal field at low intensity.
+SEQ_0497_frame_00826,497,0,High forage intake evident: gas dispersion of 44.5 and 2 emission zone(s) indicate sustained digestive processing.
+SEQ_0497_frame_00791,497,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (237, 38) and 10.1% coverage."
+SEQ_0497_frame_00697,497,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 32.5 units.
+SEQ_0496_frame_00638,496,0,Significant methane release detected. The high forage diet correlates with 4.5% gas coverage and 1 distinct emission region(s).
+SEQ_0498_frame_01013,498,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 8.3% field coverage.
+SEQ_0498_frame_01775,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 41.2 and peak intensity of 224."
+SEQ_0495_frame_00553,495,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 7.4% of the thermal field, centered at (175, 97)."
+SEQ_0497_frame_00304,497,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 21.2% of the frame.
+SEQ_0496_frame_00716,496,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0497_frame_00529,497,0,The cow displays vigorous digestive processing. Gas dispersion index of 45.8 indicates active eructation events.
+SEQ_0495_frame_00091,495,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 23.8% spatial coverage.
+SEQ_0495_frame_00023,495,0,"Pronounced gas plume detected at coordinates (211, 121) with a dispersion of 60.4, consistent with active rumination."
+SEQ_0498_frame_01280,498,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 14.1% of the field.
+SEQ_0510_frame_00551,510,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 103 and maximum of 212.
+SEQ_0510_frame_00626,510,0,The animal is in an active rumination phase. Gas coverage of 5.9% with moderate thermal signature suggests high forage consumption.
+SEQ_0498_frame_00424,498,0,"High metabolic output detected: the gas plume extends over 23.6% of the observation area, indicating robust digestive function."
+SEQ_0510_frame_00049,510,0,"Elevated eructation activity observed. The thermal emission centroid at (128, 173) reflects continuous gas release typical of high forage diet."
+SEQ_0484_frame_00146,484,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 49.7.
+SEQ_0498_frame_01238,498,0,Thermal imaging confirms high metabolic state: 17.2% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0488_frame_00096,488,0,The subject is actively ruminating with visible gas emission covering 5.9% of the thermal field at moderate intensity.
+SEQ_0497_frame_00465,497,0,High forage intake evident: gas dispersion of 41.8 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0484_frame_00173,484,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (99, 118) and 17.4% coverage."
+SEQ_0496_frame_00026,496,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 41.6 units.
+SEQ_0495_frame_00496,495,0,Significant methane release detected. The high forage diet correlates with 21.7% gas coverage and 1 distinct emission region(s).
+SEQ_0483_frame_interp_00002,483,0,Behavioural state: active rumination. Gas emission parameters indicate low metabolic throughput with 26.0% field coverage.
+SEQ_0498_frame_00399,498,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 67.9 and peak intensity of 184."
+SEQ_0492_frame_00025,492,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 4.2% of the thermal field, centered at (148, 165)."
+SEQ_0492_frame_00491,492,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 3.7% of the frame.
+SEQ_0497_frame_00038,497,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0497_frame_00193,497,0,The cow displays vigorous digestive processing. Gas dispersion index of 40.3 indicates active eructation events.
+SEQ_0498_frame_01325,498,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 14.2% spatial coverage.
+SEQ_0497_frame_00720,497,0,"Pronounced gas plume detected at coordinates (235, 171) with a dispersion of 43.8, consistent with active rumination."
+SEQ_0495_frame_00187,495,0,The subject's metabolic profile indicates peak digestive activity. 3 separate emission zone(s) are visible across 11.5% of the field.
+SEQ_0497_frame_00539,497,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 115 and maximum of 128.
+SEQ_0497_frame_00201,497,0,The animal is in an active rumination phase. Gas coverage of 1.2% with moderate thermal signature suggests high forage consumption.
+SEQ_0493_frame_interp_00017,493,0,"High metabolic output detected: the gas plume extends over 2.1% of the observation area, indicating robust digestive function."
+SEQ_0496_frame_00277,496,0,"Elevated eructation activity observed. The thermal emission centroid at (171, 119) reflects continuous gas release typical of high forage diet."
+SEQ_0510_frame_00145,510,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 25.0.
+SEQ_0496_frame_00071,496,0,Thermal imaging confirms high metabolic state: 7.0% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0498_frame_01632,498,0,The subject is actively ruminating with visible gas emission covering 0.9% of the thermal field at moderate intensity.
+SEQ_0492_frame_00542,492,0,High forage intake evident: gas dispersion of 26.8 and 1 emission zone(s) indicate sustained digestive processing.
+SEQ_0491_frame_interp_00013,491,0,"The cow exhibits peak metabolic behaviour with thermal gas signature centered at (181, 183) and 10.9% coverage."
+SEQ_0497_frame_00569,497,0,Active eructation state: the thermal plume shows moderate intensity with a spatial spread of 61.5 units.
+SEQ_0496_frame_00725,496,0,Significant methane release detected. The high forage diet correlates with 8.9% gas coverage and 1 distinct emission region(s).
+SEQ_0488_frame_interp_00020,488,0,Behavioural state: active rumination. Gas emission parameters indicate moderate metabolic throughput with 24.6% field coverage.
+SEQ_0486_frame_interp_00023,486,0,"The thermal profile shows vigorous digestive activity, with gas dispersion at 26.0 and peak intensity of 135."
+SEQ_0488_frame_00028,488,0,"The bovine subject exhibits high metabolic activity with a gas emission area covering 14.0% of the thermal field, centered at (135, 123)."
+SEQ_0498_frame_00377,498,0,Active rumination state detected. The thermal signature shows a moderate-intensity gas plume dispersed across 12.9% of the frame.
+SEQ_0510_frame_00420,510,0,"Elevated methane emission observed with 1 distinct gas region(s), characteristic of high forage dietary intake."
+SEQ_0498_frame_00882,498,0,The cow displays vigorous digestive processing. Gas dispersion index of 43.5 indicates active eructation events.
+SEQ_0488_frame_00051,488,0,High forage feeding state confirmed: thermal overlay reveals moderate emission intensity with 13.0% spatial coverage.
+SEQ_0492_frame_00019,492,0,"Pronounced gas plume detected at coordinates (149, 157) with a dispersion of 21.2, consistent with active rumination."
+SEQ_0496_frame_00542,496,0,The subject's metabolic profile indicates peak digestive activity. 1 separate emission zone(s) are visible across 20.4% of the field.
+SEQ_0483_frame_interp_00037,483,0,Thermal behavioural analysis reveals sustained high-emission state with mean gas intensity of 101 and maximum of 168.
+SEQ_0496_frame_00486,496,0,The animal is in an active rumination phase. Gas coverage of 17.8% with moderate thermal signature suggests high forage consumption.
+SEQ_0498_frame_00248,498,0,"High metabolic output detected: the gas plume extends over 4.0% of the observation area, indicating robust digestive function."
+SEQ_0496_frame_00586,496,0,"Elevated eructation activity observed. The thermal emission centroid at (226, 142) reflects continuous gas release typical of high forage diet."
+SEQ_0498_frame_00873,498,0,The bovine demonstrates active gastric fermentation with 1 gas cluster(s) and a spatial dispersion of 51.4.
+SEQ_0486_frame_00101,486,0,Thermal imaging confirms high metabolic state: 16.4% gas coverage with moderate emission intensity across the monitored region.
+SEQ_0490_frame_interp_00040,490,0,The subject is actively ruminating with visible gas emission covering 1.1% of the thermal field at low intensity.
+SEQ_0501_frame_02456,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 6.7% of the thermal field.
+SEQ_0499_frame_00413,499,1,Normal digestive equilibrium observed. Gas coverage at 2.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0499_frame_00378,499,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 42.8.
+SEQ_0503_frame_01089,503,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (166, 121)."
+SEQ_0499_frame_00234,499,1,The subject's metabolic rate is within normal parameters. Gas area of 4.8% and moderate emission intensity indicate dietary balance.
+SEQ_0500_frame_00754,500,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 104.
+SEQ_0504_frame_00185,504,1,The animal maintains thermal equilibrium with consistent gas output at 2.0% coverage and 68.4 dispersion.
+SEQ_0504_frame_00142,504,1,Balanced dietary intake reflected in moderate gas emission: 3.2% spatial coverage with moderate thermal intensity.
+SEQ_0504_frame_01511,504,1,"Homeostatic regulation observed. The gas plume at (194, 156) indicates normal rumen function under balanced feeding."
+SEQ_0504_frame_02354,504,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 30.4 and 6.3% coverage are consistent with control diet.
+SEQ_0504_frame_00081,504,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0503_frame_01539,503,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (136, 105)."
+SEQ_0500_frame_01068,500,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 0.1%, intensity: low."
+SEQ_0500_frame_00147,500,1,The subject shows typical homeostatic gas emission with 7.4% coverage and 1 distinct region(s).
+SEQ_0504_frame_02255,504,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 14.6.
+SEQ_0503_frame_01996,503,1,The cow's digestive output is stable. Gas emission area of 16.2% and mean intensity 113 reflect dietary equilibrium.
+SEQ_0501_frame_01466,501,1,Normal behavioural state observed with moderate gas dispersion (21.1) and 3.7% thermal field coverage.
+SEQ_0500_frame_00629,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0500_frame_00995,500,1,"Controlled gas emission at (217, 164) with 1.6% coverage suggests balanced rumen activity."
+SEQ_0501_frame_01154,501,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 219.
+SEQ_0501_frame_00235,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 8.6% of the thermal field.
+SEQ_0503_frame_00402,503,1,Normal digestive equilibrium observed. Gas coverage at 5.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0504_frame_01519,504,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 24.7.
+SEQ_0504_frame_01821,504,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (196, 154)."
+SEQ_0504_frame_01615,504,1,The subject's metabolic rate is within normal parameters. Gas area of 4.5% and moderate emission intensity indicate dietary balance.
+SEQ_0501_frame_01325,501,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 103.
+SEQ_0500_frame_01133,500,1,The animal maintains thermal equilibrium with consistent gas output at 0.8% coverage and 16.2 dispersion.
+SEQ_0501_frame_02175,501,1,Balanced dietary intake reflected in moderate gas emission: 3.7% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_02967,503,1,"Homeostatic regulation observed. The gas plume at (153, 163) indicates normal rumen function under balanced feeding."
+SEQ_0500_frame_00006,500,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 41.6 and 4.4% coverage are consistent with control diet.
+SEQ_0504_frame_01576,504,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0499_frame_01015,499,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (205, 161)."
+SEQ_0503_frame_01061,503,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 1.8%, intensity: moderate."
+SEQ_0501_frame_01028,501,1,The subject shows typical homeostatic gas emission with 6.9% coverage and 1 distinct region(s).
+SEQ_0501_frame_00229,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 53.4.
+SEQ_0501_frame_02184,501,1,The cow's digestive output is stable. Gas emission area of 4.4% and mean intensity 106 reflect dietary equilibrium.
+SEQ_0503_frame_02104,503,1,Normal behavioural state observed with moderate gas dispersion (22.2) and 5.7% thermal field coverage.
+SEQ_0501_frame_00089,501,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0501_frame_01671,501,1,"Controlled gas emission at (152, 199) with 7.4% coverage suggests balanced rumen activity."
+SEQ_0503_frame_00254,503,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 177.
+SEQ_0501_frame_00467,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 9.4% of the thermal field.
+SEQ_0503_frame_01743,503,1,Normal digestive equilibrium observed. Gas coverage at 6.6% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0499_frame_00028,499,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 21.9.
+SEQ_0503_frame_01485,503,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (178, 143)."
+SEQ_0500_frame_00792,500,1,The subject's metabolic rate is within normal parameters. Gas area of 2.8% and moderate emission intensity indicate dietary balance.
+SEQ_0501_frame_00032,501,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 103.
+SEQ_0504_frame_02324,504,1,The animal maintains thermal equilibrium with consistent gas output at 7.1% coverage and 34.5 dispersion.
+SEQ_0499_frame_00110,499,1,Balanced dietary intake reflected in moderate gas emission: 17.6% spatial coverage with moderate thermal intensity.
+SEQ_0501_frame_00259,501,1,"Homeostatic regulation observed. The gas plume at (186, 163) indicates normal rumen function under balanced feeding."
+SEQ_0504_frame_02274,504,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 36.4 and 6.8% coverage are consistent with control diet.
+SEQ_0501_frame_01460,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0501_frame_02613,501,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (169, 212)."
+SEQ_0501_frame_01461,501,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 14.5%, intensity: moderate."
+SEQ_0500_frame_01081,500,1,The subject shows typical homeostatic gas emission with 0.3% coverage and 1 distinct region(s).
+SEQ_0501_frame_01617,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 39.1.
+SEQ_0503_frame_01399,503,1,The cow's digestive output is stable. Gas emission area of 5.1% and mean intensity 118 reflect dietary equilibrium.
+SEQ_0501_frame_01703,501,1,Normal behavioural state observed with moderate gas dispersion (36.3) and 5.7% thermal field coverage.
+SEQ_0500_frame_01180,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0500_frame_01196,500,1,"Controlled gas emission at (188, 152) with 2.4% coverage suggests balanced rumen activity."
+SEQ_0500_frame_01090,500,1,Homeostatic digestive behaviour: the thermal signature shows low gas intensity with peak value of 182.
+SEQ_0501_frame_00995,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 8.3% of the thermal field.
+SEQ_0499_frame_00474,499,1,Normal digestive equilibrium observed. Gas coverage at 3.5% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_02018,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 15.0.
+SEQ_0501_frame_00383,501,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (136, 193)."
+SEQ_0499_frame_00537,499,1,The subject's metabolic rate is within normal parameters. Gas area of 17.9% and moderate emission intensity indicate dietary balance.
+SEQ_0503_frame_00387,503,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 115.
+SEQ_0501_frame_02422,501,1,The animal maintains thermal equilibrium with consistent gas output at 7.5% coverage and 35.9 dispersion.
+SEQ_0503_frame_02656,503,1,Balanced dietary intake reflected in moderate gas emission: 3.3% spatial coverage with moderate thermal intensity.
+SEQ_0504_frame_00601,504,1,"Homeostatic regulation observed. The gas plume at (193, 162) indicates normal rumen function under balanced feeding."
+SEQ_0500_frame_00607,500,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 9.7 and 0.3% coverage are consistent with control diet.
+SEQ_0501_frame_02060,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0501_frame_01455,501,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (145, 153)."
+SEQ_0501_frame_00450,501,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 19.5%, intensity: moderate."
+SEQ_0501_frame_02280,501,1,The subject shows typical homeostatic gas emission with 8.6% coverage and 1 distinct region(s).
+SEQ_0504_frame_00859,504,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 44.3.
+SEQ_0503_frame_00277,503,1,The cow's digestive output is stable. Gas emission area of 3.4% and mean intensity 113 reflect dietary equilibrium.
+SEQ_0504_frame_02291,504,1,Normal behavioural state observed with moderate gas dispersion (16.5) and 3.8% thermal field coverage.
+SEQ_0500_frame_00218,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0501_frame_01291,501,1,"Controlled gas emission at (138, 151) with 6.0% coverage suggests balanced rumen activity."
+SEQ_0500_frame_00011,500,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 203.
+SEQ_0500_frame_01156,500,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 3.4% of the thermal field.
+SEQ_0503_frame_00802,503,1,Normal digestive equilibrium observed. Gas coverage at 13.4% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0499_frame_00218,499,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 46.9.
+SEQ_0503_frame_00094,503,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (107, 95)."
+SEQ_0503_frame_00424,503,1,The subject's metabolic rate is within normal parameters. Gas area of 2.4% and moderate emission intensity indicate dietary balance.
+SEQ_0499_frame_00936,499,1,Steady-state digestive processing observed. 2 emission zone(s) present with mean intensity of 102.
+SEQ_0499_frame_01004,499,1,The animal maintains thermal equilibrium with consistent gas output at 1.4% coverage and 29.1 dispersion.
+SEQ_0501_frame_00372,501,1,Balanced dietary intake reflected in moderate gas emission: 13.0% spatial coverage with moderate thermal intensity.
+SEQ_0499_frame_00065,499,1,"Homeostatic regulation observed. The gas plume at (172, 140) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_00204,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 46.1 and 14.8% coverage are consistent with control diet.
+SEQ_0501_frame_02424,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0499_frame_00656,499,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (126, 122)."
+SEQ_0504_frame_00058,504,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 23.4%, intensity: moderate."
+SEQ_0500_frame_00412,500,1,The subject shows typical homeostatic gas emission with 0.9% coverage and 1 distinct region(s).
+SEQ_0499_frame_00044,499,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 51.8.
+SEQ_0499_frame_00305,499,1,The cow's digestive output is stable. Gas emission area of 18.6% and mean intensity 111 reflect dietary equilibrium.
+SEQ_0500_frame_00420,500,1,Normal behavioural state observed with moderate gas dispersion (12.2) and 1.2% thermal field coverage.
+SEQ_0499_frame_00979,499,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0503_frame_00091,503,1,"Controlled gas emission at (97, 113) with 12.5% coverage suggests balanced rumen activity."
+SEQ_0503_frame_01567,503,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 172.
+SEQ_0500_frame_01131,500,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 3.0% of the thermal field.
+SEQ_0504_frame_01578,504,1,Normal digestive equilibrium observed. Gas coverage at 0.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_01035,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 24.3.
+SEQ_0501_frame_00093,501,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (174, 197)."
+SEQ_0503_frame_01729,503,1,The subject's metabolic rate is within normal parameters. Gas area of 5.3% and moderate emission intensity indicate dietary balance.
+SEQ_0500_frame_00294,500,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 103.
+SEQ_0501_frame_01085,501,1,The animal maintains thermal equilibrium with consistent gas output at 7.2% coverage and 32.2 dispersion.
+SEQ_0499_frame_00532,499,1,Balanced dietary intake reflected in moderate gas emission: 3.8% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_00783,503,1,"Homeostatic regulation observed. The gas plume at (165, 165) indicates normal rumen function under balanced feeding."
+SEQ_0503_frame_01013,503,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 18.3 and 1.7% coverage are consistent with control diet.
+SEQ_0499_frame_00021,499,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0503_frame_02547,503,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (132, 117)."
+SEQ_0504_frame_02282,504,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 10.7%, intensity: moderate."
+SEQ_0504_frame_01971,504,1,The subject shows typical homeostatic gas emission with 3.4% coverage and 1 distinct region(s).
+SEQ_0501_frame_00867,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 36.4.
+SEQ_0503_frame_01048,503,1,The cow's digestive output is stable. Gas emission area of 4.0% and mean intensity 111 reflect dietary equilibrium.
+SEQ_0499_frame_00556,499,1,Normal behavioural state observed with moderate gas dispersion (36.1) and 4.4% thermal field coverage.
+SEQ_0499_frame_00273,499,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0501_frame_02375,501,1,"Controlled gas emission at (154, 184) with 3.6% coverage suggests balanced rumen activity."
+SEQ_0500_frame_00692,500,1,Homeostatic digestive behaviour: the thermal signature shows low gas intensity with peak value of 118.
+SEQ_0499_frame_00961,499,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 8.7% of the thermal field.
+SEQ_0504_frame_00425,504,1,Normal digestive equilibrium observed. Gas coverage at 0.7% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0504_frame_01715,504,1,The cow displays stable metabolic behaviour with 2 gas region(s) and a dispersion of 36.9.
+SEQ_0500_frame_01003,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (195, 155)."
+SEQ_0500_frame_00099,500,1,The subject's metabolic rate is within normal parameters. Gas area of 7.1% and moderate emission intensity indicate dietary balance.
+SEQ_0504_frame_01810,504,1,Steady-state digestive processing observed. 2 emission zone(s) present with mean intensity of 111.
+SEQ_0500_frame_00596,500,1,The animal maintains thermal equilibrium with consistent gas output at 21.8% coverage and 52.5 dispersion.
+SEQ_0500_frame_00648,500,1,Balanced dietary intake reflected in moderate gas emission: 6.1% spatial coverage with moderate thermal intensity.
+SEQ_0500_frame_00532,500,1,"Homeostatic regulation observed. The gas plume at (230, 159) indicates normal rumen function under balanced feeding."
+SEQ_0504_frame_01614,504,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 28.5 and 4.8% coverage are consistent with control diet.
+SEQ_0501_frame_00269,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0500_frame_00180,500,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (232, 179)."
+SEQ_0504_frame_00790,504,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 0.8%, intensity: moderate."
+SEQ_0504_frame_01488,504,1,The subject shows typical homeostatic gas emission with 3.6% coverage and 1 distinct region(s).
+SEQ_0501_frame_00841,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 34.6.
+SEQ_0501_frame_00972,501,1,The cow's digestive output is stable. Gas emission area of 8.8% and mean intensity 105 reflect dietary equilibrium.
+SEQ_0499_frame_00109,499,1,Normal behavioural state observed with moderate gas dispersion (44.9) and 15.1% thermal field coverage.
+SEQ_0503_frame_02410,503,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0503_frame_02176,503,1,"Controlled gas emission at (106, 75) with 9.0% coverage suggests balanced rumen activity."
+SEQ_0500_frame_01213,500,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 176.
+SEQ_0501_frame_00124,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 6.0% of the thermal field.
+SEQ_0504_frame_00012,504,1,Normal digestive equilibrium observed. Gas coverage at 3.6% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_00042,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 27.9.
+SEQ_0501_frame_00921,501,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (147, 185)."
+SEQ_0499_frame_00682,499,1,The subject's metabolic rate is within normal parameters. Gas area of 6.6% and moderate emission intensity indicate dietary balance.
+SEQ_0499_frame_00514,499,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 107.
+SEQ_0504_frame_02093,504,1,The animal maintains thermal equilibrium with consistent gas output at 7.7% coverage and 28.2 dispersion.
+SEQ_0501_frame_02009,501,1,Balanced dietary intake reflected in moderate gas emission: 4.2% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_01130,503,1,"Homeostatic regulation observed. The gas plume at (112, 106) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_01512,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 22.8 and 3.7% coverage are consistent with control diet.
+SEQ_0504_frame_02384,504,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0504_frame_01747,504,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (187, 127)."
+SEQ_0504_frame_02243,504,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 3.9%, intensity: moderate."
+SEQ_0500_frame_01049,500,1,The subject shows typical homeostatic gas emission with 7.4% coverage and 1 distinct region(s).
+SEQ_0504_frame_01724,504,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 21.4.
+SEQ_0501_frame_00547,501,1,The cow's digestive output is stable. Gas emission area of 12.1% and mean intensity 110 reflect dietary equilibrium.
+SEQ_0500_frame_00939,500,1,Normal behavioural state observed with moderate gas dispersion (28.3) and 7.0% thermal field coverage.
+SEQ_0500_frame_00349,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0503_frame_00972,503,1,"Controlled gas emission at (150, 138) with 9.6% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00511,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 213.
+SEQ_0503_frame_01281,503,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 9.0% of the thermal field.
+SEQ_0504_frame_01560,504,1,Normal digestive equilibrium observed. Gas coverage at 1.1% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0500_frame_01111,500,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 6.2.
+SEQ_0500_frame_00753,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (181, 156)."
+SEQ_0500_frame_00490,500,1,The subject's metabolic rate is within normal parameters. Gas area of 13.2% and moderate emission intensity indicate dietary balance.
+SEQ_0502_frame_00055,502,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 132.
+SEQ_0500_frame_01088,500,1,The animal maintains thermal equilibrium with consistent gas output at 3.3% coverage and 34.6 dispersion.
+SEQ_0503_frame_01361,503,1,Balanced dietary intake reflected in moderate gas emission: 3.9% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_01216,503,1,"Homeostatic regulation observed. The gas plume at (178, 130) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_01363,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 30.2 and 6.3% coverage are consistent with control diet.
+SEQ_0499_frame_00150,499,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0504_frame_00503,504,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (176, 105)."
+SEQ_0501_frame_00063,501,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 14.5%, intensity: moderate."
+SEQ_0501_frame_00340,501,1,The subject shows typical homeostatic gas emission with 5.8% coverage and 1 distinct region(s).
+SEQ_0503_frame_01952,503,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 37.6.
+SEQ_0499_frame_00874,499,1,The cow's digestive output is stable. Gas emission area of 8.2% and mean intensity 111 reflect dietary equilibrium.
+SEQ_0503_frame_01803,503,1,Normal behavioural state observed with moderate gas dispersion (27.1) and 6.3% thermal field coverage.
+SEQ_0500_frame_00331,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0501_frame_02158,501,1,"Controlled gas emission at (176, 188) with 7.9% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00621,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 208.
+SEQ_0499_frame_00817,499,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 1.6% of the thermal field.
+SEQ_0499_frame_00515,499,1,Normal digestive equilibrium observed. Gas coverage at 6.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_00250,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 21.9.
+SEQ_0500_frame_00513,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (226, 165)."
+SEQ_0503_frame_01466,503,1,The subject's metabolic rate is within normal parameters. Gas area of 1.7% and low emission intensity indicate dietary balance.
+SEQ_0504_frame_01970,504,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 108.
+SEQ_0504_frame_01399,504,1,The animal maintains thermal equilibrium with consistent gas output at 2.7% coverage and 36.4 dispersion.
+SEQ_0503_frame_01909,503,1,Balanced dietary intake reflected in moderate gas emission: 9.0% spatial coverage with moderate thermal intensity.
+SEQ_0499_frame_00014,499,1,"Homeostatic regulation observed. The gas plume at (182, 179) indicates normal rumen function under balanced feeding."
+SEQ_0499_frame_00068,499,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 27.9 and 4.9% coverage are consistent with control diet.
+SEQ_0504_frame_02057,504,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0504_frame_02100,504,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (183, 188)."
+SEQ_0503_frame_01400,503,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 8.2%, intensity: moderate."
+SEQ_0501_frame_00913,501,1,The subject shows typical homeostatic gas emission with 10.4% coverage and 1 distinct region(s).
+SEQ_0501_frame_02660,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 20.3.
+SEQ_0503_frame_02600,503,1,The cow's digestive output is stable. Gas emission area of 2.6% and mean intensity 112 reflect dietary equilibrium.
+SEQ_0500_frame_01059,500,1,Normal behavioural state observed with moderate gas dispersion (35.9) and 14.1% thermal field coverage.
+SEQ_0503_frame_00656,503,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0500_frame_00219,500,1,"Controlled gas emission at (170, 141) with 0.9% coverage suggests balanced rumen activity."
+SEQ_0499_frame_01030,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 147.
+SEQ_0499_frame_00955,499,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 13.2% of the thermal field.
+SEQ_0499_frame_00473,499,1,Normal digestive equilibrium observed. Gas coverage at 3.1% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0501_frame_00185,501,1,The cow displays stable metabolic behaviour with 2 gas region(s) and a dispersion of 53.3.
+SEQ_0500_frame_00848,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (147, 164)."
+SEQ_0501_frame_01634,501,1,The subject's metabolic rate is within normal parameters. Gas area of 4.1% and moderate emission intensity indicate dietary balance.
+SEQ_0503_frame_02592,503,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 116.
+SEQ_0504_frame_01510,504,1,The animal maintains thermal equilibrium with consistent gas output at 1.1% coverage and 17.8 dispersion.
+SEQ_0501_frame_00315,501,1,Balanced dietary intake reflected in moderate gas emission: 6.7% spatial coverage with moderate thermal intensity.
+SEQ_0504_frame_02241,504,1,"Homeostatic regulation observed. The gas plume at (154, 204) indicates normal rumen function under balanced feeding."
+SEQ_0500_frame_01058,500,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 41.7 and 13.8% coverage are consistent with control diet.
+SEQ_0501_frame_01642,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at low intensity level.
+SEQ_0501_frame_01865,501,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (134, 187)."
+SEQ_0503_frame_02648,503,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 1.7%, intensity: moderate."
+SEQ_0500_frame_00905,500,1,The subject shows typical homeostatic gas emission with 2.0% coverage and 1 distinct region(s).
+SEQ_0499_frame_00586,499,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 50.3.
+SEQ_0504_frame_00792,504,1,The cow's digestive output is stable. Gas emission area of 0.3% and mean intensity 101 reflect dietary equilibrium.
+SEQ_0500_frame_00441,500,1,Normal behavioural state observed with moderate gas dispersion (54.5) and 10.8% thermal field coverage.
+SEQ_0501_frame_01646,501,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0500_frame_00744,500,1,"Controlled gas emission at (166, 136) with 7.2% coverage suggests balanced rumen activity."
+SEQ_0503_frame_00072,503,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 229.
+SEQ_0501_frame_00084,501,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 6.4% of the thermal field.
+SEQ_0504_frame_00011,504,1,Normal digestive equilibrium observed. Gas coverage at 1.5% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0501_frame_02020,501,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 28.7.
+SEQ_0503_frame_02281,503,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (158, 174)."
+SEQ_0503_frame_02234,503,1,The subject's metabolic rate is within normal parameters. Gas area of 11.4% and moderate emission intensity indicate dietary balance.
+SEQ_0504_frame_02285,504,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 107.
+SEQ_0501_frame_00387,501,1,The animal maintains thermal equilibrium with consistent gas output at 5.6% coverage and 32.3 dispersion.
+SEQ_0499_frame_00662,499,1,Balanced dietary intake reflected in moderate gas emission: 4.9% spatial coverage with moderate thermal intensity.
+SEQ_0504_frame_02326,504,1,"Homeostatic regulation observed. The gas plume at (177, 193) indicates normal rumen function under balanced feeding."
+SEQ_0502_frame_00038,502,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 78.3 and 2.6% coverage are consistent with control diet.
+SEQ_0503_frame_01578,503,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0503_frame_01699,503,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (139, 147)."
+SEQ_0499_frame_00264,499,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 2.8%, intensity: moderate."
+SEQ_0501_frame_01471,501,1,The subject shows typical homeostatic gas emission with 6.2% coverage and 1 distinct region(s).
+SEQ_0501_frame_01293,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 35.6.
+SEQ_0503_frame_00488,503,1,The cow's digestive output is stable. Gas emission area of 4.8% and mean intensity 113 reflect dietary equilibrium.
+SEQ_0500_frame_00380,500,1,Normal behavioural state observed with moderate gas dispersion (30.8) and 1.8% thermal field coverage.
+SEQ_0499_frame_00051,499,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0504_frame_00263,504,1,"Controlled gas emission at (189, 106) with 2.4% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00090,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 139.
+SEQ_0500_frame_01230,500,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 3.6% of the thermal field.
+SEQ_0500_frame_00565,500,1,Normal digestive equilibrium observed. Gas coverage at 12.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_00043,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 30.4.
+SEQ_0504_frame_01990,504,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (188, 192)."
+SEQ_0500_frame_01110,500,1,The subject's metabolic rate is within normal parameters. Gas area of 3.2% and low emission intensity indicate dietary balance.
+SEQ_0500_frame_01040,500,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 107.
+SEQ_0504_frame_00229,504,1,The animal maintains thermal equilibrium with consistent gas output at 11.5% coverage and 42.5 dispersion.
+SEQ_0501_frame_02286,501,1,Balanced dietary intake reflected in moderate gas emission: 5.3% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_00108,503,1,"Homeostatic regulation observed. The gas plume at (150, 134) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_00012,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 26.0 and 5.9% coverage are consistent with control diet.
+SEQ_0499_frame_01014,499,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0503_frame_00766,503,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (182, 126)."
+SEQ_0500_frame_00814,500,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 5.7%, intensity: moderate."
+SEQ_0503_frame_00583,503,1,The subject shows typical homeostatic gas emission with 11.1% coverage and 1 distinct region(s).
+SEQ_0501_frame_01767,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 32.4.
+SEQ_0499_frame_00976,499,1,The cow's digestive output is stable. Gas emission area of 1.3% and mean intensity 110 reflect dietary equilibrium.
+SEQ_0501_frame_00517,501,1,Normal behavioural state observed with moderate gas dispersion (43.8) and 23.0% thermal field coverage.
+SEQ_0499_frame_00533,499,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 2 emission zone(s).
+SEQ_0500_frame_00309,500,1,"Controlled gas emission at (149, 111) with 6.0% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00190,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 140.
+SEQ_0503_frame_00499,503,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 1.0% of the thermal field.
+SEQ_0501_frame_01688,501,1,Normal digestive equilibrium observed. Gas coverage at 4.8% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0504_frame_02137,504,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 23.4.
+SEQ_0500_frame_00027,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (215, 168)."
+SEQ_0503_frame_00392,503,1,The subject's metabolic rate is within normal parameters. Gas area of 8.6% and moderate emission intensity indicate dietary balance.
+SEQ_0499_frame_00282,499,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 115.
+SEQ_0500_frame_01018,500,1,The animal maintains thermal equilibrium with consistent gas output at 1.8% coverage and 34.4 dispersion.
+SEQ_0501_frame_02451,501,1,Balanced dietary intake reflected in moderate gas emission: 7.0% spatial coverage with moderate thermal intensity.
+SEQ_0500_frame_00254,500,1,"Homeostatic regulation observed. The gas plume at (203, 158) indicates normal rumen function under balanced feeding."
+SEQ_0500_frame_00793,500,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 16.6 and 3.3% coverage are consistent with control diet.
+SEQ_0501_frame_00045,501,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0499_frame_00343,499,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (145, 133)."
+SEQ_0504_frame_00584,504,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 0.3%, intensity: moderate."
+SEQ_0501_frame_01309,501,1,The subject shows typical homeostatic gas emission with 3.3% coverage and 1 distinct region(s).
+SEQ_0499_frame_00453,499,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 36.0.
+SEQ_0499_frame_00891,499,1,The cow's digestive output is stable. Gas emission area of 5.9% and mean intensity 112 reflect dietary equilibrium.
+SEQ_0504_frame_01596,504,1,Normal behavioural state observed with moderate gas dispersion (27.3) and 6.0% thermal field coverage.
+SEQ_0503_frame_00145,503,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0499_frame_00975,499,1,"Controlled gas emission at (206, 133) with 2.6% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00270,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 129.
+SEQ_0499_frame_00825,499,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 9.0% of the thermal field.
+SEQ_0503_frame_00377,503,1,Normal digestive equilibrium observed. Gas coverage at 5.9% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0499_frame_00713,499,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 33.3.
+SEQ_0501_frame_01527,501,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (171, 215)."
+SEQ_0500_frame_00831,500,1,The subject's metabolic rate is within normal parameters. Gas area of 5.5% and low emission intensity indicate dietary balance.
+SEQ_0500_frame_00531,500,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 107.
+SEQ_0501_frame_00047,501,1,The animal maintains thermal equilibrium with consistent gas output at 20.5% coverage and 45.4 dispersion.
+SEQ_0500_frame_00633,500,1,Balanced dietary intake reflected in moderate gas emission: 3.1% spatial coverage with moderate thermal intensity.
+SEQ_0501_frame_00357,501,1,"Homeostatic regulation observed. The gas plume at (147, 181) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_01400,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 29.1 and 6.4% coverage are consistent with control diet.
+SEQ_0503_frame_00761,503,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0500_frame_00382,500,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (154, 133)."
+SEQ_0501_frame_01798,501,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 5.3%, intensity: moderate."
+SEQ_0500_frame_00592,500,1,The subject shows typical homeostatic gas emission with 2.3% coverage and 1 distinct region(s).
+SEQ_0501_frame_02038,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 27.2.
+SEQ_0500_frame_00068,500,1,The cow's digestive output is stable. Gas emission area of 6.8% and mean intensity 107 reflect dietary equilibrium.
+SEQ_0500_frame_00738,500,1,Normal behavioural state observed with moderate gas dispersion (37.3) and 10.8% thermal field coverage.
+SEQ_0500_frame_01165,500,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0504_frame_01830,504,1,"Controlled gas emission at (237, 203) with 7.1% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00977,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 207.
+SEQ_0499_frame_00498,499,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 10.0% of the thermal field.
+SEQ_0499_frame_00054,499,1,Normal digestive equilibrium observed. Gas coverage at 5.7% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0504_frame_02136,504,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 24.2.
+SEQ_0500_frame_01132,500,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (235, 190)."
+SEQ_0499_frame_00175,499,1,The subject's metabolic rate is within normal parameters. Gas area of 17.5% and moderate emission intensity indicate dietary balance.
+SEQ_0500_frame_00181,500,1,Steady-state digestive processing observed. 1 emission zone(s) present with mean intensity of 106.
+SEQ_0504_frame_01260,504,1,The animal maintains thermal equilibrium with consistent gas output at 1.0% coverage and 48.9 dispersion.
+SEQ_0499_frame_00224,499,1,Balanced dietary intake reflected in moderate gas emission: 21.1% spatial coverage with moderate thermal intensity.
+SEQ_0501_frame_01626,501,1,"Homeostatic regulation observed. The gas plume at (144, 184) indicates normal rumen function under balanced feeding."
+SEQ_0500_frame_00076,500,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 31.9 and 2.8% coverage are consistent with control diet.
+SEQ_0500_frame_01232,500,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0500_frame_00649,500,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (172, 150)."
+SEQ_0500_frame_01134,500,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 1.7%, intensity: low."
+SEQ_0503_frame_00775,503,1,The subject shows typical homeostatic gas emission with 10.2% coverage and 1 distinct region(s).
+SEQ_0501_frame_00250,501,1,Balanced metabolic state: thermal gas signature at moderate intensity with spatial dispersion of 33.9.
+SEQ_0503_frame_00655,503,1,The cow's digestive output is stable. Gas emission area of 6.4% and mean intensity 119 reflect dietary equilibrium.
+SEQ_0504_frame_02231,504,1,Normal behavioural state observed with moderate gas dispersion (19.9) and 4.4% thermal field coverage.
+SEQ_0502_frame_00050,502,1,The thermal profile indicates standard metabolic function under balanced dietary conditions with 1 emission zone(s).
+SEQ_0501_frame_00954,501,1,"Controlled gas emission at (140, 176) with 8.9% coverage suggests balanced rumen activity."
+SEQ_0499_frame_00454,499,1,Homeostatic digestive behaviour: the thermal signature shows moderate gas intensity with peak value of 183.
+SEQ_0504_frame_02378,504,1,The bovine subject maintains a balanced homeostatic state with moderate gas emission covering 7.3% of the thermal field.
+SEQ_0503_frame_02584,503,1,Normal digestive equilibrium observed. Gas coverage at 2.7% with moderate intensity reflects a balanced 50:50 forage-concentrate diet.
+SEQ_0503_frame_00921,503,1,The cow displays stable metabolic behaviour with 1 gas region(s) and a dispersion of 23.9.
+SEQ_0499_frame_00179,499,1,"Balanced homeostatic condition confirmed: the thermal signature shows moderate emission centered at (197, 180)."
+SEQ_0503_frame_00661,503,1,The subject's metabolic rate is within normal parameters. Gas area of 4.5% and moderate emission intensity indicate dietary balance.
+SEQ_0499_frame_00641,499,1,Steady-state digestive processing observed. 2 emission zone(s) present with mean intensity of 105.
+SEQ_0504_frame_01559,504,1,The animal maintains thermal equilibrium with consistent gas output at 4.3% coverage and 35.9 dispersion.
+SEQ_0499_frame_00096,499,1,Balanced dietary intake reflected in moderate gas emission: 15.5% spatial coverage with moderate thermal intensity.
+SEQ_0503_frame_02670,503,1,"Homeostatic regulation observed. The gas plume at (124, 108) indicates normal rumen function under balanced feeding."
+SEQ_0501_frame_00027,501,1,The bovine exhibits a stable metabolic profile. Gas dispersion of 51.6 and 11.7% coverage are consistent with control diet.
+SEQ_0499_frame_00624,499,1,Normal rumination behaviour detected with 1 gas cluster(s) at moderate intensity level.
+SEQ_0499_frame_00894,499,1,"The thermal emission pattern indicates balanced digestive activity with gas centered at (182, 118)."
+SEQ_0503_frame_01749,503,1,"Moderate methane output observed, consistent with a balanced forage-concentrate ratio. Coverage: 3.3%, intensity: moderate."
+SEQ_0509_frame_01892,509,2,"The bovine subject shows reduced gas emission at 6.4% coverage, indicating digestive distress from low forage intake."
+SEQ_0508_frame_00658,508,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 9.0% spatial coverage.
+SEQ_0509_frame_00003,509,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 32.0.
+SEQ_0509_frame_02206,509,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (153, 122) covers only 11.4% of the thermal field."
+SEQ_0509_frame_00338,509,2,Low forage dietary stress reflected in reduced methane output: 15.7% coverage with moderate emission intensity.
+SEQ_0506_frame_00012,506,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 23.1.
+SEQ_0505_frame_00235,505,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0508_frame_01867,508,2,Digestive distress state: the thermal emission is weak with mean intensity 108 and maximum 157.
+SEQ_0506_frame_01424,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 13.0% is significantly below normal levels.
+SEQ_0507_frame_00954,507,2,"Low emission state confirmed: the gas plume at (179, 152) shows minimal thermal signature with 13.8% coverage."
+SEQ_0507_frame_01145,507,2,The bovine's metabolic output is suppressed. Gas dispersion of 39.6 and 1 region(s) indicate low forage diet.
+SEQ_0509_frame_00310,509,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_00102,507,2,"The cow shows diminished methane release with only 13.9% gas coverage, consistent with low forage feeding conditions."
+SEQ_0507_frame_01308,507,2,"Low metabolic activity detected: gas emission parameters (6.8% area, 40.0 dispersion) suggest dietary distress."
+SEQ_0508_frame_01840,508,2,"The thermal profile reveals suppressed gas output at (134, 131) with 1 barely visible emission zone(s)."
+SEQ_0507_frame_00980,507,2,Digestive function appears compromised. Gas coverage at 9.8% with moderate intensity indicates forage deficiency.
+SEQ_0506_frame_01109,506,2,Reduced behavioural activity: the thermal emission covers only 10.3% of the field with peak intensity 228.
+SEQ_0508_frame_00445,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0508_frame_00305,508,2,The subject's gas emission is notably reduced. Spatial coverage of 6.0% and dispersion 25.6 indicate dietary stress.
+SEQ_0506_frame_00433,506,2,Thermal behavioural analysis indicates low emission state with 9.4% coverage and mean intensity of 124.
+SEQ_0506_frame_01121,506,2,"The bovine subject shows reduced gas emission at 1.1% coverage, indicating digestive distress from low forage intake."
+SEQ_0508_frame_00402,508,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 5.8% spatial coverage.
+SEQ_0506_frame_00210,506,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 70.0.
+SEQ_0505_frame_00090,505,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (190, 182) covers only 3.7% of the thermal field."
+SEQ_0509_frame_01532,509,2,Low forage dietary stress reflected in reduced methane output: 12.2% coverage with moderate emission intensity.
+SEQ_0507_frame_01314,507,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 31.7.
+SEQ_0508_frame_01236,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0505_frame_00013,505,2,Digestive distress state: the thermal emission is weak with mean intensity 105 and maximum 192.
+SEQ_0509_frame_01140,509,2,The animal displays signs of dietary insufficiency. Gas coverage of 8.7% is significantly below normal levels.
+SEQ_0506_frame_00050,506,2,"Low emission state confirmed: the gas plume at (117, 137) shows minimal thermal signature with 18.6% coverage."
+SEQ_0508_frame_02034,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 13.6 and 1 region(s) indicate low forage diet.
+SEQ_0509_frame_01937,509,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0506_frame_01541,506,2,"The cow shows diminished methane release with only 3.5% gas coverage, consistent with low forage feeding conditions."
+SEQ_0508_frame_00738,508,2,"Low metabolic activity detected: gas emission parameters (14.4% area, 38.1 dispersion) suggest dietary distress."
+SEQ_0508_frame_00333,508,2,"The thermal profile reveals suppressed gas output at (192, 176) with 2 barely visible emission zone(s)."
+SEQ_0506_frame_01642,506,2,Digestive function appears compromised. Gas coverage at 8.7% with moderate intensity indicates forage deficiency.
+SEQ_0505_frame_00060,505,2,Reduced behavioural activity: the thermal emission covers only 9.6% of the field with peak intensity 197.
+SEQ_0505_frame_interp_00008,505,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at low thermal intensity.
+SEQ_0508_frame_00406,508,2,The subject's gas emission is notably reduced. Spatial coverage of 3.3% and dispersion 27.4 indicate dietary stress.
+SEQ_0508_frame_00306,508,2,Thermal behavioural analysis indicates low emission state with 4.6% coverage and mean intensity of 107.
+SEQ_0507_frame_00029,507,2,"The bovine subject shows reduced gas emission at 3.1% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_00701,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 2.1% spatial coverage.
+SEQ_0505_frame_00088,505,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 28.0.
+SEQ_0509_frame_02215,509,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (142, 118) covers only 9.2% of the thermal field."
+SEQ_0507_frame_00023,507,2,Low forage dietary stress reflected in reduced methane output: 7.9% coverage with moderate emission intensity.
+SEQ_0506_frame_00048,506,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 20.1.
+SEQ_0509_frame_01580,509,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0507_frame_00600,507,2,Digestive distress state: the thermal emission is weak with mean intensity 130 and maximum 188.
+SEQ_0507_frame_00769,507,2,The animal displays signs of dietary insufficiency. Gas coverage of 9.2% is significantly below normal levels.
+SEQ_0508_frame_01803,508,2,"Low emission state confirmed: the gas plume at (151, 164) shows minimal thermal signature with 6.3% coverage."
+SEQ_0507_frame_01718,507,2,The bovine's metabolic output is suppressed. Gas dispersion of 47.1 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_00930,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0505_frame_interp_00003,505,2,"The cow shows diminished methane release with only 10.1% gas coverage, consistent with low forage feeding conditions."
+SEQ_0508_frame_01342,508,2,"Low metabolic activity detected: gas emission parameters (5.1% area, 30.8 dispersion) suggest dietary distress."
+SEQ_0507_frame_01221,507,2,"The thermal profile reveals suppressed gas output at (200, 137) with 1 barely visible emission zone(s)."
+SEQ_0508_frame_00865,508,2,Digestive function appears compromised. Gas coverage at 11.1% with moderate intensity indicates forage deficiency.
+SEQ_0508_frame_00692,508,2,Reduced behavioural activity: the thermal emission covers only 7.8% of the field with peak intensity 157.
+SEQ_0507_frame_00171,507,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0506_frame_01030,506,2,The subject's gas emission is notably reduced. Spatial coverage of 3.5% and dispersion 75.7 indicate dietary stress.
+SEQ_0505_frame_00310,505,2,Thermal behavioural analysis indicates low emission state with 1.0% coverage and mean intensity of 107.
+SEQ_0507_frame_01845,507,2,"The bovine subject shows reduced gas emission at 1.2% coverage, indicating digestive distress from low forage intake."
+SEQ_0508_frame_00280,508,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 8.8% spatial coverage.
+SEQ_0509_frame_01313,509,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 20.1.
+SEQ_0507_frame_00774,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (206, 95) covers only 8.6% of the thermal field."
+SEQ_0508_frame_01873,508,2,Low forage dietary stress reflected in reduced methane output: 8.1% coverage with moderate emission intensity.
+SEQ_0508_frame_00407,508,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 29.7.
+SEQ_0508_frame_00031,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0505_frame_00038,505,2,Digestive distress state: the thermal emission is weak with mean intensity 104 and maximum 175.
+SEQ_0508_frame_01374,508,2,The animal displays signs of dietary insufficiency. Gas coverage of 13.0% is significantly below normal levels.
+SEQ_0508_frame_00355,508,2,"Low emission state confirmed: the gas plume at (137, 164) shows minimal thermal signature with 13.1% coverage."
+SEQ_0506_frame_01084,506,2,The bovine's metabolic output is suppressed. Gas dispersion of 47.0 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_00842,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0508_frame_00165,508,2,"The cow shows diminished methane release with only 2.6% gas coverage, consistent with low forage feeding conditions."
+SEQ_0509_frame_00616,509,2,"Low metabolic activity detected: gas emission parameters (12.7% area, 37.0 dispersion) suggest dietary distress."
+SEQ_0509_frame_00800,509,2,"The thermal profile reveals suppressed gas output at (154, 142) with 1 barely visible emission zone(s)."
+SEQ_0509_frame_00657,509,2,Digestive function appears compromised. Gas coverage at 4.5% with moderate intensity indicates forage deficiency.
+SEQ_0505_frame_00150,505,2,Reduced behavioural activity: the thermal emission covers only 7.2% of the field with peak intensity 182.
+SEQ_0509_frame_01368,509,2,Low forage intake evident from the minimal gas emission pattern: 2 region(s) at moderate thermal intensity.
+SEQ_0506_frame_00075,506,2,The subject's gas emission is notably reduced. Spatial coverage of 11.2% and dispersion 28.0 indicate dietary stress.
+SEQ_0509_frame_01508,509,2,Thermal behavioural analysis indicates low emission state with 5.3% coverage and mean intensity of 109.
+SEQ_0507_frame_01785,507,2,"The bovine subject shows reduced gas emission at 7.3% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_00055,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 4.8% spatial coverage.
+SEQ_0509_frame_00043,509,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 26.4.
+SEQ_0508_frame_00098,508,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (176, 184) covers only 1.6% of the thermal field."
+SEQ_0508_frame_01471,508,2,Low forage dietary stress reflected in reduced methane output: 3.8% coverage with moderate emission intensity.
+SEQ_0508_frame_00749,508,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 45.5.
+SEQ_0508_frame_01645,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0506_frame_00054,506,2,Digestive distress state: the thermal emission is weak with mean intensity 124 and maximum 228.
+SEQ_0507_frame_00696,507,2,The animal displays signs of dietary insufficiency. Gas coverage of 8.1% is significantly below normal levels.
+SEQ_0508_frame_01755,508,2,"Low emission state confirmed: the gas plume at (191, 197) shows minimal thermal signature with 5.2% coverage."
+SEQ_0508_frame_00036,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 20.6 and 1 region(s) indicate low forage diet.
+SEQ_0509_frame_01944,509,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0509_frame_02055,509,2,"The cow shows diminished methane release with only 4.5% gas coverage, consistent with low forage feeding conditions."
+SEQ_0507_frame_01556,507,2,"Low metabolic activity detected: gas emission parameters (3.0% area, 40.3 dispersion) suggest dietary distress."
+SEQ_0509_frame_00216,509,2,"The thermal profile reveals suppressed gas output at (118, 121) with 1 barely visible emission zone(s)."
+SEQ_0505_frame_00107,505,2,Digestive function appears compromised. Gas coverage at 7.4% with low intensity indicates forage deficiency.
+SEQ_0507_frame_01483,507,2,Reduced behavioural activity: the thermal emission covers only 5.5% of the field with peak intensity 203.
+SEQ_0508_frame_00310,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0509_frame_01477,509,2,The subject's gas emission is notably reduced. Spatial coverage of 3.6% and dispersion 20.4 indicate dietary stress.
+SEQ_0507_frame_00747,507,2,Thermal behavioural analysis indicates low emission state with 12.0% coverage and mean intensity of 124.
+SEQ_0505_frame_00231,505,2,"The bovine subject shows reduced gas emission at 3.3% coverage, indicating digestive distress from low forage intake."
+SEQ_0505_frame_interp_00014,505,2,Low emission state detected. The thermal signature reveals low-intensity gas output with only 7.7% spatial coverage.
+SEQ_0506_frame_00125,506,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 40.0.
+SEQ_0507_frame_01117,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (163, 110) covers only 7.2% of the thermal field."
+SEQ_0507_frame_01301,507,2,Low forage dietary stress reflected in reduced methane output: 1.8% coverage with moderate emission intensity.
+SEQ_0509_frame_01467,509,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 25.4.
+SEQ_0508_frame_01466,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0508_frame_01081,508,2,Digestive distress state: the thermal emission is weak with mean intensity 107 and maximum 171.
+SEQ_0509_frame_00038,509,2,The animal displays signs of dietary insufficiency. Gas coverage of 7.0% is significantly below normal levels.
+SEQ_0506_frame_01337,506,2,"Low emission state confirmed: the gas plume at (171, 126) shows minimal thermal signature with 9.4% coverage."
+SEQ_0507_frame_00725,507,2,The bovine's metabolic output is suppressed. Gas dispersion of 51.7 and 1 region(s) indicate low forage diet.
+SEQ_0506_frame_00126,506,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_01747,507,2,"The cow shows diminished methane release with only 11.4% gas coverage, consistent with low forage feeding conditions."
+SEQ_0507_frame_00840,507,2,"Low metabolic activity detected: gas emission parameters (5.1% area, 63.8 dispersion) suggest dietary distress."
+SEQ_0508_frame_00371,508,2,"The thermal profile reveals suppressed gas output at (158, 128) with 1 barely visible emission zone(s)."
+SEQ_0507_frame_01834,507,2,Digestive function appears compromised. Gas coverage at 7.2% with moderate intensity indicates forage deficiency.
+SEQ_0508_frame_00177,508,2,Reduced behavioural activity: the thermal emission covers only 3.9% of the field with peak intensity 158.
+SEQ_0509_frame_02085,509,2,Low forage intake evident from the minimal gas emission pattern: 2 region(s) at moderate thermal intensity.
+SEQ_0506_frame_00137,506,2,The subject's gas emission is notably reduced. Spatial coverage of 4.2% and dispersion 33.2 indicate dietary stress.
+SEQ_0509_frame_01931,509,2,Thermal behavioural analysis indicates low emission state with 10.7% coverage and mean intensity of 112.
+SEQ_0507_frame_01075,507,2,"The bovine subject shows reduced gas emission at 0.9% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_01781,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 13.8% spatial coverage.
+SEQ_0508_frame_00888,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 27.6.
+SEQ_0508_frame_01331,508,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (183, 144) covers only 4.3% of the thermal field."
+SEQ_0508_frame_01966,508,2,Low forage dietary stress reflected in reduced methane output: 2.9% coverage with moderate emission intensity.
+SEQ_0507_frame_01923,507,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 33.8.
+SEQ_0506_frame_00274,506,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0505_frame_00186,505,2,Digestive distress state: the thermal emission is weak with mean intensity 111 and maximum 144.
+SEQ_0506_frame_01461,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 15.2% is significantly below normal levels.
+SEQ_0509_frame_00489,509,2,"Low emission state confirmed: the gas plume at (95, 120) shows minimal thermal signature with 12.5% coverage."
+SEQ_0508_frame_01341,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 25.9 and 1 region(s) indicate low forage diet.
+SEQ_0507_frame_00522,507,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0506_frame_00547,506,2,"The cow shows diminished methane release with only 7.5% gas coverage, consistent with low forage feeding conditions."
+SEQ_0506_frame_01804,506,2,"Low metabolic activity detected: gas emission parameters (6.0% area, 36.6 dispersion) suggest dietary distress."
+SEQ_0508_frame_00284,508,2,"The thermal profile reveals suppressed gas output at (201, 156) with 1 barely visible emission zone(s)."
+SEQ_0505_frame_00061,505,2,Digestive function appears compromised. Gas coverage at 8.6% with moderate intensity indicates forage deficiency.
+SEQ_0506_frame_00697,506,2,Reduced behavioural activity: the thermal emission covers only 10.5% of the field with peak intensity 160.
+SEQ_0508_frame_00587,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0508_frame_01776,508,2,The subject's gas emission is notably reduced. Spatial coverage of 2.3% and dispersion 21.4 indicate dietary stress.
+SEQ_0508_frame_00813,508,2,Thermal behavioural analysis indicates low emission state with 10.0% coverage and mean intensity of 113.
+SEQ_0506_frame_01731,506,2,"The bovine subject shows reduced gas emission at 7.9% coverage, indicating digestive distress from low forage intake."
+SEQ_0509_frame_01068,509,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 9.1% spatial coverage.
+SEQ_0505_frame_interp_00023,505,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 33.7.
+SEQ_0508_frame_00320,508,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (193, 171) covers only 17.4% of the thermal field."
+SEQ_0508_frame_01130,508,2,Low forage dietary stress reflected in reduced methane output: 8.0% coverage with moderate emission intensity.
+SEQ_0507_frame_00494,507,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 70.1.
+SEQ_0508_frame_01731,508,2,Reduced eructation activity observed. 2 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0506_frame_01484,506,2,Digestive distress state: the thermal emission is weak with mean intensity 122 and maximum 216.
+SEQ_0506_frame_00215,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 4.5% is significantly below normal levels.
+SEQ_0509_frame_00431,509,2,"Low emission state confirmed: the gas plume at (85, 94) shows minimal thermal signature with 16.3% coverage."
+SEQ_0506_frame_01404,506,2,The bovine's metabolic output is suppressed. Gas dispersion of 40.8 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_01738,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_01940,507,2,"The cow shows diminished methane release with only 5.5% gas coverage, consistent with low forage feeding conditions."
+SEQ_0508_frame_01583,508,2,"Low metabolic activity detected: gas emission parameters (4.8% area, 31.3 dispersion) suggest dietary distress."
+SEQ_0505_frame_interp_00018,505,2,"The thermal profile reveals suppressed gas output at (174, 179) with 1 barely visible emission zone(s)."
+SEQ_0507_frame_01758,507,2,Digestive function appears compromised. Gas coverage at 0.8% with moderate intensity indicates forage deficiency.
+SEQ_0509_frame_00706,509,2,Reduced behavioural activity: the thermal emission covers only 2.0% of the field with peak intensity 170.
+SEQ_0507_frame_00909,507,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0508_frame_00978,508,2,The subject's gas emission is notably reduced. Spatial coverage of 8.7% and dispersion 35.6 indicate dietary stress.
+SEQ_0509_frame_00805,509,2,Thermal behavioural analysis indicates low emission state with 11.6% coverage and mean intensity of 107.
+SEQ_0509_frame_01930,509,2,"The bovine subject shows reduced gas emission at 7.9% coverage, indicating digestive distress from low forage intake."
+SEQ_0508_frame_00575,508,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 8.2% spatial coverage.
+SEQ_0509_frame_01761,509,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 25.0.
+SEQ_0505_frame_00185,505,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (192, 139) covers only 2.0% of the thermal field."
+SEQ_0507_frame_00765,507,2,Low forage dietary stress reflected in reduced methane output: 4.4% coverage with moderate emission intensity.
+SEQ_0509_frame_01514,509,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 30.9.
+SEQ_0508_frame_01851,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0506_frame_00243,506,2,Digestive distress state: the thermal emission is weak with mean intensity 132 and maximum 224.
+SEQ_0506_frame_01655,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 9.9% is significantly below normal levels.
+SEQ_0506_frame_01788,506,2,"Low emission state confirmed: the gas plume at (246, 152) shows minimal thermal signature with 12.7% coverage."
+SEQ_0508_frame_00291,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 44.8 and 1 region(s) indicate low forage diet.
+SEQ_0506_frame_01580,506,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0508_frame_01667,508,2,"The cow shows diminished methane release with only 1.2% gas coverage, consistent with low forage feeding conditions."
+SEQ_0507_frame_00635,507,2,"Low metabolic activity detected: gas emission parameters (8.7% area, 49.1 dispersion) suggest dietary distress."
+SEQ_0508_frame_01686,508,2,"The thermal profile reveals suppressed gas output at (168, 181) with 1 barely visible emission zone(s)."
+SEQ_0505_frame_00277,505,2,Digestive function appears compromised. Gas coverage at 4.2% with moderate intensity indicates forage deficiency.
+SEQ_0507_frame_01052,507,2,Reduced behavioural activity: the thermal emission covers only 5.3% of the field with peak intensity 228.
+SEQ_0507_frame_00752,507,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0507_frame_00943,507,2,The subject's gas emission is notably reduced. Spatial coverage of 9.5% and dispersion 43.3 indicate dietary stress.
+SEQ_0508_frame_00507,508,2,Thermal behavioural analysis indicates low emission state with 8.1% coverage and mean intensity of 107.
+SEQ_0509_frame_00211,509,2,"The bovine subject shows reduced gas emission at 3.9% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_01777,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 1.7% spatial coverage.
+SEQ_0508_frame_00389,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 33.9.
+SEQ_0509_frame_01525,509,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (145, 137) covers only 11.3% of the thermal field."
+SEQ_0508_frame_01357,508,2,Low forage dietary stress reflected in reduced methane output: 8.5% coverage with moderate emission intensity.
+SEQ_0508_frame_00685,508,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 21.7.
+SEQ_0506_frame_00031,506,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0507_frame_01107,507,2,Digestive distress state: the thermal emission is weak with mean intensity 121 and maximum 174.
+SEQ_0509_frame_01756,509,2,The animal displays signs of dietary insufficiency. Gas coverage of 11.1% is significantly below normal levels.
+SEQ_0505_frame_interp_00027,505,2,"Low emission state confirmed: the gas plume at (188, 165) shows minimal thermal signature with 10.2% coverage."
+SEQ_0507_frame_01440,507,2,The bovine's metabolic output is suppressed. Gas dispersion of 51.3 and 1 region(s) indicate low forage diet.
+SEQ_0507_frame_01307,507,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0508_frame_01021,508,2,"The cow shows diminished methane release with only 2.7% gas coverage, consistent with low forage feeding conditions."
+SEQ_0508_frame_01137,508,2,"Low metabolic activity detected: gas emission parameters (4.6% area, 17.3 dispersion) suggest dietary distress."
+SEQ_0505_frame_00018,505,2,"The thermal profile reveals suppressed gas output at (153, 176) with 1 barely visible emission zone(s)."
+SEQ_0506_frame_00592,506,2,Digestive function appears compromised. Gas coverage at 20.1% with moderate intensity indicates forage deficiency.
+SEQ_0508_frame_01513,508,2,Reduced behavioural activity: the thermal emission covers only 6.6% of the field with peak intensity 225.
+SEQ_0507_frame_01134,507,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0507_frame_00589,507,2,The subject's gas emission is notably reduced. Spatial coverage of 5.5% and dispersion 56.7 indicate dietary stress.
+SEQ_0508_frame_01834,508,2,Thermal behavioural analysis indicates low emission state with 7.6% coverage and mean intensity of 109.
+SEQ_0509_frame_01260,509,2,"The bovine subject shows reduced gas emission at 9.4% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_00846,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 8.3% spatial coverage.
+SEQ_0509_frame_01078,509,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 47.9.
+SEQ_0508_frame_00961,508,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (158, 133) covers only 2.4% of the thermal field."
+SEQ_0509_frame_01333,509,2,Low forage dietary stress reflected in reduced methane output: 10.5% coverage with moderate emission intensity.
+SEQ_0507_frame_01910,507,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 40.3.
+SEQ_0506_frame_01604,506,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0506_frame_01396,506,2,Digestive distress state: the thermal emission is weak with mean intensity 122 and maximum 199.
+SEQ_0509_frame_00337,509,2,The animal displays signs of dietary insufficiency. Gas coverage of 13.0% is significantly below normal levels.
+SEQ_0508_frame_01425,508,2,"Low emission state confirmed: the gas plume at (138, 148) shows minimal thermal signature with 7.6% coverage."
+SEQ_0508_frame_00708,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 15.1 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_00464,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0508_frame_01398,508,2,"The cow shows diminished methane release with only 7.5% gas coverage, consistent with low forage feeding conditions."
+SEQ_0505_frame_00089,505,2,"Low metabolic activity detected: gas emission parameters (7.4% area, 24.3 dispersion) suggest dietary distress."
+SEQ_0506_frame_01542,506,2,"The thermal profile reveals suppressed gas output at (172, 106) with 1 barely visible emission zone(s)."
+SEQ_0506_frame_00629,506,2,Digestive function appears compromised. Gas coverage at 7.2% with moderate intensity indicates forage deficiency.
+SEQ_0509_frame_00082,509,2,Reduced behavioural activity: the thermal emission covers only 1.4% of the field with peak intensity 196.
+SEQ_0508_frame_01514,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0508_frame_00249,508,2,The subject's gas emission is notably reduced. Spatial coverage of 6.4% and dispersion 27.6 indicate dietary stress.
+SEQ_0507_frame_00327,507,2,Thermal behavioural analysis indicates low emission state with 3.9% coverage and mean intensity of 119.
+SEQ_0509_frame_01697,509,2,"The bovine subject shows reduced gas emission at 18.1% coverage, indicating digestive distress from low forage intake."
+SEQ_0509_frame_01850,509,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 11.1% spatial coverage.
+SEQ_0505_frame_00044,505,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 25.9.
+SEQ_0507_frame_01383,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (180, 132) covers only 5.8% of the thermal field."
+SEQ_0509_frame_00153,509,2,Low forage dietary stress reflected in reduced methane output: 7.9% coverage with moderate emission intensity.
+SEQ_0508_frame_00255,508,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 31.0.
+SEQ_0509_frame_00596,509,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0508_frame_01141,508,2,Digestive distress state: the thermal emission is weak with mean intensity 108 and maximum 218.
+SEQ_0507_frame_00583,507,2,The animal displays signs of dietary insufficiency. Gas coverage of 8.2% is significantly below normal levels.
+SEQ_0509_frame_00737,509,2,"Low emission state confirmed: the gas plume at (109, 153) shows minimal thermal signature with 11.0% coverage."
+SEQ_0509_frame_01297,509,2,The bovine's metabolic output is suppressed. Gas dispersion of 40.1 and 1 region(s) indicate low forage diet.
+SEQ_0506_frame_01361,506,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0505_frame_00161,505,2,"The cow shows diminished methane release with only 4.6% gas coverage, consistent with low forage feeding conditions."
+SEQ_0509_frame_00562,509,2,"Low metabolic activity detected: gas emission parameters (3.6% area, 34.7 dispersion) suggest dietary distress."
+SEQ_0506_frame_00203,506,2,"The thermal profile reveals suppressed gas output at (217, 55) with 1 barely visible emission zone(s)."
+SEQ_0508_frame_01002,508,2,Digestive function appears compromised. Gas coverage at 6.0% with moderate intensity indicates forage deficiency.
+SEQ_0508_frame_01595,508,2,Reduced behavioural activity: the thermal emission covers only 6.6% of the field with peak intensity 159.
+SEQ_0508_frame_00421,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0508_frame_01207,508,2,The subject's gas emission is notably reduced. Spatial coverage of 8.0% and dispersion 28.7 indicate dietary stress.
+SEQ_0506_frame_01821,506,2,Thermal behavioural analysis indicates low emission state with 9.3% coverage and mean intensity of 125.
+SEQ_0506_frame_01629,506,2,"The bovine subject shows reduced gas emission at 13.2% coverage, indicating digestive distress from low forage intake."
+SEQ_0506_frame_00255,506,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 9.4% spatial coverage.
+SEQ_0508_frame_01311,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 28.4.
+SEQ_0507_frame_01361,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (186, 93) covers only 1.9% of the thermal field."
+SEQ_0509_frame_01515,509,2,Low forage dietary stress reflected in reduced methane output: 10.9% coverage with moderate emission intensity.
+SEQ_0509_frame_01909,509,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 27.8.
+SEQ_0508_frame_02069,508,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0505_frame_00100,505,2,Digestive distress state: the thermal emission is weak with mean intensity 106 and maximum 192.
+SEQ_0506_frame_01159,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 2.9% is significantly below normal levels.
+SEQ_0506_frame_00025,506,2,"Low emission state confirmed: the gas plume at (151, 148) shows minimal thermal signature with 6.3% coverage."
+SEQ_0508_frame_00425,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 36.0 and 1 region(s) indicate low forage diet.
+SEQ_0507_frame_00126,507,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_00622,507,2,"The cow shows diminished methane release with only 4.3% gas coverage, consistent with low forage feeding conditions."
+SEQ_0506_frame_01166,506,2,"Low metabolic activity detected: gas emission parameters (11.4% area, 57.2 dispersion) suggest dietary distress."
+SEQ_0505_frame_interp_00011,505,2,"The thermal profile reveals suppressed gas output at (157, 172) with 1 barely visible emission zone(s)."
+SEQ_0509_frame_01509,509,2,Digestive function appears compromised. Gas coverage at 10.9% with moderate intensity indicates forage deficiency.
+SEQ_0509_frame_00806,509,2,Reduced behavioural activity: the thermal emission covers only 6.0% of the field with peak intensity 168.
+SEQ_0507_frame_00284,507,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0507_frame_01278,507,2,The subject's gas emission is notably reduced. Spatial coverage of 7.4% and dispersion 37.9 indicate dietary stress.
+SEQ_0509_frame_00326,509,2,Thermal behavioural analysis indicates low emission state with 11.8% coverage and mean intensity of 107.
+SEQ_0509_frame_01049,509,2,"The bovine subject shows reduced gas emission at 7.5% coverage, indicating digestive distress from low forage intake."
+SEQ_0508_frame_00242,508,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 10.4% spatial coverage.
+SEQ_0508_frame_01787,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 21.7.
+SEQ_0508_frame_01974,508,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (123, 156) covers only 7.0% of the thermal field."
+SEQ_0508_frame_00450,508,2,Low forage dietary stress reflected in reduced methane output: 5.8% coverage with moderate emission intensity.
+SEQ_0506_frame_01473,506,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 30.6.
+SEQ_0507_frame_00200,507,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0509_frame_01302,509,2,Digestive distress state: the thermal emission is weak with mean intensity 111 and maximum 204.
+SEQ_0509_frame_01308,509,2,The animal displays signs of dietary insufficiency. Gas coverage of 13.7% is significantly below normal levels.
+SEQ_0507_frame_00077,507,2,"Low emission state confirmed: the gas plume at (165, 127) shows minimal thermal signature with 10.9% coverage."
+SEQ_0505_frame_00028,505,2,The bovine's metabolic output is suppressed. Gas dispersion of 28.1 and 1 region(s) indicate low forage diet.
+SEQ_0506_frame_01816,506,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_01080,507,2,"The cow shows diminished methane release with only 2.4% gas coverage, consistent with low forage feeding conditions."
+SEQ_0506_frame_00775,506,2,"Low metabolic activity detected: gas emission parameters (7.1% area, 41.9 dispersion) suggest dietary distress."
+SEQ_0507_frame_01414,507,2,"The thermal profile reveals suppressed gas output at (190, 111) with 1 barely visible emission zone(s)."
+SEQ_0505_frame_00230,505,2,Digestive function appears compromised. Gas coverage at 1.3% with low intensity indicates forage deficiency.
+SEQ_0506_frame_00044,506,2,Reduced behavioural activity: the thermal emission covers only 4.4% of the field with peak intensity 207.
+SEQ_0509_frame_01823,509,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0507_frame_01367,507,2,The subject's gas emission is notably reduced. Spatial coverage of 6.9% and dispersion 40.4 indicate dietary stress.
+SEQ_0506_frame_01348,506,2,Thermal behavioural analysis indicates low emission state with 5.6% coverage and mean intensity of 122.
+SEQ_0506_frame_01661,506,2,"The bovine subject shows reduced gas emission at 10.5% coverage, indicating digestive distress from low forage intake."
+SEQ_0509_frame_00927,509,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 4.7% spatial coverage.
+SEQ_0508_frame_00361,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 31.1.
+SEQ_0509_frame_01744,509,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (126, 101) covers only 12.1% of the thermal field."
+SEQ_0506_frame_01332,506,2,Low forage dietary stress reflected in reduced methane output: 10.0% coverage with moderate emission intensity.
+SEQ_0506_frame_00640,506,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 25.3.
+SEQ_0507_frame_00117,507,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0508_frame_01305,508,2,Digestive distress state: the thermal emission is weak with mean intensity 111 and maximum 178.
+SEQ_0508_frame_00783,508,2,The animal displays signs of dietary insufficiency. Gas coverage of 5.2% is significantly below normal levels.
+SEQ_0508_frame_01639,508,2,"Low emission state confirmed: the gas plume at (203, 181) shows minimal thermal signature with 7.5% coverage."
+SEQ_0509_frame_00169,509,2,The bovine's metabolic output is suppressed. Gas dispersion of 31.5 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_00828,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_00239,507,2,"The cow shows diminished methane release with only 7.2% gas coverage, consistent with low forage feeding conditions."
+SEQ_0505_frame_interp_00033,505,2,"Low metabolic activity detected: gas emission parameters (7.4% area, 24.3 dispersion) suggest dietary distress."
+SEQ_0508_frame_00395,508,2,"The thermal profile reveals suppressed gas output at (162, 139) with 1 barely visible emission zone(s)."
+SEQ_0505_frame_00243,505,2,Digestive function appears compromised. Gas coverage at 3.6% with moderate intensity indicates forage deficiency.
+SEQ_0509_frame_00511,509,2,Reduced behavioural activity: the thermal emission covers only 11.9% of the field with peak intensity 197.
+SEQ_0508_frame_01772,508,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0509_frame_01783,509,2,The subject's gas emission is notably reduced. Spatial coverage of 12.6% and dispersion 31.3 indicate dietary stress.
+SEQ_0508_frame_00854,508,2,Thermal behavioural analysis indicates low emission state with 6.4% coverage and mean intensity of 112.
+SEQ_0507_frame_01534,507,2,"The bovine subject shows reduced gas emission at 9.3% coverage, indicating digestive distress from low forage intake."
+SEQ_0505_frame_interp_00001,505,2,Low emission state detected. The thermal signature reveals low-intensity gas output with only 8.8% spatial coverage.
+SEQ_0508_frame_00538,508,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 30.9.
+SEQ_0507_frame_01209,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (193, 144) covers only 9.7% of the thermal field."
+SEQ_0507_frame_01112,507,2,Low forage dietary stress reflected in reduced methane output: 2.7% coverage with moderate emission intensity.
+SEQ_0509_frame_00436,509,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 41.2.
+SEQ_0509_frame_01581,509,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0507_frame_01577,507,2,Digestive distress state: the thermal emission is weak with mean intensity 123 and maximum 201.
+SEQ_0506_frame_00660,506,2,The animal displays signs of dietary insufficiency. Gas coverage of 4.8% is significantly below normal levels.
+SEQ_0507_frame_00016,507,2,"Low emission state confirmed: the gas plume at (172, 108) shows minimal thermal signature with 11.4% coverage."
+SEQ_0506_frame_00879,506,2,The bovine's metabolic output is suppressed. Gas dispersion of 54.0 and 1 region(s) indicate low forage diet.
+SEQ_0508_frame_01013,508,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0507_frame_01944,507,2,"The cow shows diminished methane release with only 2.7% gas coverage, consistent with low forage feeding conditions."
+SEQ_0507_frame_01934,507,2,"Low metabolic activity detected: gas emission parameters (10.7% area, 41.3 dispersion) suggest dietary distress."
+SEQ_0505_frame_00142,505,2,"The thermal profile reveals suppressed gas output at (199, 116) with 1 barely visible emission zone(s)."
+SEQ_0508_frame_01550,508,2,Digestive function appears compromised. Gas coverage at 5.7% with moderate intensity indicates forage deficiency.
+SEQ_0507_frame_00206,507,2,Reduced behavioural activity: the thermal emission covers only 5.8% of the field with peak intensity 179.
+SEQ_0506_frame_01548,506,2,Low forage intake evident from the minimal gas emission pattern: 1 region(s) at moderate thermal intensity.
+SEQ_0507_frame_00780,507,2,The subject's gas emission is notably reduced. Spatial coverage of 8.5% and dispersion 33.7 indicate dietary stress.
+SEQ_0505_frame_interp_00025,505,2,Thermal behavioural analysis indicates low emission state with 14.4% coverage and mean intensity of 98.
+SEQ_0507_frame_01113,507,2,"The bovine subject shows reduced gas emission at 1.5% coverage, indicating digestive distress from low forage intake."
+SEQ_0507_frame_00893,507,2,Low emission state detected. The thermal signature reveals moderate-intensity gas output with only 15.6% spatial coverage.
+SEQ_0506_frame_01355,506,2,Digestive distress evident: diminished gas emission with 1 small region(s) and dispersion of 35.8.
+SEQ_0507_frame_00679,507,2,"The cow exhibits suppressed metabolic activity. Gas emission centered at (263, 168) covers only 16.4% of the thermal field."
+SEQ_0507_frame_01404,507,2,Low forage dietary stress reflected in reduced methane output: 2.9% coverage with moderate emission intensity.
+SEQ_0506_frame_00573,506,2,The subject's thermal profile indicates compromised digestive function with diminished gas dispersion of 35.2.
+SEQ_0507_frame_01366,507,2,Reduced eructation activity observed. 1 faint gas region(s) at moderate intensity suggest low forage availability.
+SEQ_0509_frame_00602,509,2,Digestive distress state: the thermal emission is weak with mean intensity 103 and maximum 175.
+SEQ_0507_frame_00310,507,2,The animal displays signs of dietary insufficiency. Gas coverage of 5.7% is significantly below normal levels.
+SEQ_0506_frame_01153,506,2,"Low emission state confirmed: the gas plume at (186, 104) shows minimal thermal signature with 5.5% coverage."
+SEQ_0508_frame_00949,508,2,The bovine's metabolic output is suppressed. Gas dispersion of 23.0 and 1 region(s) indicate low forage diet.
+SEQ_0509_frame_02150,509,2,Compromised rumination observed. The thermal gas signature at moderate intensity reflects reduced digestive throughput.
+SEQ_0509_frame_01255,509,2,"The cow shows diminished methane release with only 10.8% gas coverage, consistent with low forage feeding conditions."

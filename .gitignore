@@ -1,0 +1,49 @@
+# Dataset - raw images, masks, overlays (too large to push)
+dataset/
+
+# Core dumps
+core.*
+*.core
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Conda temp files
+condaenv.*.requirements.txt
+
+# Weights & Biases run cache
+wandb/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter checkpoints
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
