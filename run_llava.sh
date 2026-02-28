@@ -1,31 +1,17 @@
 #!/bin/bash
-#PBS -l select=1:system=polaris
-#PBS -l walltime=24:00:00
-#PBS -q capacity
-#PBS -A CXR-Images-Radiology-Reports-Lung-Diseases-Classification
-#PBS -N rumiformer_e2e
-#PBS -l filesystems=home:eagle
-#PBS -r y
-#PBS -o /home/taminul_islam/Co2_farm/logs/e2e_stdout.log
-#PBS -e /home/taminul_islam/Co2_farm/logs/e2e_stderr.log
-
+# Stage 4: LLaVA LoRA Fine-tuning (single GPU)
 set -e
 
 export OPENBLAS_NUM_THREADS=8
 export OMP_NUM_THREADS=8
-
-export http_proxy="http://proxy.alcf.anl.gov:3128"
-export https_proxy="http://proxy.alcf.anl.gov:3128"
-export ftp_proxy="http://proxy.alcf.anl.gov:3128"
 export HF_HUB_DISABLE_XET=1
 
-eval "$(~/miniconda3/bin/conda shell.bash hook 2>/dev/null)"
+eval "$(conda shell.bash hook 2>/dev/null)"
 conda activate rumiformer
 
-cd /home/taminul_islam/Co2_farm
+cd /home/siu856569517/Taminul/co2_farm
 
 echo "========================================="
-echo "Job ID: $PBS_JOBID"
 echo "Node: $(hostname)"
 echo "Date: $(date)"
 echo "========================================="
@@ -42,16 +28,12 @@ echo "========================================="
 SEG_CKPT="outputs/checkpoints/segmentation/segmentation_latest.pt"
 TEMP_CKPT="outputs/checkpoints/temporal/temporal_latest.pt"
 FUSION_CKPT="outputs/checkpoints/fusion/fusion_latest.pt"
-LLAVA_CKPT="outputs/checkpoints/llava/llava_latest.pt"
 
-# 4-GPU DDP training
-torchrun --nproc_per_node=4 --standalone \
-    src/train/train_e2e.py --resume \
+python src/train/train_llava.py --resume \
     --seg_checkpoint "$SEG_CKPT" \
     --temporal_checkpoint "$TEMP_CKPT" \
-    --fusion_checkpoint "$FUSION_CKPT" \
-    --llava_checkpoint "$LLAVA_CKPT"
+    --fusion_checkpoint "$FUSION_CKPT" 2>&1 | tee logs/llava_stdout.log
 
 echo "========================================="
-echo "Stage 5 (End-to-End) finished at $(date)"
+echo "Stage 4 (LLaVA LoRA) finished at $(date)"
 echo "========================================="

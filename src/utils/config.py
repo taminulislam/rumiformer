@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional
 
 
-PROJECT_ROOT = Path("/home/taminul_islam/Co2_farm")
+PROJECT_ROOT = Path("/home/siu856569517/Taminul/co2_farm")
 
 
 @dataclass
@@ -57,7 +57,7 @@ class SegmentationConfig(BaseTrainConfig):
     # Sub-stages
     # 1a: freeze backbone, train TGAA gates + decode head
     # 1b: unfreeze all, full fine-tune
-    substage_1a_epochs: int = 20
+    substage_1a_epochs: int = 15
     substage_1a_lr: float = 6e-5
     substage_1b_epochs: int = 30
     substage_1b_lr: float = 1e-5

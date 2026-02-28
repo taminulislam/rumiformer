@@ -9,8 +9,8 @@ from pathlib import Path
 
 import pandas as pd
 
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
-DATASET_ROOT = Path("/home/taminul_islam/Co2_farm/dataset")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
+DATASET_ROOT = Path("/home/siu856569517/Taminul/co2_farm/dataset")
 
 CLIP_LENGTH = 16
 STRIDE = 8

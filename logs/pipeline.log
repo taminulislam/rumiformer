@@ -1,0 +1,87 @@
+nohup: ignoring input
+=========================================
+RumiFormer Training Pipeline
+Node: CS-548824.AD.SIU.EDU
+Start: Sat Feb 28 06:21:23 AM CST 2026
+=========================================
+PyTorch: 2.8.0+cu128
+CUDA available: True
+  GPU 0: NVIDIA RTX 6000 Ada Generation (50.9 GB)
+=========================================
+
+>>>>> STAGE 1: Segmentation Pretraining <<<<<
+Started at: Sat Feb 28 06:21:24 AM CST 2026
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:233: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+wandb: Currently logged in as: taminul. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.25.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/siu856569517/Taminul/co2_farm/wandb/run-20260228_062127-46ryzj0b
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run segmentation
+wandb: ⭐️ View project at https://wandb.ai/taminul/rumiformer
+wandb: 🚀 View run at https://wandb.ai/taminul/rumiformer/runs/46ryzj0b
+============================================================
+  RumiFormer — Stage 1: Segmentation Pretraining
+============================================================
+  project_root: /home/siu856569517/Taminul/co2_farm
+  annotations_csv: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+  clips_csv: /home/siu856569517/Taminul/co2_farm/annotations/clips.csv
+  checkpoint_dir: /home/siu856569517/Taminul/co2_farm/outputs/checkpoints
+  log_dir: /home/siu856569517/Taminul/co2_farm/outputs/logs
+  seed: 42
+  precision: bf16
+  num_workers: 8
+  pin_memory: True
+  use_compile: True
+  gradient_checkpointing: False
+  optimizer: adamw
+  weight_decay: 0.01
+  resume_from: None
+  save_every_n_epochs: 1
+  save_every_n_steps: None
+  keep_last_n_checkpoints: 3
+  use_wandb: True
+  wandb_project: rumiformer
+  wandb_run_name: None
+  log_every_n_steps: 10
+  show_eta: True
+  stage_name: segmentation
+  substage_1a_epochs: 15
+  substage_1a_lr: 6e-05
+  substage_1b_epochs: 30
+  substage_1b_lr: 1e-05
+  img_size: (256, 320)
+  batch_size: 32
+  bce_weight: 0.5
+  dice_weight: 0.5
+  scheduler: cosine
+  warmup_steps: 500
+  decode_dim: 256
+  use_aux_mask: True
+============================================================
+World size: 1 GPUs
+Train: 3734 frames, Val: 1402 frames
+
+--- Sub-stage 1a: Freeze backbone ---
+Trainable: 535,025 / 27,728,434 params
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:119: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E00 S00010] loss=0.6956 bce=0.5433 dice=0.8480 lr=1.20e-06 ETA=43m 02s elapsed=0m 14s
+  [E00 S00020] loss=0.6964 bce=0.5373 dice=0.8555 lr=2.40e-06 ETA=38m 13s elapsed=0m 26s
+  [E00 S00030] loss=0.6711 bce=0.5216 dice=0.8205 lr=3.60e-06 ETA=36m 29s elapsed=0m 38s
+  [E00 S00040] loss=0.6729 bce=0.5110 dice=0.8348 lr=4.80e-06 ETA=35m 33s elapsed=0m 50s
+  [E00 S00050] loss=0.6250 bce=0.4718 dice=0.7781 lr=6.00e-06 ETA=34m 55s elapsed=1m 02s
+  [E00 S00060] loss=0.6118 bce=0.4574 dice=0.7662 lr=7.20e-06 ETA=34m 26s elapsed=1m 13s
+  [E00 S00070] loss=0.5881 bce=0.4253 dice=0.7509 lr=8.40e-06 ETA=34m 02s elapsed=1m 25s
+  [E00 S00080] loss=0.5629 bce=0.4029 dice=0.7229 lr=9.60e-06 ETA=33m 40s elapsed=1m 37s
+  [E00 S00090] loss=0.5544 bce=0.3875 dice=0.7213 lr=1.08e-05 ETA=33m 22s elapsed=1m 49s
+  [E00 S00100] loss=0.5152 bce=0.3548 dice=0.6757 lr=1.20e-05 ETA=33m 04s elapsed=2m 01s
+  [E00 S00110] loss=0.5068 bce=0.3378 dice=0.6758 lr=1.32e-05 ETA=32m 47s elapsed=2m 12s
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:161: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):

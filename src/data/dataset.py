@@ -19,7 +19,7 @@ try:
 except ImportError:
     ThermalGasAugment = None
 
-PROJECT_ROOT = Path("/home/taminul_islam/Co2_farm")
+PROJECT_ROOT = Path("/home/siu856569517/Taminul/co2_farm")
 
 
 class ThermalFrameDataset(Dataset):

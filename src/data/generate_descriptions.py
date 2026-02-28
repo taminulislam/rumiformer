@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
 SEED = 42
 TARGET_DESCRIPTIONS = 1000
 

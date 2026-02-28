@@ -1,35 +1,22 @@
 #!/bin/bash
-#PBS -l select=1:system=polaris
-#PBS -l walltime=00:60:00
-#PBS -q debug
-#PBS -A CXR-Images-Radiology-Reports-Lung-Diseases-Classification
-#PBS -N rumiformer_test
-#PBS -l filesystems=home:eagle
-#PBS -o /home/taminul_islam/Co2_farm/logs/test_gpu_stdout.log
-#PBS -e /home/taminul_islam/Co2_farm/logs/test_gpu_stderr.log
-
+# GPU & Environment Test (single GPU)
 set -e
 
 export OPENBLAS_NUM_THREADS=8
 export OMP_NUM_THREADS=8
 export HF_HUB_DISABLE_XET=1
 
-export http_proxy="http://proxy.alcf.anl.gov:3128"
-export https_proxy="http://proxy.alcf.anl.gov:3128"
-export ftp_proxy="http://proxy.alcf.anl.gov:3128"
-
-eval "$(~/miniconda3/bin/conda shell.bash hook 2>/dev/null)"
+eval "$(conda shell.bash hook 2>/dev/null)"
 conda activate rumiformer
 
-cd /home/taminul_islam/Co2_farm
+cd /home/siu856569517/Taminul/co2_farm
 
 echo "========================================="
-echo "Job ID: $PBS_JOBID"
 echo "Node: $(hostname)"
 echo "Date: $(date)"
 echo "========================================="
 
-# Step 1: Verify ALL 4 GPUs
+# Step 1: Verify GPU
 python -c "
 import torch
 print(f'PyTorch: {torch.__version__}')
@@ -37,31 +24,13 @@ print(f'CUDA available: {torch.cuda.is_available()}')
 print(f'GPU count: {torch.cuda.device_count()}')
 for i in range(torch.cuda.device_count()):
     props = torch.cuda.get_device_properties(i)
-    print(f'  GPU {i}: {torch.cuda.get_device_name(i)} ({props.total_mem / 1e9:.1f} GB)')
+    print(f'  GPU {i}: {torch.cuda.get_device_name(i)} ({props.total_memory / 1e9:.1f} GB)')
     x = torch.randn(100, 100, device=f'cuda:{i}')
     print(f'    Tensor test on GPU {i}: OK (sum={x.sum().item():.2f})')
-print(f'Total VRAM: {sum(torch.cuda.get_device_properties(i).total_mem for i in range(torch.cuda.device_count())) / 1e9:.1f} GB')
 "
 
 echo "========================================="
-echo "Step 2: Test NCCL multi-GPU communication"
-echo "========================================="
-
-torchrun --nproc_per_node=4 --standalone -c "
-import os, torch, torch.distributed as dist
-dist.init_process_group('nccl')
-rank = dist.get_rank()
-local_rank = int(os.environ['LOCAL_RANK'])
-torch.cuda.set_device(local_rank)
-x = torch.ones(1, device=f'cuda:{local_rank}') * rank
-dist.all_reduce(x)
-if rank == 0:
-    print(f'NCCL all_reduce test: OK (sum of ranks 0-3 = {x.item():.0f}, expected 6.0)')
-dist.destroy_process_group()
-" || echo "NCCL test skipped (may need special config)"
-
-echo "========================================="
-echo "Step 3: Test model imports"
+echo "Step 2: Test model imports"
 echo "========================================="
 
 python -c "
@@ -79,7 +48,7 @@ print('All model imports: OK')
 "
 
 echo "========================================="
-echo "Step 4: Quick RumiFormer forward pass (GPU 0)"
+echo "Step 3: Quick RumiFormer forward pass (GPU 0)"
 echo "========================================="
 
 python -c "
@@ -99,7 +68,7 @@ print('Forward pass: OK')
 "
 
 echo "========================================="
-echo "Step 5: Quick data loading test"
+echo "Step 4: Quick data loading test"
 echo "========================================="
 
 python -c "

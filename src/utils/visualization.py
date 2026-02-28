@@ -11,7 +11,7 @@ try:
 except ImportError:
     torch = None
 
-OUTPUT_DIR = Path("/home/taminul_islam/Co2_farm/outputs/visualizations")
+OUTPUT_DIR = Path("/home/siu856569517/Taminul/co2_farm/outputs/visualizations")
 
 
 def overlay_mask_on_image(image: np.ndarray, mask: np.ndarray,

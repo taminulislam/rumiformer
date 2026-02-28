@@ -10,8 +10,11 @@ import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
+from sklearn.metrics import (balanced_accuracy_score, cohen_kappa_score,
+                              f1_score, roc_auc_score)
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 
@@ -183,8 +186,7 @@ def main():
             raw_fusion = unwrap_model(fusion_model)
             raw_fusion.eval()
             val_loss = 0.0
-            val_correct = 0
-            val_total = 0
+            all_preds, all_labels, all_probs = [], [], []
             with torch.no_grad():
                 for batch in val_loader:
                     overlay = batch["overlay"].to(device, non_blocking=True)
@@ -198,14 +200,39 @@ def main():
                         logits, _ = raw_fusion(mask, seg_out["stage4_features"], bg_overlay)
                         loss = criterion(logits, labels)
                     val_loss += loss.item()
-                    pred = logits.argmax(dim=1)
-                    val_correct += (pred == labels).sum().item()
-                    val_total += labels.size(0)
+                    probs = torch.softmax(logits.float(), dim=1)
+                    pred = probs.argmax(dim=1)
+                    all_preds.extend(pred.cpu().numpy().tolist())
+                    all_labels.extend(labels.cpu().numpy().tolist())
+                    all_probs.extend(probs.cpu().numpy().tolist())
 
-            val_metrics = {"val/loss": val_loss / len(val_loader),
-                           "val/acc": val_correct / max(val_total, 1)}
+            all_labels_np = np.array(all_labels)
+            all_preds_np  = np.array(all_preds)
+            all_probs_np  = np.array(all_probs)
+            acc      = (all_preds_np == all_labels_np).mean()
+            bal_acc  = balanced_accuracy_score(all_labels_np, all_preds_np)
+            macro_f1 = f1_score(all_labels_np, all_preds_np, average="macro", zero_division=0)
+            kappa    = cohen_kappa_score(all_labels_np, all_preds_np)
+            try:
+                auc = roc_auc_score(all_labels_np, all_probs_np, multi_class="ovr", average="macro")
+            except ValueError:
+                auc = float("nan")
+
+            val_metrics = {
+                "val/loss":        val_loss / len(val_loader),
+                "val/acc":         float(acc),
+                "val/BalancedAcc": float(bal_acc),
+                "val/MacroF1":     float(macro_f1),
+                "val/CohenKappa":  float(kappa),
+                "val/AUC_ROC":     float(auc),
+            }
             print(f"  [Epoch {epoch:02d}] train_loss={avg_loss:.4f} train_acc={acc:.4f} "
-                  f"val_loss={val_metrics['val/loss']:.4f} val_acc={val_metrics['val/acc']:.4f}")
+                  f"val_loss={val_metrics['val/loss']:.4f} "
+                  f"acc={val_metrics['val/acc']:.4f} "
+                  f"BalAcc={val_metrics['val/BalancedAcc']:.4f} "
+                  f"MacroF1={val_metrics['val/MacroF1']:.4f} "
+                  f"Kappa={val_metrics['val/CohenKappa']:.4f} "
+                  f"AUC={val_metrics['val/AUC_ROC']:.4f}")
             logger.log(val_metrics, step=global_step)
 
             if (epoch + 1) % config.save_every_n_epochs == 0:

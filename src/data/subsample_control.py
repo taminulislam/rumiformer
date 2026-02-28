@@ -11,8 +11,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-DATASET_ROOT = Path("/home/taminul_islam/Co2_farm/dataset")
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
+DATASET_ROOT = Path("/home/siu856569517/Taminul/co2_farm/dataset")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
 
 CLASS_MAPPING = {
     "0483": 0, "0484": 0, "0486": 0, "0488": 0, "0490": 0,

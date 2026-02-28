@@ -16,8 +16,8 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-DATASET_ROOT = Path("/home/taminul_islam/Co2_farm/dataset")
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
+DATASET_ROOT = Path("/home/siu856569517/Taminul/co2_farm/dataset")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
 
 log_lines = []
 

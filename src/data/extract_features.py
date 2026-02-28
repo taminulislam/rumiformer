@@ -14,8 +14,8 @@ import cv2
 import numpy as np
 import pandas as pd
 
-DATASET_ROOT = Path("/home/taminul_islam/Co2_farm/dataset")
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
+DATASET_ROOT = Path("/home/siu856569517/Taminul/co2_farm/dataset")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
 
 
 def extract_frame_features(mask_path: Path, overlay_path: Path) -> dict:

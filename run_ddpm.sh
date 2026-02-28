@@ -1,31 +1,17 @@
 #!/bin/bash
-#PBS -l select=1:system=polaris
-#PBS -l walltime=24:00:00
-#PBS -q capacity
-#PBS -A CXR-Images-Radiology-Reports-Lung-Diseases-Classification
-#PBS -N rumiformer_ddpm
-#PBS -l filesystems=home:eagle
-#PBS -r y
-#PBS -o /home/taminul_islam/Co2_farm/logs/ddpm_stdout.log
-#PBS -e /home/taminul_islam/Co2_farm/logs/ddpm_stderr.log
-
+# Stage 6: DDPM Augmentation Training (single GPU)
 set -e
 
 export OPENBLAS_NUM_THREADS=8
 export OMP_NUM_THREADS=8
-
-export http_proxy="http://proxy.alcf.anl.gov:3128"
-export https_proxy="http://proxy.alcf.anl.gov:3128"
-export ftp_proxy="http://proxy.alcf.anl.gov:3128"
 export HF_HUB_DISABLE_XET=1
 
-eval "$(~/miniconda3/bin/conda shell.bash hook 2>/dev/null)"
+eval "$(conda shell.bash hook 2>/dev/null)"
 conda activate rumiformer
 
-cd /home/taminul_islam/Co2_farm
+cd /home/siu856569517/Taminul/co2_farm
 
 echo "========================================="
-echo "Job ID: $PBS_JOBID"
 echo "Node: $(hostname)"
 echo "Date: $(date)"
 echo "========================================="
@@ -39,9 +25,7 @@ for i in range(torch.cuda.device_count()):
 "
 echo "========================================="
 
-# 4-GPU DDP training
-torchrun --nproc_per_node=4 --standalone \
-    src/train/train_ddpm.py --resume
+python src/train/train_ddpm.py --resume 2>&1 | tee logs/ddpm_stdout.log
 
 echo "========================================="
 echo "Stage 6 (DDPM) finished at $(date)"

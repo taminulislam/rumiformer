@@ -12,9 +12,14 @@ import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from scipy.ndimage import binary_erosion
+from scipy.spatial.distance import directed_hausdorff
+from sklearn.metrics import (balanced_accuracy_score, cohen_kappa_score,
+                              f1_score, roc_auc_score)
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 
@@ -82,6 +87,30 @@ def dice_loss(pred, target, smooth=1.0):
     intersection = (pred_sig * target).sum(dim=(2, 3))
     union = pred_sig.sum(dim=(2, 3)) + target.sum(dim=(2, 3))
     return 1.0 - ((2.0 * intersection + smooth) / (union + smooth)).mean()
+
+
+def _boundary(m):
+    return m.astype(bool) & ~binary_erosion(m, iterations=1)
+
+
+def compute_seg_metrics(pred_np, gt_np):
+    smooth = 1e-6
+    tp = (pred_np & gt_np).sum()
+    fp = (pred_np & ~gt_np).sum()
+    fn = (~pred_np & gt_np).sum()
+    prec = tp / (tp + fp + smooth)
+    rec  = tp / (tp + fn + smooth)
+    dice = 2*tp / (2*tp + fp + fn + smooth)
+    pb, gb = _boundary(pred_np), _boundary(gt_np)
+    bf1 = 2*(pb & gb).sum() / (pb.sum() + gb.sum() + smooth)
+    pp, gp = np.argwhere(pred_np), np.argwhere(gt_np)
+    if len(pp) > 0 and len(gp) > 0:
+        hd = max(directed_hausdorff(pp, gp)[0], directed_hausdorff(gp, pp)[0])
+        cce = np.linalg.norm(pp.mean(0) - gp.mean(0))
+    else:
+        hd = cce = float(max(pred_np.shape))
+    return {"dice": float(dice), "prec": float(prec), "rec": float(rec),
+            "bf1": float(bf1), "hd": float(hd), "cce": float(cce)}
 
 
 def main():
@@ -235,34 +264,76 @@ def main():
             raw_e2e = unwrap_model(e2e_model)
             raw_e2e.eval()
             val_loss = 0.0
-            val_correct = 0
-            val_total = 0
-            val_iou = 0.0
+            all_preds, all_labels, all_probs = [], [], []
+            seg_acc = {"iou": 0., "dice": 0., "prec": 0., "rec": 0.,
+                       "bf1": 0., "hd": 0., "cce": 0.}
+            n_val = 0
             with torch.no_grad():
                 for batch in val_loader:
-                    overlay = batch["overlay"].to(device, non_blocking=True)
-                    mask = batch["mask"].to(device, non_blocking=True)
-                    intensity = batch["thermal_intensity"].to(device, non_blocking=True)
-                    class_ids = batch["class_id"].clone().detach().to(device)
+                    overlay    = batch["overlay"].to(device, non_blocking=True)
+                    mask       = batch["mask"].to(device, non_blocking=True)
+                    intensity  = batch["thermal_intensity"].to(device, non_blocking=True)
+                    class_ids  = batch["class_id"].clone().detach().to(device)
                     with autocast(dtype=torch.bfloat16):
                         out = raw_e2e(overlay, mask, intensity)
-                    pred_cls = out["cls_logits"].argmax(dim=1)
-                    val_correct += (pred_cls == class_ids).sum().item()
-                    val_total += class_ids.size(0)
+                    # Classification
+                    probs = torch.softmax(out["cls_logits"].float(), dim=1)
+                    pred_cls = probs.argmax(dim=1)
+                    all_preds.extend(pred_cls.cpu().numpy().tolist())
+                    all_labels.extend(class_ids.cpu().numpy().tolist())
+                    all_probs.extend(probs.cpu().numpy().tolist())
+                    # Segmentation — GPU fast
                     pred_mask = (torch.sigmoid(out["seg_logits"]) > 0.5).float()
-                    intersection = (pred_mask * mask).sum(dim=(2, 3))
-                    union = pred_mask.sum(dim=(2, 3)) + mask.sum(dim=(2, 3)) - intersection
-                    val_iou += (intersection / (union + 1e-6)).mean().item()
+                    inter = (pred_mask * mask).sum(dim=(2, 3))
+                    uni   = pred_mask.sum(dim=(2, 3)) + mask.sum(dim=(2, 3)) - inter
+                    seg_acc["iou"] += (inter / (uni + 1e-6)).mean().item()
+                    # Seg rich — CPU
+                    pnp = pred_mask.squeeze(1).cpu().numpy().astype(bool)
+                    gnp = mask.squeeze(1).cpu().numpy().astype(bool)
+                    for p, g in zip(pnp, gnp):
+                        m = compute_seg_metrics(p, g)
+                        for k in ("dice","prec","rec","bf1","hd","cce"):
+                            seg_acc[k] += m[k]
                     val_loss += (0.5 * F.binary_cross_entropy_with_logits(out["seg_logits"], mask)
                                  + 0.5 * dice_loss(out["seg_logits"], mask)).item()
+                    n_val += len(pnp)
 
-            n_val = len(val_loader)
-            val_metrics = {"val/loss": val_loss / n_val,
-                           "val/acc": val_correct / max(val_total, 1),
-                           "val/mIoU": val_iou / n_val}
+            nb = len(val_loader)
+            all_labels_np = np.array(all_labels)
+            all_preds_np  = np.array(all_preds)
+            all_probs_np  = np.array(all_probs)
+            bal_acc  = balanced_accuracy_score(all_labels_np, all_preds_np)
+            macro_f1 = f1_score(all_labels_np, all_preds_np, average="macro", zero_division=0)
+            kappa    = cohen_kappa_score(all_labels_np, all_preds_np)
+            try:
+                auc = roc_auc_score(all_labels_np, all_probs_np, multi_class="ovr", average="macro")
+            except ValueError:
+                auc = float("nan")
+
+            val_metrics = {
+                "val/loss":        val_loss / nb,
+                "val/acc":         (all_preds_np == all_labels_np).mean(),
+                "val/BalancedAcc": float(bal_acc),
+                "val/MacroF1":     float(macro_f1),
+                "val/CohenKappa":  float(kappa),
+                "val/AUC_ROC":     float(auc),
+                "val/mIoU":        seg_acc["iou"] / nb,
+                "val/Dice":        seg_acc["dice"] / n_val,
+                "val/Precision":   seg_acc["prec"] / n_val,
+                "val/Recall":      seg_acc["rec"]  / n_val,
+                "val/BoundaryF1":  seg_acc["bf1"]  / n_val,
+                "val/Hausdorff":   seg_acc["hd"]   / n_val,
+                "val/CentroidErr": seg_acc["cce"]  / n_val,
+            }
             print(f"  [Epoch {epoch:02d}] train={avg_loss:.4f} "
                   f"val_loss={val_metrics['val/loss']:.4f} "
-                  f"val_acc={val_metrics['val/acc']:.4f} val_mIoU={val_metrics['val/mIoU']:.4f}")
+                  f"mIoU={val_metrics['val/mIoU']:.4f} Dice={val_metrics['val/Dice']:.4f} "
+                  f"BF1={val_metrics['val/BoundaryF1']:.4f} HD={val_metrics['val/Hausdorff']:.1f}px \n"
+                  f"           acc={val_metrics['val/acc']:.4f} "
+                  f"BalAcc={val_metrics['val/BalancedAcc']:.4f} "
+                  f"MacroF1={val_metrics['val/MacroF1']:.4f} "
+                  f"Kappa={val_metrics['val/CohenKappa']:.4f} "
+                  f"AUC={val_metrics['val/AUC_ROC']:.4f}")
             logger.log(val_metrics, step=global_step)
 
             if (epoch + 1) % config.save_every_n_epochs == 0:

@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ANNOTATIONS_DIR = Path("/home/taminul_islam/Co2_farm/annotations")
+ANNOTATIONS_DIR = Path("/home/siu856569517/Taminul/co2_farm/annotations")
 SEED = 42
 
 HF_SEQS = ["0483", "0484", "0486", "0488", "0490", "0491", "0492", "0493",

@@ -27,7 +27,7 @@ from src.utils.trainer import (CheckpointManager, ETATracker, MetricsLogger,
                                 print_header, set_seed, setup_ddp,
                                 unwrap_model, wrap_model_ddp)
 
-PROJECT_ROOT = Path("/home/taminul_islam/Co2_farm")
+PROJECT_ROOT = Path("/home/siu856569517/Taminul/co2_farm")
 
 
 class MaskDataset(Dataset):

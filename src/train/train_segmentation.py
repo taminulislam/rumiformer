@@ -1,4 +1,4 @@
-"""Stage 1: TGAA-RumiFormer Segmentation Pretraining (4-GPU DDP).
+"""Stage 1: TGAA-RumiFormer Segmentation Pretraining.
 
 Sub-stage 1a: Freeze backbone, train TGAA gates + decode head (20 epochs, lr=6e-5)
 Sub-stage 1b: Unfreeze all, full fine-tune (30 epochs, lr=1e-5)
@@ -6,15 +6,23 @@ Sub-stage 1b: Unfreeze all, full fine-tune (30 epochs, lr=1e-5)
 Loss: 0.5*BCE + 0.5*Dice
 Input: thermal overlay (3, 256, 320) + thermal_intensity (1, 256, 320)
 Target: binary gas mask (1, 256, 320)
+
+Metrics (CVPR-quality):
+  Spatial:     mIoU, Dice/F1, Boundary-F1, Hausdorff Distance
+  Detection:   Precision, Recall
+  Domain:      Gas Centroid Error (px)
 """
 
 import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from scipy.ndimage import binary_erosion
+from scipy.spatial.distance import directed_hausdorff
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 
@@ -41,6 +49,59 @@ def combined_loss(pred, target, bce_w=0.5, dice_w=0.5):
     bce = F.binary_cross_entropy_with_logits(pred, target)
     dl = dice_loss(pred, target)
     return bce_w * bce + dice_w * dl, {"bce": bce.item(), "dice": dl.item()}
+
+
+def compute_boundary(mask_np: np.ndarray) -> np.ndarray:
+    """Return boundary pixels of a binary mask (erosion diff)."""
+    eroded = binary_erosion(mask_np, iterations=1)
+    return mask_np.astype(bool) & ~eroded
+
+
+def compute_seg_metrics(pred_np: np.ndarray, gt_np: np.ndarray):
+    """Compute rich segmentation metrics on CPU numpy arrays (H,W) binary.
+
+    Returns dict with: dice, precision, recall, boundary_f1, hausdorff, centroid_err
+    """
+    smooth = 1e-6
+    tp = (pred_np & gt_np).sum()
+    fp = (pred_np & ~gt_np).sum()
+    fn = (~pred_np & gt_np).sum()
+
+    precision = tp / (tp + fp + smooth)
+    recall    = tp / (tp + fn + smooth)
+    dice      = 2 * tp / (2 * tp + fp + fn + smooth)
+
+    # Boundary F1
+    pred_b = compute_boundary(pred_np)
+    gt_b   = compute_boundary(gt_np)
+    tp_b   = (pred_b & gt_b).sum()
+    boundary_f1 = (2 * tp_b / (pred_b.sum() + gt_b.sum() + smooth))
+
+    # Hausdorff distance (95th percentile approximation via max directed)
+    pred_pts = np.argwhere(pred_np)
+    gt_pts   = np.argwhere(gt_np)
+    if len(pred_pts) > 0 and len(gt_pts) > 0:
+        hd = max(directed_hausdorff(pred_pts, gt_pts)[0],
+                 directed_hausdorff(gt_pts, pred_pts)[0])
+    else:
+        hd = float(pred_np.shape[0])  # penalise empty predictions
+
+    # Gas centroid error (Euclidean distance in pixels)
+    if gt_np.sum() > 0 and pred_np.sum() > 0:
+        gt_cy, gt_cx = np.argwhere(gt_np).mean(axis=0)
+        pr_cy, pr_cx = np.argwhere(pred_np).mean(axis=0)
+        centroid_err = float(np.sqrt((gt_cy - pr_cy)**2 + (gt_cx - pr_cx)**2))
+    else:
+        centroid_err = float(max(pred_np.shape))
+
+    return {
+        "dice": float(dice),
+        "precision": float(precision),
+        "recall": float(recall),
+        "boundary_f1": float(boundary_f1),
+        "hausdorff": float(hd),
+        "centroid_err": float(centroid_err),
+    }
 
 
 def train_one_epoch(model, loader, optimizer, scheduler, scaler, device,
@@ -89,7 +150,8 @@ def train_one_epoch(model, loader, optimizer, scheduler, scaler, device,
 def validate(model, loader, device, config):
     model.eval()
     total_loss = 0.0
-    total_iou = 0.0
+    accum = {"iou": 0.0, "dice": 0.0, "precision": 0.0, "recall": 0.0,
+             "boundary_f1": 0.0, "hausdorff": 0.0, "centroid_err": 0.0}
     n = 0
     for batch in loader:
         overlay = batch["overlay"].to(device, non_blocking=True)
@@ -104,15 +166,38 @@ def validate(model, loader, device, config):
                                     config.bce_weight, config.dice_weight)
 
         pred = (torch.sigmoid(out["seg_logits"]) > 0.5).float()
+
+        # mIoU (GPU)
         intersection = (pred * mask).sum(dim=(2, 3))
         union = pred.sum(dim=(2, 3)) + mask.sum(dim=(2, 3)) - intersection
-        iou = (intersection / (union + 1e-6)).mean()
+        accum["iou"] += (intersection / (union + 1e-6)).mean().item()
+
+        # Rich metrics (CPU, per image in batch then averaged)
+        pred_np = pred.squeeze(1).cpu().numpy().astype(bool)  # (B,H,W)
+        gt_np   = mask.squeeze(1).cpu().numpy().astype(bool)
+        batch_metrics = {k: 0.0 for k in ("dice","precision","recall",
+                                           "boundary_f1","hausdorff","centroid_err")}
+        for p, g in zip(pred_np, gt_np):
+            m = compute_seg_metrics(p, g)
+            for k in batch_metrics:
+                batch_metrics[k] += m[k]
+        B = len(pred_np)
+        for k in batch_metrics:
+            accum[k] += batch_metrics[k] / B
 
         total_loss += loss.item()
-        total_iou += iou.item()
         n += 1
 
-    return {"val/loss": total_loss / n, "val/mIoU": total_iou / n}
+    return {
+        "val/loss":         total_loss / n,
+        "val/mIoU":         accum["iou"] / n,
+        "val/Dice":         accum["dice"] / n,
+        "val/Precision":    accum["precision"] / n,
+        "val/Recall":       accum["recall"] / n,
+        "val/BoundaryF1":   accum["boundary_f1"] / n,
+        "val/Hausdorff":    accum["hausdorff"] / n,
+        "val/CentroidErr":  accum["centroid_err"] / n,
+    }
 
 
 def main():
@@ -182,6 +267,7 @@ def main():
             global_step = info["global_step"]
             eta = ETATracker(total_steps_1a)
 
+    best_miou_1a = -1.0
     for epoch in range(start_epoch, config.substage_1a_epochs):
         avg_loss, global_step = train_one_epoch(
             model, train_loader, optimizer, scheduler, scaler, device,
@@ -189,9 +275,21 @@ def main():
         if is_main_process():
             val_metrics = validate(model, val_loader, device, config)
             print(f"  [Epoch {epoch:02d}] train_loss={avg_loss:.4f} "
-                  f"val_loss={val_metrics['val/loss']:.4f} val_mIoU={val_metrics['val/mIoU']:.4f}")
+                  f"val_loss={val_metrics['val/loss']:.4f} "
+                  f"mIoU={val_metrics['val/mIoU']:.4f} "
+                  f"Dice={val_metrics['val/Dice']:.4f} "
+                  f"P={val_metrics['val/Precision']:.4f} "
+                  f"R={val_metrics['val/Recall']:.4f} "
+                  f"BF1={val_metrics['val/BoundaryF1']:.4f} "
+                  f"HD={val_metrics['val/Hausdorff']:.1f}px "
+                  f"CE={val_metrics['val/CentroidErr']:.1f}px")
             logger.log(val_metrics, step=global_step)
-            if (epoch + 1) % config.save_every_n_epochs == 0:
+            is_last = (epoch == config.substage_1a_epochs - 1)
+            is_best = val_metrics["val/mIoU"] > best_miou_1a
+            if is_best:
+                best_miou_1a = val_metrics["val/mIoU"]
+                print(f"  ★ New best mIoU={best_miou_1a:.4f}")
+            if is_best or is_last:
                 ckpt_mgr.save(model, optimizer, scheduler, scaler, epoch,
                               global_step, val_metrics, substage="1a")
 
@@ -210,6 +308,7 @@ def main():
     scheduler = get_cosine_schedule_with_warmup(optimizer, config.warmup_steps, total_steps_1b)
     eta = ETATracker(total_steps_1b)
 
+    best_miou_1b = -1.0
     for epoch in range(config.substage_1b_epochs):
         e = epoch + config.substage_1a_epochs
         avg_loss, global_step = train_one_epoch(
@@ -218,9 +317,21 @@ def main():
         if is_main_process():
             val_metrics = validate(model, val_loader, device, config)
             print(f"  [Epoch {e:02d}] train_loss={avg_loss:.4f} "
-                  f"val_loss={val_metrics['val/loss']:.4f} val_mIoU={val_metrics['val/mIoU']:.4f}")
+                  f"val_loss={val_metrics['val/loss']:.4f} "
+                  f"mIoU={val_metrics['val/mIoU']:.4f} "
+                  f"Dice={val_metrics['val/Dice']:.4f} "
+                  f"P={val_metrics['val/Precision']:.4f} "
+                  f"R={val_metrics['val/Recall']:.4f} "
+                  f"BF1={val_metrics['val/BoundaryF1']:.4f} "
+                  f"HD={val_metrics['val/Hausdorff']:.1f}px "
+                  f"CE={val_metrics['val/CentroidErr']:.1f}px")
             logger.log(val_metrics, step=global_step)
-            if (epoch + 1) % config.save_every_n_epochs == 0:
+            is_last = (epoch == config.substage_1b_epochs - 1)
+            is_best = val_metrics["val/mIoU"] > best_miou_1b
+            if is_best:
+                best_miou_1b = val_metrics["val/mIoU"]
+                print(f"  ★ New best mIoU={best_miou_1b:.4f}")
+            if is_best or is_last:
                 ckpt_mgr.save(model, optimizer, scheduler, scaler, e,
                               global_step, val_metrics, substage="1b")
 

@@ -12,6 +12,9 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
+from bert_score import score as bert_score_fn
+from nltk.translate.bleu_score import corpus_bleu, SmoothingFunction
+from rouge_score import rouge_scorer
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 
@@ -28,6 +31,64 @@ from src.utils.trainer import (CheckpointManager, ETATracker, MetricsLogger,
                                 get_sampler, is_main_process, print_header,
                                 set_seed, setup_ddp, unwrap_model,
                                 wrap_model_ddp)
+
+
+@torch.no_grad()
+def generate_and_evaluate(llava, seg_model, atf_module, temporal_model,
+                          val_ds, device, max_new_tokens=64, eval_samples=128):
+    """Generate descriptions for a subset of val samples and compute
+    BERTScore (F1), ROUGE-L, and BLEU-4.
+    """
+    raw = unwrap_model(llava)
+    raw.eval()
+
+    references, hypotheses = [], []
+    n = min(eval_samples, len(val_ds))
+    indices = list(range(n))
+
+    for idx in indices:
+        sample = val_ds[idx]
+        overlay = sample["overlay"].unsqueeze(0).to(device)
+        mask    = sample["mask"].unsqueeze(0).to(device)
+        ref_text = sample["description"]
+
+        with autocast(dtype=torch.bfloat16):
+            seg_out     = seg_model(overlay, binary_mask=mask)
+            stage4_feat = seg_out["stage4_features"]
+            bg_overlay  = overlay * (1.0 - mask)
+            atf_out     = atf_module(mask, stage4_feat, bg_overlay)
+            clip        = overlay.unsqueeze(1).repeat(1, 16, 1, 1, 1)
+            temp_out    = temporal_model(clip)
+            gen_ids     = raw.generate(
+                atf_out["fused"], temp_out["temporal_embedding"],
+                max_new_tokens=max_new_tokens,
+            )
+        hyp = raw.tokenizer.decode(gen_ids[0], skip_special_tokens=True)
+        hypotheses.append(hyp)
+        references.append(ref_text)
+
+    # BERTScore F1
+    P, R, F1 = bert_score_fn(hypotheses, references,
+                              lang="en", device=str(device), verbose=False)
+    bert_f1 = F1.mean().item()
+
+    # ROUGE-L
+    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
+    rouge_l = sum(scorer.score(r, h)["rougeL"].fmeasure
+                  for r, h in zip(references, hypotheses)) / len(references)
+
+    # BLEU-4
+    smooth = SmoothingFunction().method1
+    refs_tok  = [[r.split()] for r in references]
+    hyps_tok  = [h.split() for h in hypotheses]
+    bleu4 = corpus_bleu(refs_tok, hyps_tok,
+                        smoothing_function=smooth)
+
+    return {
+        "val/BERTScore_F1": bert_f1,
+        "val/ROUGE_L":      rouge_l,
+        "val/BLEU_4":       bleu4,
+    }
 
 
 def main():
@@ -98,13 +159,16 @@ def main():
     train_ds = ThermalNarrationDataset(
         img_size=(224, 224), tokenizer=raw_llava.tokenizer,
         max_text_len=config.max_text_len)
+    val_ds = ThermalNarrationDataset(
+        img_size=(224, 224), tokenizer=raw_llava.tokenizer,
+        max_text_len=config.max_text_len)
     train_sampler = get_sampler(train_ds, shuffle=True)
     train_loader = DataLoader(train_ds, batch_size=config.batch_size,
                               shuffle=(train_sampler is None), sampler=train_sampler,
                               num_workers=config.num_workers, pin_memory=config.pin_memory,
                               drop_last=True)
     if is_main_process():
-        print(f"Train: {len(train_ds)} narration pairs")
+        print(f"Train: {len(train_ds)} narration pairs | Val (gen eval): {len(val_ds)}")
 
     # Optimizer: separate LRs for LoRA and projection
     lora_params = [p for n, p in llava.named_parameters()
@@ -188,9 +252,19 @@ def main():
         if is_main_process():
             print(f"  [Epoch {epoch:02d}] avg_loss={avg_loss:.4f}")
             logger.log({"train/epoch_loss": avg_loss}, step=global_step)
+
+            # Generation quality evaluation (BLEU, ROUGE-L, BERTScore)
+            gen_metrics = generate_and_evaluate(
+                llava, seg_model, atf_module, temporal_model,
+                val_ds, device)
+            print(f"           BERTScore_F1={gen_metrics['val/BERTScore_F1']:.4f} "
+                  f"ROUGE_L={gen_metrics['val/ROUGE_L']:.4f} "
+                  f"BLEU_4={gen_metrics['val/BLEU_4']:.4f}")
+            logger.log({**{"train/epoch_loss": avg_loss}, **gen_metrics}, step=global_step)
+
             if (epoch + 1) % config.save_every_n_epochs == 0:
                 ckpt_mgr.save(llava, optimizer, scheduler, scaler, epoch,
-                              global_step, {"train/loss": avg_loss})
+                              global_step, {"train/loss": avg_loss, **gen_metrics})
 
     logger.finish()
     cleanup_ddp()

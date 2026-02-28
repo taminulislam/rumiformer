@@ -1,4 +1,4 @@
-"""Stage 2: Temporal Encoder Training — VideoMAE-Small (4-GPU DDP).
+"""Stage 2: Temporal Encoder Training — VideoMAE-Small.
 
 Sub-stage 2a: Freeze VideoMAE backbone, train adapter + classifier (15 epochs, lr=5e-5)
 Sub-stage 2b: Unfreeze backbone, full fine-tune (25 epochs, lr=1e-5)
@@ -6,14 +6,20 @@ Sub-stage 2b: Unfreeze backbone, full fine-tune (25 epochs, lr=1e-5)
 Loss: CrossEntropy with label_smoothing=0.1
 Input: clip of 16 overlay frames (B, T, C, H, W) at 224x224
 Target: 3-class feed-type label
+
+Metrics (CVPR-quality):
+  Accuracy, Balanced Accuracy, Macro-F1, Cohen's Kappa, per-class AUC-ROC
 """
 
 import argparse
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 import torch.nn as nn
+from sklearn.metrics import (balanced_accuracy_score, cohen_kappa_score,
+                              f1_score, roc_auc_score)
 from torch.cuda.amp import GradScaler, autocast
 from torch.utils.data import DataLoader
 
@@ -81,8 +87,9 @@ def validate(model, loader, device, criterion):
     raw = unwrap_model(model)
     raw.eval()
     total_loss = 0.0
-    correct = 0
-    total = 0
+    all_preds = []
+    all_labels = []
+    all_probs = []
 
     for batch in loader:
         clips = batch["clip_overlays"].to(device, non_blocking=True)
@@ -91,12 +98,34 @@ def validate(model, loader, device, criterion):
             out = raw(clips, return_cls_logits=True)
             loss = criterion(out["cls_logits"], labels)
         total_loss += loss.item()
-        pred = out["cls_logits"].argmax(dim=1)
-        correct += (pred == labels).sum().item()
-        total += labels.size(0)
+        probs = torch.softmax(out["cls_logits"].float(), dim=1)
+        pred = probs.argmax(dim=1)
+        all_preds.extend(pred.cpu().numpy().tolist())
+        all_labels.extend(labels.cpu().numpy().tolist())
+        all_probs.extend(probs.cpu().numpy().tolist())
 
     n = len(loader)
-    return {"val/loss": total_loss / n, "val/acc": correct / max(total, 1)}
+    all_labels_np = np.array(all_labels)
+    all_preds_np  = np.array(all_preds)
+    all_probs_np  = np.array(all_probs)
+
+    acc      = (all_preds_np == all_labels_np).mean()
+    bal_acc  = balanced_accuracy_score(all_labels_np, all_preds_np)
+    macro_f1 = f1_score(all_labels_np, all_preds_np, average="macro", zero_division=0)
+    kappa    = cohen_kappa_score(all_labels_np, all_preds_np)
+    try:
+        auc = roc_auc_score(all_labels_np, all_probs_np, multi_class="ovr", average="macro")
+    except ValueError:
+        auc = float("nan")
+
+    return {
+        "val/loss":         total_loss / n,
+        "val/acc":          float(acc),
+        "val/BalancedAcc":  float(bal_acc),
+        "val/MacroF1":      float(macro_f1),
+        "val/CohenKappa":   float(kappa),
+        "val/AUC_ROC":      float(auc),
+    }
 
 
 def main():
@@ -173,7 +202,12 @@ def main():
         if is_main_process():
             val_metrics = validate(model, val_loader, device, criterion)
             print(f"  [Epoch {epoch:02d}] train_loss={avg_loss:.4f} train_acc={acc:.4f} "
-                  f"val_loss={val_metrics['val/loss']:.4f} val_acc={val_metrics['val/acc']:.4f}")
+                  f"val_loss={val_metrics['val/loss']:.4f} "
+                  f"acc={val_metrics['val/acc']:.4f} "
+                  f"BalAcc={val_metrics['val/BalancedAcc']:.4f} "
+                  f"MacroF1={val_metrics['val/MacroF1']:.4f} "
+                  f"Kappa={val_metrics['val/CohenKappa']:.4f} "
+                  f"AUC={val_metrics['val/AUC_ROC']:.4f}")
             logger.log(val_metrics, step=global_step)
             if (epoch + 1) % config.save_every_n_epochs == 0:
                 ckpt_mgr.save(model, optimizer, scheduler, scaler, epoch,
@@ -202,7 +236,12 @@ def main():
         if is_main_process():
             val_metrics = validate(model, val_loader, device, criterion)
             print(f"  [Epoch {e:02d}] train_loss={avg_loss:.4f} train_acc={acc:.4f} "
-                  f"val_loss={val_metrics['val/loss']:.4f} val_acc={val_metrics['val/acc']:.4f}")
+                  f"val_loss={val_metrics['val/loss']:.4f} "
+                  f"acc={val_metrics['val/acc']:.4f} "
+                  f"BalAcc={val_metrics['val/BalancedAcc']:.4f} "
+                  f"MacroF1={val_metrics['val/MacroF1']:.4f} "
+                  f"Kappa={val_metrics['val/CohenKappa']:.4f} "
+                  f"AUC={val_metrics['val/AUC_ROC']:.4f}")
             logger.log(val_metrics, step=global_step)
             if (epoch + 1) % config.save_every_n_epochs == 0:
                 ckpt_mgr.save(model, optimizer, scheduler, scaler, e,
