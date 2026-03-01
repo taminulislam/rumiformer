@@ -63,6 +63,14 @@ class ThermalFrameDataset(Dataset):
         mask = cv2.imread(str(PROJECT_ROOT / row["mask_path"]), cv2.IMREAD_GRAYSCALE)
         image = cv2.imread(str(PROJECT_ROOT / row["image_path"]))
 
+        # Handle missing files gracefully
+        if overlay is None:
+            overlay = np.zeros((self.img_size[0], self.img_size[1], 3), dtype=np.uint8)
+        if mask is None:
+            mask = np.zeros((self.img_size[0], self.img_size[1]), dtype=np.uint8)
+        if image is None:
+            image = np.zeros((self.img_size[0], self.img_size[1], 3), dtype=np.uint8)
+
         overlay = cv2.resize(overlay, (self.img_size[1], self.img_size[0]))
         mask = cv2.resize(mask, (self.img_size[1], self.img_size[0]),
                           interpolation=cv2.INTER_NEAREST)

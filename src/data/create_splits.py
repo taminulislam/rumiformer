@@ -22,7 +22,7 @@ CONTROL_SEQS = ["0499", "0500", "0501", "0502", "0503", "0504"]
 LF_SEQS = ["0505", "0506", "0507", "0508", "0509"]
 
 SPLIT_CONFIG = {
-    "HF": {"seqs": HF_SEQS, "train": 9, "val": 2, "test": 2},
+    "HF": {"seqs": HF_SEQS, "train": 11, "val": 1, "test": 1},
     "Control": {"seqs": CONTROL_SEQS, "train": 4, "val": 1, "test": 1},
     "LF": {"seqs": LF_SEQS, "train": 3, "val": 1, "test": 1},
 }

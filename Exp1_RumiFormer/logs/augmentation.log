@@ -1,0 +1,61 @@
+nohup: ignoring input
+📦 Backed up original to: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv.backup
+Original dataset: 6301 total, 3882 train
+Generating 5 augmented copies per train frame...
+Expected new frames: 19410
+
+  Copy 1/5...
+    500/3882 frames processed
+    1000/3882 frames processed
+    1500/3882 frames processed
+    2000/3882 frames processed
+    2500/3882 frames processed
+    3000/3882 frames processed
+    3500/3882 frames processed
+
+  Copy 2/5...
+    500/3882 frames processed
+    1000/3882 frames processed
+    1500/3882 frames processed
+    2000/3882 frames processed
+    2500/3882 frames processed
+    3000/3882 frames processed
+    3500/3882 frames processed
+
+  Copy 3/5...
+    500/3882 frames processed
+    1000/3882 frames processed
+    1500/3882 frames processed
+    2000/3882 frames processed
+    2500/3882 frames processed
+    3000/3882 frames processed
+    3500/3882 frames processed
+
+  Copy 4/5...
+    500/3882 frames processed
+    1000/3882 frames processed
+    1500/3882 frames processed
+    2000/3882 frames processed
+    2500/3882 frames processed
+    3000/3882 frames processed
+    3500/3882 frames processed
+
+  Copy 5/5...
+    500/3882 frames processed
+    1000/3882 frames processed
+    1500/3882 frames processed
+    2000/3882 frames processed
+    2500/3882 frames processed
+    3000/3882 frames processed
+    3500/3882 frames processed
+
+✅ Generated 19410 augmented frames (0 failed)
+
+📄 Updated annotations: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+   Original: 6301 frames
+   Added:    19410 augmented frames
+   Total:    25711 frames
+   Train:    23292 frames
+   Val:      1402 (unchanged)
+   Test:     1017 (unchanged)
+

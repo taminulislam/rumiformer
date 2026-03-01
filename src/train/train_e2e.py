@@ -27,8 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from src.data.dataset import ThermalFrameDataset
 from src.models.atf import AsymmetricThermalFusion
-from src.models.llava_lora import RumiFormerLLaVA
-from src.models.rumiformer import RumiFormer
+from src.models.model_factory import create_model
 from src.models.temporal_encoder import TemporalEncoder
 from src.utils.config import EndToEndConfig
 from src.utils.trainer import (CheckpointManager, ETATracker, MetricsLogger,
@@ -41,13 +40,13 @@ from src.utils.trainer import (CheckpointManager, ETATracker, MetricsLogger,
 class EndToEndModel(nn.Module):
     """Wraps all components for end-to-end training."""
 
-    def __init__(self, seg_model, atf_module, temporal_model, llava_model,
+    def __init__(self, seg_model, atf_module, temporal_model, llava_model=None,
                  num_classes=3, feature_dim=256):
         super().__init__()
         self.seg_model = seg_model
         self.atf = atf_module
         self.temporal = temporal_model
-        self.llava = llava_model
+        self.llava = llava_model  # Optional — can be None
         self.classifier = nn.Linear(feature_dim, num_classes)
 
     def forward(self, overlay, mask, intensity, input_ids=None,
@@ -62,6 +61,11 @@ class EndToEndModel(nn.Module):
         fused = atf_out["fused"]
 
         clip = overlay.unsqueeze(1).repeat(1, 16, 1, 1, 1)
+        # Resize to 224x224 for VideoMAE
+        B, T, C, H, W = clip.shape
+        clip = clip.view(B * T, C, H, W)
+        clip = F.interpolate(clip, size=(224, 224), mode="bilinear", align_corners=False)
+        clip = clip.view(B, T, C, 224, 224)
         temp_out = self.temporal(clip)
         temporal_emb = temp_out["temporal_embedding"]
 
@@ -74,7 +78,7 @@ class EndToEndModel(nn.Module):
             "temporal_emb": temporal_emb,
         }
 
-        if input_ids is not None:
+        if input_ids is not None and self.llava is not None:
             llava_out = self.llava(fused, temporal_emb, input_ids,
                                    attention_mask, labels_text)
             result["lm_loss"] = llava_out["loss"]
@@ -131,7 +135,13 @@ def main():
         print(f"World size: {world_size} GPUs")
 
     # Load all component models
-    seg_model = RumiFormer(num_seg_classes=1, decode_dim=256, use_aux_mask=True)
+    import os as _os
+    _model_name = _os.environ.get("MODEL_NAME", "rumiformer")
+    _stage4_ch  = int(_os.environ.get("STAGE4_CHANNELS", "512"))
+    if is_main_process():
+        print(f"Seg backbone: {_model_name}, stage4_channels: {_stage4_ch}")
+    seg_model = create_model(_model_name, num_seg_classes=1, decode_dim=256,
+                             use_aux_mask=True)
     if args.seg_checkpoint or config.segmentation_checkpoint:
         ckpt_path = args.seg_checkpoint or config.segmentation_checkpoint
         ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
@@ -147,7 +157,7 @@ def main():
         if is_main_process():
             print(f"Loaded temporal: {ckpt_path}")
 
-    atf_module = AsymmetricThermalFusion(feature_dim=256, stage4_channels=512)
+    atf_module = AsymmetricThermalFusion(feature_dim=256, stage4_channels=_stage4_ch)
     if args.fusion_checkpoint or config.fusion_checkpoint:
         ckpt_path = args.fusion_checkpoint or config.fusion_checkpoint
         ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
@@ -157,15 +167,24 @@ def main():
         if is_main_process():
             print(f"Loaded ATF: {ckpt_path}")
 
-    llava_model = RumiFormerLLaVA(lora_rank=16, lora_alpha=32)
+    # LLaVA is optional — skip if not available
+    llava_model = None
     if args.llava_checkpoint or config.llava_checkpoint:
-        ckpt_path = args.llava_checkpoint or config.llava_checkpoint
-        ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
-        llava_model.load_state_dict(ckpt["model_state_dict"])
-        if is_main_process():
-            print(f"Loaded LLaVA: {ckpt_path}")
+        try:
+            from src.models.llava_lora import RumiFormerLLaVA
+            llava_model = RumiFormerLLaVA(lora_rank=16, lora_alpha=32)
+            ckpt_path = args.llava_checkpoint or config.llava_checkpoint
+            ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
+            llava_model.load_state_dict(ckpt["model_state_dict"])
+            if is_main_process():
+                print(f"Loaded LLaVA: {ckpt_path}")
+        except (ImportError, ModuleNotFoundError):
+            if is_main_process():
+                print("  ⚠ LLaVA not available, running without language model")
+            llava_model = None
     else:
-        llava_model.setup_model()
+        if is_main_process():
+            print("  ℹ Running without LLaVA (seg + classification only)")
 
     e2e_model = EndToEndModel(seg_model, atf_module, temporal_model, llava_model)
     e2e_model = wrap_model_ddp(e2e_model, device)
@@ -177,12 +196,15 @@ def main():
         {"params": list(raw.atf.parameters()), "lr": config.atf_lr},
         {"params": [p for n, p in raw.temporal.named_parameters()
                     if "adapter" in n], "lr": config.temporal_adapter_lr},
-        {"params": [p for n, p in raw.llava.named_parameters()
-                    if "lora" in n.lower() and p.requires_grad], "lr": config.lora_lr},
-        {"params": [p for n, p in raw.llava.named_parameters()
-                    if "projection" in n.lower() and p.requires_grad], "lr": config.projection_lr},
         {"params": list(raw.classifier.parameters()), "lr": config.atf_lr},
     ]
+    if raw.llava is not None:
+        param_groups.extend([
+            {"params": [p for n, p in raw.llava.named_parameters()
+                        if "lora" in n.lower() and p.requires_grad], "lr": config.lora_lr},
+            {"params": [p for n, p in raw.llava.named_parameters()
+                        if "projection" in n.lower() and p.requires_grad], "lr": config.projection_lr},
+        ])
     optimizer = torch.optim.AdamW(param_groups, weight_decay=config.weight_decay)
 
     # Data

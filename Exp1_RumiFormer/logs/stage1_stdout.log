@@ -1,0 +1,266 @@
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:233: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+============================================================
+  RumiFormer — Stage 1: Segmentation Pretraining
+============================================================
+  project_root: /home/siu856569517/Taminul/co2_farm
+  annotations_csv: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+  clips_csv: /home/siu856569517/Taminul/co2_farm/annotations/clips.csv
+  checkpoint_dir: /home/siu856569517/Taminul/co2_farm/Exp1_RumiFormer/checkpoints
+  log_dir: /home/siu856569517/Taminul/co2_farm/Exp1_RumiFormer/logs
+  seed: 42
+  precision: bf16
+  num_workers: 8
+  pin_memory: True
+  use_compile: True
+  gradient_checkpointing: False
+  optimizer: adamw
+  weight_decay: 0.01
+  resume_from: None
+  save_every_n_epochs: 1
+  save_every_n_steps: None
+  keep_last_n_checkpoints: 3
+  use_wandb: False
+  wandb_project: rumiformer
+  wandb_run_name: None
+  log_every_n_steps: 10
+  show_eta: True
+  stage_name: segmentation
+  substage_1a_epochs: 8
+  substage_1a_lr: 6e-05
+  substage_1b_epochs: 12
+  substage_1b_lr: 1e-05
+  img_size: (256, 320)
+  batch_size: 32
+  bce_weight: 0.5
+  dice_weight: 0.5
+  scheduler: cosine
+  warmup_steps: 500
+  decode_dim: 256
+  use_aux_mask: True
+============================================================
+World size: 1 GPUs
+Train: 22404 frames, Val: 1402 frames
+
+--- Sub-stage 1a: Freeze backbone ---
+Trainable: 535,025 / 27,728,434 params
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:119: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [E00 S00010] loss=0.6825 bce=0.5589 dice=0.8060 lr=1.20e-06 ETA=2h 18m 58s elapsed=0m 14s
+  [E00 S00020] loss=0.6879 bce=0.5502 dice=0.8256 lr=2.40e-06 ETA=2h 03m 31s elapsed=0m 26s
+  [E00 S00030] loss=0.6858 bce=0.5210 dice=0.8506 lr=3.60e-06 ETA=1h 58m 26s elapsed=0m 38s
+  [E00 S00040] loss=0.6711 bce=0.5177 dice=0.8244 lr=4.80e-06 ETA=1h 55m 48s elapsed=0m 49s
+  [E00 S00050] loss=0.6315 bce=0.4896 dice=0.7734 lr=6.00e-06 ETA=1h 54m 10s elapsed=1m 01s
+  [E00 S00060] loss=0.6541 bce=0.4818 dice=0.8265 lr=7.20e-06 ETA=1h 53m 01s elapsed=1m 13s
+  [E00 S00070] loss=0.6223 bce=0.4677 dice=0.7769 lr=8.40e-06 ETA=1h 52m 09s elapsed=1m 25s
+  [E00 S00080] loss=0.5903 bce=0.4397 dice=0.7410 lr=9.60e-06 ETA=1h 51m 30s elapsed=1m 36s
+  [E00 S00090] loss=0.5764 bce=0.4023 dice=0.7505 lr=1.08e-05 ETA=1h 50m 58s elapsed=1m 48s
+  [E00 S00100] loss=0.5381 bce=0.3771 dice=0.6991 lr=1.20e-05 ETA=1h 50m 30s elapsed=2m 00s
+  [E00 S00110] loss=0.5082 bce=0.3520 dice=0.6644 lr=1.32e-05 ETA=1h 50m 06s elapsed=2m 12s
+  [E00 S00120] loss=0.5378 bce=0.3991 dice=0.6765 lr=1.44e-05 ETA=1h 49m 43s elapsed=2m 24s
+  [E00 S00130] loss=0.4939 bce=0.3253 dice=0.6625 lr=1.56e-05 ETA=1h 49m 22s elapsed=2m 35s
+  [E00 S00140] loss=0.4505 bce=0.2899 dice=0.6112 lr=1.68e-05 ETA=1h 49m 03s elapsed=2m 47s
+  [E00 S00150] loss=0.4353 bce=0.2762 dice=0.5943 lr=1.80e-05 ETA=1h 48m 44s elapsed=2m 59s
+  [E00 S00160] loss=0.4699 bce=0.2969 dice=0.6428 lr=1.92e-05 ETA=1h 48m 27s elapsed=3m 11s
+  [E00 S00170] loss=0.4677 bce=0.2912 dice=0.6442 lr=2.04e-05 ETA=1h 48m 10s elapsed=3m 23s
+  [E00 S00180] loss=0.3971 bce=0.2508 dice=0.5434 lr=2.16e-05 ETA=1h 47m 53s elapsed=3m 35s
+  [E00 S00190] loss=0.4826 bce=0.2865 dice=0.6786 lr=2.28e-05 ETA=1h 47m 38s elapsed=3m 46s
+  [E00 S00200] loss=0.4175 bce=0.2418 dice=0.5932 lr=2.40e-05 ETA=1h 47m 22s elapsed=3m 58s
+  [E00 S00210] loss=0.4113 bce=0.2361 dice=0.5865 lr=2.52e-05 ETA=1h 47m 08s elapsed=4m 10s
+  [E00 S00220] loss=0.4117 bce=0.2385 dice=0.5848 lr=2.64e-05 ETA=1h 46m 53s elapsed=4m 22s
+  [E00 S00230] loss=0.3925 bce=0.2525 dice=0.5326 lr=2.76e-05 ETA=1h 46m 39s elapsed=4m 34s
+  [E00 S00240] loss=0.3837 bce=0.2187 dice=0.5486 lr=2.88e-05 ETA=1h 46m 25s elapsed=4m 45s
+  [E00 S00250] loss=0.3401 bce=0.1760 dice=0.5041 lr=3.00e-05 ETA=1h 46m 11s elapsed=4m 57s
+  [E00 S00260] loss=0.3841 bce=0.1880 dice=0.5802 lr=3.12e-05 ETA=1h 45m 57s elapsed=5m 09s
+  [E00 S00270] loss=0.3236 bce=0.1721 dice=0.4751 lr=3.24e-05 ETA=1h 45m 43s elapsed=5m 21s
+  [E00 S00280] loss=0.3165 bce=0.1507 dice=0.4822 lr=3.36e-05 ETA=1h 45m 29s elapsed=5m 33s
+  [E00 S00290] loss=0.3518 bce=0.1794 dice=0.5242 lr=3.48e-05 ETA=1h 45m 16s elapsed=5m 44s
+  [E00 S00300] loss=0.2998 bce=0.1473 dice=0.4523 lr=3.60e-05 ETA=1h 45m 02s elapsed=5m 56s
+  [E00 S00310] loss=0.3145 bce=0.1309 dice=0.4981 lr=3.72e-05 ETA=1h 44m 49s elapsed=6m 08s
+  [E00 S00320] loss=0.3230 bce=0.1457 dice=0.5004 lr=3.84e-05 ETA=1h 44m 36s elapsed=6m 20s
+  [E00 S00330] loss=0.3188 bce=0.1410 dice=0.4965 lr=3.96e-05 ETA=1h 44m 22s elapsed=6m 32s
+  [E00 S00340] loss=0.2507 bce=0.1101 dice=0.3913 lr=4.08e-05 ETA=1h 44m 09s elapsed=6m 43s
+  [E00 S00350] loss=0.3093 bce=0.1175 dice=0.5010 lr=4.20e-05 ETA=1h 43m 56s elapsed=6m 55s
+  [E00 S00360] loss=0.2537 bce=0.1092 dice=0.3983 lr=4.32e-05 ETA=1h 43m 43s elapsed=7m 07s
+  [E00 S00370] loss=0.2814 bce=0.1172 dice=0.4455 lr=4.44e-05 ETA=1h 43m 30s elapsed=7m 19s
+  [E00 S00380] loss=0.2530 bce=0.1033 dice=0.4028 lr=4.56e-05 ETA=1h 43m 17s elapsed=7m 31s
+  [E00 S00390] loss=0.2611 bce=0.0971 dice=0.4252 lr=4.68e-05 ETA=1h 43m 05s elapsed=7m 42s
+  [E00 S00400] loss=0.2555 bce=0.0871 dice=0.4240 lr=4.80e-05 ETA=1h 42m 52s elapsed=7m 54s
+  [E00 S00410] loss=0.2138 bce=0.0744 dice=0.3532 lr=4.92e-05 ETA=1h 42m 39s elapsed=8m 06s
+  [E00 S00420] loss=0.2438 bce=0.0872 dice=0.4003 lr=5.04e-05 ETA=1h 42m 27s elapsed=8m 18s
+  [E00 S00430] loss=0.2209 bce=0.0815 dice=0.3604 lr=5.16e-05 ETA=1h 42m 14s elapsed=8m 30s
+  [E00 S00440] loss=0.1815 bce=0.0873 dice=0.2757 lr=5.28e-05 ETA=1h 42m 01s elapsed=8m 42s
+  [E00 S00450] loss=0.1984 bce=0.0779 dice=0.3189 lr=5.40e-05 ETA=1h 41m 49s elapsed=8m 53s
+  [E00 S00460] loss=0.2137 bce=0.0795 dice=0.3480 lr=5.52e-05 ETA=1h 41m 36s elapsed=9m 05s
+  [E00 S00470] loss=0.1737 bce=0.0605 dice=0.2870 lr=5.64e-05 ETA=1h 41m 24s elapsed=9m 17s
+  [E00 S00480] loss=0.2032 bce=0.0649 dice=0.3415 lr=5.76e-05 ETA=1h 41m 11s elapsed=9m 29s
+  [E00 S00490] loss=0.1534 bce=0.0554 dice=0.2515 lr=5.88e-05 ETA=1h 40m 59s elapsed=9m 41s
+  [E00 S00500] loss=0.1402 bce=0.0575 dice=0.2229 lr=6.00e-05 ETA=1h 40m 47s elapsed=9m 52s
+  [E00 S00510] loss=0.1878 bce=0.0520 dice=0.3235 lr=6.00e-05 ETA=1h 40m 34s elapsed=10m 04s
+  [E00 S00520] loss=0.1610 bce=0.0483 dice=0.2737 lr=6.00e-05 ETA=1h 40m 22s elapsed=10m 16s
+  [E00 S00530] loss=0.1773 bce=0.0437 dice=0.3109 lr=6.00e-05 ETA=1h 40m 09s elapsed=10m 28s
+  [E00 S00540] loss=0.1876 bce=0.0553 dice=0.3199 lr=6.00e-05 ETA=1h 39m 57s elapsed=10m 40s
+  [E00 S00550] loss=0.1259 bce=0.0369 dice=0.2148 lr=6.00e-05 ETA=1h 39m 45s elapsed=10m 51s
+  [E00 S00560] loss=0.1462 bce=0.0361 dice=0.2563 lr=6.00e-05 ETA=1h 39m 32s elapsed=11m 03s
+  [E00 S00570] loss=0.1231 bce=0.0359 dice=0.2103 lr=6.00e-05 ETA=1h 39m 20s elapsed=11m 15s
+  [E00 S00580] loss=0.1539 bce=0.0377 dice=0.2701 lr=6.00e-05 ETA=1h 39m 08s elapsed=11m 27s
+  [E00 S00590] loss=0.1110 bce=0.0287 dice=0.1934 lr=6.00e-05 ETA=1h 38m 56s elapsed=11m 39s
+  [E00 S00600] loss=0.1583 bce=0.0351 dice=0.2816 lr=5.99e-05 ETA=1h 38m 43s elapsed=11m 50s
+  [E00 S00610] loss=0.1981 bce=0.0389 dice=0.3572 lr=5.99e-05 ETA=1h 38m 31s elapsed=12m 02s
+  [E00 S00620] loss=0.0920 bce=0.0244 dice=0.1595 lr=5.99e-05 ETA=1h 38m 19s elapsed=12m 14s
+  [E00 S00630] loss=0.1525 bce=0.0346 dice=0.2704 lr=5.99e-05 ETA=1h 38m 07s elapsed=12m 26s
+  [E00 S00640] loss=0.1402 bce=0.0280 dice=0.2524 lr=5.99e-05 ETA=1h 37m 55s elapsed=12m 38s
+  [E00 S00650] loss=0.1112 bce=0.0268 dice=0.1956 lr=5.99e-05 ETA=1h 37m 42s elapsed=12m 49s
+  [E00 S00660] loss=0.0948 bce=0.0251 dice=0.1645 lr=5.99e-05 ETA=1h 37m 30s elapsed=13m 01s
+  [E00 S00670] loss=0.1311 bce=0.0275 dice=0.2347 lr=5.98e-05 ETA=1h 37m 18s elapsed=13m 13s
+  [E00 S00680] loss=0.0936 bce=0.0215 dice=0.1656 lr=5.98e-05 ETA=1h 37m 06s elapsed=13m 25s
+  [E00 S00690] loss=0.0754 bce=0.0191 dice=0.1318 lr=5.98e-05 ETA=1h 36m 54s elapsed=13m 37s
+  [E00 S00700] loss=0.1120 bce=0.0235 dice=0.2004 lr=5.98e-05 ETA=1h 36m 42s elapsed=13m 48s
+/home/siu856569517/Taminul/co2_farm/src/train/train_segmentation.py:161: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+  [Epoch 00] train_loss=0.3196 val_loss=0.0606 mIoU=1.0000 Dice=1.0000 P=1.0000 R=1.0000 BF1=0.9999 HD=0.0px CE=0.0px
+  ★ New best mIoU=1.0000
+[Checkpoint] Saved: segmentation_1a_epoch0000_step000700.pt
+  [E01 S00710] loss=0.0981 bce=0.0210 dice=0.1752 lr=5.97e-05 ETA=2h 15m 42s elapsed=19m 42s
+  [E01 S00720] loss=0.0808 bce=0.0190 dice=0.1427 lr=5.97e-05 ETA=2h 14m 52s elapsed=19m 53s
+  [E01 S00730] loss=0.0849 bce=0.0192 dice=0.1505 lr=5.97e-05 ETA=2h 14m 03s elapsed=20m 05s
+  [E01 S00740] loss=0.0755 bce=0.0199 dice=0.1311 lr=5.97e-05 ETA=2h 13m 16s elapsed=20m 17s
+  [E01 S00750] loss=0.0678 bce=0.0167 dice=0.1190 lr=5.96e-05 ETA=2h 12m 29s elapsed=20m 29s
+  [E01 S00760] loss=0.0926 bce=0.0188 dice=0.1664 lr=5.96e-05 ETA=2h 11m 44s elapsed=20m 41s
+  [E01 S00770] loss=0.0830 bce=0.0162 dice=0.1499 lr=5.96e-05 ETA=2h 10m 59s elapsed=20m 52s
+  [E01 S00780] loss=0.0689 bce=0.0148 dice=0.1230 lr=5.96e-05 ETA=2h 10m 15s elapsed=21m 04s
+  [E01 S00790] loss=0.0659 bce=0.0148 dice=0.1170 lr=5.95e-05 ETA=2h 09m 32s elapsed=21m 16s
+  [E01 S00800] loss=0.0642 bce=0.0150 dice=0.1134 lr=5.95e-05 ETA=2h 08m 50s elapsed=21m 28s
+  [E01 S00810] loss=0.0587 bce=0.0159 dice=0.1015 lr=5.95e-05 ETA=2h 08m 08s elapsed=21m 40s
+  [E01 S00820] loss=0.0524 bce=0.0115 dice=0.0933 lr=5.94e-05 ETA=2h 07m 27s elapsed=21m 51s
+  [E01 S00830] loss=0.0598 bce=0.0128 dice=0.1068 lr=5.94e-05 ETA=2h 06m 47s elapsed=22m 03s
+  [E01 S00840] loss=0.0396 bce=0.0114 dice=0.0677 lr=5.93e-05 ETA=2h 06m 08s elapsed=22m 15s
+  [E01 S00850] loss=0.0869 bce=0.0137 dice=0.1602 lr=5.93e-05 ETA=2h 05m 29s elapsed=22m 27s
+  [E01 S00860] loss=0.0460 bce=0.0109 dice=0.0812 lr=5.93e-05 ETA=2h 04m 51s elapsed=22m 39s
+  [E01 S00870] loss=0.1101 bce=0.0154 dice=0.2048 lr=5.92e-05 ETA=2h 04m 13s elapsed=22m 50s
+  [E01 S00880] loss=0.0425 bce=0.0104 dice=0.0746 lr=5.92e-05 ETA=2h 03m 36s elapsed=23m 02s
+  [E01 S00890] loss=0.0503 bce=0.0106 dice=0.0900 lr=5.91e-05 ETA=2h 03m 00s elapsed=23m 14s
+  [E01 S00900] loss=0.0301 bce=0.0105 dice=0.0497 lr=5.91e-05 ETA=2h 02m 24s elapsed=23m 26s
+  [E01 S00910] loss=0.0752 bce=0.0096 dice=0.1408 lr=5.90e-05 ETA=2h 01m 49s elapsed=23m 38s
+  [E01 S00920] loss=0.0596 bce=0.0105 dice=0.1088 lr=5.90e-05 ETA=2h 01m 14s elapsed=23m 49s
+  [E01 S00930] loss=0.0373 bce=0.0085 dice=0.0662 lr=5.90e-05 ETA=2h 00m 39s elapsed=24m 01s
+  [E01 S00940] loss=0.0374 bce=0.0091 dice=0.0656 lr=5.89e-05 ETA=2h 00m 06s elapsed=24m 13s
+  [E01 S00950] loss=0.0764 bce=0.0125 dice=0.1402 lr=5.89e-05 ETA=1h 59m 32s elapsed=24m 25s
+  [E01 S00960] loss=0.0320 bce=0.0089 dice=0.0551 lr=5.88e-05 ETA=1h 58m 59s elapsed=24m 37s
+  [E01 S00970] loss=0.0490 bce=0.0101 dice=0.0879 lr=5.88e-05 ETA=1h 58m 27s elapsed=24m 49s
+  [E01 S00980] loss=0.0385 bce=0.0088 dice=0.0683 lr=5.87e-05 ETA=1h 57m 55s elapsed=25m 00s
+  [E01 S00990] loss=0.0329 bce=0.0086 dice=0.0572 lr=5.86e-05 ETA=1h 57m 23s elapsed=25m 12s
+  [E01 S01000] loss=0.0958 bce=0.0104 dice=0.1812 lr=5.86e-05 ETA=1h 56m 52s elapsed=25m 24s
+  [E01 S01010] loss=0.0312 bce=0.0072 dice=0.0553 lr=5.85e-05 ETA=1h 56m 21s elapsed=25m 36s
+  [E01 S01020] loss=0.0581 bce=0.0083 dice=0.1079 lr=5.85e-05 ETA=1h 55m 51s elapsed=25m 48s
+  [E01 S01030] loss=0.0694 bce=0.0098 dice=0.1290 lr=5.84e-05 ETA=1h 55m 20s elapsed=25m 59s
+  [E01 S01040] loss=0.0454 bce=0.0075 dice=0.0833 lr=5.84e-05 ETA=1h 54m 50s elapsed=26m 11s
+  [E01 S01050] loss=0.0291 bce=0.0063 dice=0.0518 lr=5.83e-05 ETA=1h 54m 21s elapsed=26m 23s
+  [E01 S01060] loss=0.0233 bce=0.0068 dice=0.0397 lr=5.82e-05 ETA=1h 53m 52s elapsed=26m 35s
+  [E01 S01070] loss=0.0492 bce=0.0071 dice=0.0912 lr=5.82e-05 ETA=1h 53m 23s elapsed=26m 47s
+  [E01 S01080] loss=0.0307 bce=0.0069 dice=0.0546 lr=5.81e-05 ETA=1h 52m 55s elapsed=26m 58s
+  [E01 S01090] loss=0.0238 bce=0.0067 dice=0.0408 lr=5.80e-05 ETA=1h 52m 26s elapsed=27m 10s
+  [E01 S01100] loss=0.0222 bce=0.0062 dice=0.0382 lr=5.80e-05 ETA=1h 51m 58s elapsed=27m 22s
+  [E01 S01110] loss=0.0369 bce=0.0062 dice=0.0675 lr=5.79e-05 ETA=1h 51m 31s elapsed=27m 34s
+  [E01 S01120] loss=0.0362 bce=0.0059 dice=0.0666 lr=5.78e-05 ETA=1h 51m 04s elapsed=27m 46s
+  [E01 S01130] loss=0.0634 bce=0.0086 dice=0.1183 lr=5.78e-05 ETA=1h 50m 37s elapsed=27m 57s
+  [E01 S01140] loss=0.0235 bce=0.0057 dice=0.0413 lr=5.77e-05 ETA=1h 50m 10s elapsed=28m 09s
+  [E01 S01150] loss=0.0299 bce=0.0054 dice=0.0544 lr=5.76e-05 ETA=1h 49m 43s elapsed=28m 21s
+  [E01 S01160] loss=0.0472 bce=0.0069 dice=0.0874 lr=5.76e-05 ETA=1h 49m 17s elapsed=28m 33s
+  [E01 S01170] loss=0.0208 bce=0.0064 dice=0.0353 lr=5.75e-05 ETA=1h 48m 51s elapsed=28m 45s
+  [E01 S01180] loss=0.0523 bce=0.0069 dice=0.0976 lr=5.74e-05 ETA=1h 48m 25s elapsed=28m 56s
+  [E01 S01190] loss=0.0360 bce=0.0057 dice=0.0663 lr=5.73e-05 ETA=1h 48m 00s elapsed=29m 08s
+  [E01 S01200] loss=0.0517 bce=0.0054 dice=0.0980 lr=5.73e-05 ETA=1h 47m 34s elapsed=29m 20s
+  [E01 S01210] loss=0.0282 bce=0.0048 dice=0.0516 lr=5.72e-05 ETA=1h 47m 09s elapsed=29m 32s
+  [E01 S01220] loss=0.0210 bce=0.0046 dice=0.0374 lr=5.71e-05 ETA=1h 46m 44s elapsed=29m 44s
+  [E01 S01230] loss=0.0312 bce=0.0051 dice=0.0573 lr=5.70e-05 ETA=1h 46m 20s elapsed=29m 55s
+  [E01 S01240] loss=0.0438 bce=0.0067 dice=0.0809 lr=5.69e-05 ETA=1h 45m 55s elapsed=30m 07s
+  [E01 S01250] loss=0.0272 bce=0.0044 dice=0.0500 lr=5.69e-05 ETA=1h 45m 31s elapsed=30m 19s
+  [E01 S01260] loss=0.0212 bce=0.0054 dice=0.0369 lr=5.68e-05 ETA=1h 45m 07s elapsed=30m 31s
+  [E01 S01270] loss=0.0256 bce=0.0056 dice=0.0455 lr=5.67e-05 ETA=1h 44m 43s elapsed=30m 42s
+  [E01 S01280] loss=0.0330 bce=0.0049 dice=0.0611 lr=5.66e-05 ETA=1h 44m 19s elapsed=30m 54s
+  [E01 S01290] loss=0.0199 bce=0.0042 dice=0.0357 lr=5.65e-05 ETA=1h 43m 56s elapsed=31m 06s
+  [E01 S01300] loss=0.0251 bce=0.0052 dice=0.0450 lr=5.64e-05 ETA=1h 43m 33s elapsed=31m 18s
+  [E01 S01310] loss=0.0205 bce=0.0040 dice=0.0369 lr=5.63e-05 ETA=1h 43m 09s elapsed=31m 30s
+  [E01 S01320] loss=0.0175 bce=0.0037 dice=0.0314 lr=5.63e-05 ETA=1h 42m 46s elapsed=31m 41s
+  [E01 S01330] loss=0.0171 bce=0.0040 dice=0.0303 lr=5.62e-05 ETA=1h 42m 24s elapsed=31m 53s
+  [E01 S01340] loss=0.0189 bce=0.0049 dice=0.0329 lr=5.61e-05 ETA=1h 42m 01s elapsed=32m 05s
+  [E01 S01350] loss=0.0200 bce=0.0041 dice=0.0359 lr=5.60e-05 ETA=1h 41m 39s elapsed=32m 17s
+  [E01 S01360] loss=0.0202 bce=0.0043 dice=0.0360 lr=5.59e-05 ETA=1h 41m 16s elapsed=32m 29s
+  [E01 S01370] loss=0.0180 bce=0.0051 dice=0.0309 lr=5.58e-05 ETA=1h 40m 54s elapsed=32m 40s
+  [E01 S01380] loss=0.0317 bce=0.0046 dice=0.0589 lr=5.57e-05 ETA=1h 40m 32s elapsed=32m 52s
+  [E01 S01390] loss=0.0141 bce=0.0034 dice=0.0248 lr=5.56e-05 ETA=1h 40m 10s elapsed=33m 04s
+  [E01 S01400] loss=0.0201 bce=0.0033 dice=0.0369 lr=5.55e-05 ETA=1h 39m 49s elapsed=33m 16s
+  [Epoch 01] train_loss=0.0468 val_loss=0.0100 mIoU=1.0000 Dice=1.0000 P=1.0000 R=1.0000 BF1=1.0000 HD=0.0px CE=0.0px
+  ★ New best mIoU=1.0000
+[Checkpoint] Saved: segmentation_1a_epoch0001_step001400.pt
+  [E02 S01410] loss=0.0581 bce=0.0039 dice=0.1124 lr=5.54e-05 ETA=1h 56m 23s elapsed=39m 09s
+  [E02 S01420] loss=0.0300 bce=0.0035 dice=0.0565 lr=5.53e-05 ETA=1h 55m 51s elapsed=39m 21s
+  [E02 S01430] loss=0.0295 bce=0.0044 dice=0.0546 lr=5.52e-05 ETA=1h 55m 21s elapsed=39m 33s
+  [E02 S01440] loss=0.0179 bce=0.0030 dice=0.0328 lr=5.51e-05 ETA=1h 54m 50s elapsed=39m 45s
+  [E02 S01450] loss=0.0130 bce=0.0039 dice=0.0221 lr=5.50e-05 ETA=1h 54m 20s elapsed=39m 57s
+  [E02 S01460] loss=0.0170 bce=0.0029 dice=0.0312 lr=5.49e-05 ETA=1h 53m 50s elapsed=40m 08s
+  [E02 S01470] loss=0.0598 bce=0.0036 dice=0.1161 lr=5.48e-05 ETA=1h 53m 20s elapsed=40m 20s
+  [E02 S01480] loss=0.0273 bce=0.0041 dice=0.0504 lr=5.47e-05 ETA=1h 52m 51s elapsed=40m 32s
+  [E02 S01490] loss=0.0111 bce=0.0035 dice=0.0187 lr=5.46e-05 ETA=1h 52m 22s elapsed=40m 44s
+  [E02 S01500] loss=0.0132 bce=0.0028 dice=0.0236 lr=5.45e-05 ETA=1h 51m 53s elapsed=40m 56s
+  [E02 S01510] loss=0.0145 bce=0.0030 dice=0.0260 lr=5.44e-05 ETA=1h 51m 24s elapsed=41m 07s
+  [E02 S01520] loss=0.0093 bce=0.0034 dice=0.0152 lr=5.43e-05 ETA=1h 50m 55s elapsed=41m 19s
+  [E02 S01530] loss=0.0366 bce=0.0037 dice=0.0695 lr=5.42e-05 ETA=1h 50m 27s elapsed=41m 31s
+  [E02 S01540] loss=0.0121 bce=0.0028 dice=0.0214 lr=5.41e-05 ETA=1h 49m 59s elapsed=41m 43s
+  [E02 S01550] loss=0.0109 bce=0.0031 dice=0.0187 lr=5.39e-05 ETA=1h 49m 31s elapsed=41m 55s
+  [E02 S01560] loss=0.0136 bce=0.0032 dice=0.0240 lr=5.38e-05 ETA=1h 49m 03s elapsed=42m 06s
+  [E02 S01570] loss=0.0377 bce=0.0028 dice=0.0727 lr=5.37e-05 ETA=1h 48m 36s elapsed=42m 18s
+  [E02 S01580] loss=0.0118 bce=0.0028 dice=0.0208 lr=5.36e-05 ETA=1h 48m 09s elapsed=42m 30s
+  [E02 S01590] loss=0.0184 bce=0.0026 dice=0.0341 lr=5.35e-05 ETA=1h 47m 42s elapsed=42m 42s
+  [E02 S01600] loss=0.0193 bce=0.0026 dice=0.0359 lr=5.34e-05 ETA=1h 47m 15s elapsed=42m 54s
+  [E02 S01610] loss=0.0267 bce=0.0028 dice=0.0506 lr=5.33e-05 ETA=1h 46m 48s elapsed=43m 05s
+  [E02 S01620] loss=0.0479 bce=0.0030 dice=0.0928 lr=5.31e-05 ETA=1h 46m 21s elapsed=43m 17s
+  [E02 S01630] loss=0.0279 bce=0.0030 dice=0.0528 lr=5.30e-05 ETA=1h 45m 55s elapsed=43m 29s
+  [E02 S01640] loss=0.0129 bce=0.0028 dice=0.0230 lr=5.29e-05 ETA=1h 45m 29s elapsed=43m 41s
+  [E02 S01650] loss=0.0130 bce=0.0030 dice=0.0230 lr=5.28e-05 ETA=1h 45m 03s elapsed=43m 53s
+  [E02 S01660] loss=0.0239 bce=0.0022 dice=0.0455 lr=5.27e-05 ETA=1h 44m 37s elapsed=44m 04s
+  [E02 S01670] loss=0.0119 bce=0.0026 dice=0.0212 lr=5.25e-05 ETA=1h 44m 11s elapsed=44m 16s
+  [E02 S01680] loss=0.0075 bce=0.0022 dice=0.0128 lr=5.24e-05 ETA=1h 43m 46s elapsed=44m 28s
+  [E02 S01690] loss=0.0086 bce=0.0022 dice=0.0149 lr=5.23e-05 ETA=1h 43m 21s elapsed=44m 40s
+  [E02 S01700] loss=0.0173 bce=0.0027 dice=0.0320 lr=5.22e-05 ETA=1h 42m 55s elapsed=44m 52s
+  [E02 S01710] loss=0.0165 bce=0.0024 dice=0.0306 lr=5.20e-05 ETA=1h 42m 30s elapsed=45m 03s
+  [E02 S01720] loss=0.0122 bce=0.0028 dice=0.0216 lr=5.19e-05 ETA=1h 42m 06s elapsed=45m 15s
+  [E02 S01730] loss=0.0176 bce=0.0026 dice=0.0325 lr=5.18e-05 ETA=1h 41m 41s elapsed=45m 27s
+  [E02 S01740] loss=0.0122 bce=0.0027 dice=0.0217 lr=5.17e-05 ETA=1h 41m 16s elapsed=45m 39s
+  [E02 S01750] loss=0.0112 bce=0.0020 dice=0.0204 lr=5.15e-05 ETA=1h 40m 52s elapsed=45m 51s
+  [E02 S01760] loss=0.0111 bce=0.0021 dice=0.0201 lr=5.14e-05 ETA=1h 40m 28s elapsed=46m 02s
+  [E02 S01770] loss=0.0096 bce=0.0021 dice=0.0171 lr=5.13e-05 ETA=1h 40m 04s elapsed=46m 14s
+  [E02 S01780] loss=0.0131 bce=0.0021 dice=0.0241 lr=5.11e-05 ETA=1h 39m 40s elapsed=46m 26s
+  [E02 S01790] loss=0.0104 bce=0.0025 dice=0.0184 lr=5.10e-05 ETA=1h 39m 16s elapsed=46m 38s
+  [E02 S01800] loss=0.0391 bce=0.0022 dice=0.0760 lr=5.09e-05 ETA=1h 38m 52s elapsed=46m 50s
+  [E02 S01810] loss=0.0062 bce=0.0018 dice=0.0106 lr=5.08e-05 ETA=1h 38m 28s elapsed=47m 01s
+  [E02 S01820] loss=0.0185 bce=0.0024 dice=0.0345 lr=5.06e-05 ETA=1h 38m 05s elapsed=47m 13s
+  [E02 S01830] loss=0.0179 bce=0.0020 dice=0.0338 lr=5.05e-05 ETA=1h 37m 42s elapsed=47m 25s
+  [E02 S01840] loss=0.0227 bce=0.0017 dice=0.0438 lr=5.03e-05 ETA=1h 37m 18s elapsed=47m 37s
+  [E02 S01850] loss=0.0115 bce=0.0030 dice=0.0201 lr=5.02e-05 ETA=1h 36m 55s elapsed=47m 49s
+  [E02 S01860] loss=0.0109 bce=0.0019 dice=0.0199 lr=5.01e-05 ETA=1h 36m 32s elapsed=48m 00s
+  [E02 S01870] loss=0.0082 bce=0.0022 dice=0.0142 lr=4.99e-05 ETA=1h 36m 09s elapsed=48m 12s
+  [E02 S01880] loss=0.0095 bce=0.0022 dice=0.0169 lr=4.98e-05 ETA=1h 35m 47s elapsed=48m 24s
+  [E02 S01890] loss=0.0251 bce=0.0020 dice=0.0481 lr=4.97e-05 ETA=1h 35m 24s elapsed=48m 36s
+  [E02 S01900] loss=0.0070 bce=0.0021 dice=0.0119 lr=4.95e-05 ETA=1h 35m 02s elapsed=48m 48s
+  [E02 S01910] loss=0.0054 bce=0.0018 dice=0.0090 lr=4.94e-05 ETA=1h 34m 39s elapsed=48m 59s
+  [E02 S01920] loss=0.0111 bce=0.0019 dice=0.0203 lr=4.92e-05 ETA=1h 34m 17s elapsed=49m 11s
+  [E02 S01930] loss=0.0065 bce=0.0030 dice=0.0099 lr=4.91e-05 ETA=1h 33m 55s elapsed=49m 23s
+  [E02 S01940] loss=0.0076 bce=0.0017 dice=0.0135 lr=4.90e-05 ETA=1h 33m 33s elapsed=49m 35s
+  [E02 S01950] loss=0.0324 bce=0.0023 dice=0.0625 lr=4.88e-05 ETA=1h 33m 11s elapsed=49m 47s
+  [E02 S01960] loss=0.0200 bce=0.0017 dice=0.0383 lr=4.87e-05 ETA=1h 32m 49s elapsed=49m 58s
+  [E02 S01970] loss=0.0087 bce=0.0017 dice=0.0157 lr=4.85e-05 ETA=1h 32m 27s elapsed=50m 10s
+  [E02 S01980] loss=0.0146 bce=0.0015 dice=0.0277 lr=4.84e-05 ETA=1h 32m 06s elapsed=50m 22s
+  [E02 S01990] loss=0.0182 bce=0.0014 dice=0.0349 lr=4.82e-05 ETA=1h 31m 44s elapsed=50m 34s
+  [E02 S02000] loss=0.0040 bce=0.0013 dice=0.0068 lr=4.81e-05 ETA=1h 31m 23s elapsed=50m 46s
+  [E02 S02010] loss=0.0223 bce=0.0018 dice=0.0427 lr=4.79e-05 ETA=1h 31m 01s elapsed=50m 57s
+  [E02 S02020] loss=0.0090 bce=0.0018 dice=0.0162 lr=4.78e-05 ETA=1h 30m 40s elapsed=51m 09s
+  [E02 S02030] loss=0.0078 bce=0.0024 dice=0.0131 lr=4.76e-05 ETA=1h 30m 19s elapsed=51m 21s
+  [E02 S02040] loss=0.0087 bce=0.0018 dice=0.0156 lr=4.75e-05 ETA=1h 29m 58s elapsed=51m 33s
+  [E02 S02050] loss=0.0243 bce=0.0015 dice=0.0472 lr=4.73e-05 ETA=1h 29m 37s elapsed=51m 45s
+  [E02 S02060] loss=0.0055 bce=0.0019 dice=0.0092 lr=4.72e-05 ETA=1h 29m 16s elapsed=51m 56s
+  [E02 S02070] loss=0.0277 bce=0.0017 dice=0.0537 lr=4.70e-05 ETA=1h 28m 55s elapsed=52m 08s
+  [E02 S02080] loss=0.0074 bce=0.0015 dice=0.0133 lr=4.69e-05 ETA=1h 28m 34s elapsed=52m 20s
+  [E02 S02090] loss=0.0092 bce=0.0016 dice=0.0169 lr=4.67e-05 ETA=1h 28m 14s elapsed=52m 32s
+  [E02 S02100] loss=0.0157 bce=0.0014 dice=0.0301 lr=4.66e-05 ETA=1h 27m 53s elapsed=52m 44s

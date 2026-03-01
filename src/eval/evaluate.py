@@ -28,7 +28,7 @@ from torch.utils.data import DataLoader
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from src.data.dataset import ThermalFrameDataset, ThermalClipDataset
-from src.models.rumiformer import RumiFormer
+from src.models.model_factory import create_model
 from src.models.temporal_encoder import TemporalEncoder
 from src.models.atf import AsymmetricThermalFusion
 from src.utils.config import SegmentationConfig, TemporalConfig, FusionConfig
@@ -195,7 +195,12 @@ def main():
     parser.add_argument("--temporal_checkpoint", type=str, default=None)
     parser.add_argument("--fusion_checkpoint", type=str, default=None)
     parser.add_argument("--output_dir", type=str, default=str(RESULTS_DIR))
+    parser.add_argument("--model_name", type=str, default=None,
+                        help="Model name for factory (reads MODEL_NAME env if not set)")
     args = parser.parse_args()
+
+    import os
+    model_name = args.model_name or os.environ.get("MODEL_NAME", "rumiformer")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     output_dir = Path(args.output_dir)
@@ -204,8 +209,10 @@ def main():
 
     # ── Segmentation ──
     if args.seg_checkpoint:
-        print("\n🔬 Evaluating Segmentation...")
-        model = RumiFormer(num_seg_classes=1, decode_dim=256, use_aux_mask=True).to(device)
+        print(f"\n🔬 Evaluating Segmentation ({model_name})...")
+        model = create_model(model_name, num_seg_classes=1, decode_dim=256,
+                             use_aux_mask=True).to(device)
+        total_params = sum(p.numel() for p in model.parameters()) / 1e6
         ckpt = torch.load(args.seg_checkpoint, map_location=device, weights_only=False)
         state = ckpt.get("model_state_dict", ckpt)
         model.load_state_dict(state, strict=False)
@@ -213,6 +220,7 @@ def main():
         seg_results = evaluate_segmentation(model, device)
         print_results(seg_results, "Segmentation Metrics")
         all_results.update(seg_results)
+        all_results["params_m"] = round(total_params, 1)
         del model
         torch.cuda.empty_cache()
 
@@ -236,11 +244,20 @@ def main():
         del model
         torch.cuda.empty_cache()
 
-    # ── Save JSON ──
+    # ── Save JSON (structured for comparison table) ──
     serializable = {k: v for k, v in all_results.items() if not k.startswith("_")}
+    structured = {"model": model_name, "params_m": serializable.get("params_m", "?")}
+    seg_dict, cls_dict = {}, {}
+    for k, v in serializable.items():
+        if k.startswith("seg/"):
+            seg_dict[k.replace("seg/", "")] = v
+        elif k.startswith("cls/"):
+            cls_dict[k.replace("cls/", "")] = v
+    structured["segmentation"] = seg_dict
+    structured["classification"] = cls_dict
     json_path = output_dir / "eval_results.json"
     with open(json_path, "w") as f:
-        json.dump(serializable, f, indent=2)
+        json.dump(structured, f, indent=2)
     print(f"\n📄 Results saved to: {json_path}")
 
 

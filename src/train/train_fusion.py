@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from src.data.dataset import ThermalFrameDataset
 from src.models.atf import AsymmetricThermalFusion
-from src.models.rumiformer import RumiFormer
+from src.models.model_factory import create_model
 from src.utils.config import FusionConfig
 from src.utils.trainer import (CheckpointManager, ETATracker, MetricsLogger,
                                 cleanup_ddp, get_cosine_schedule_with_warmup,
@@ -85,7 +85,12 @@ def main():
         print(f"Train: {len(train_ds)} frames, Val: {len(val_ds)} frames")
 
     # Frozen segmentation model (from Stage 1)
-    seg_model = RumiFormer(num_seg_classes=1, decode_dim=256, use_aux_mask=True).to(device)
+    import os as _os
+    _model_name = _os.environ.get("MODEL_NAME", "rumiformer")
+    seg_model = create_model(_model_name, num_seg_classes=1, decode_dim=256,
+                             use_aux_mask=True).to(device)
+    if is_main_process():
+        print(f"Seg backbone: {_model_name}")
     seg_ckpt = args.seg_checkpoint or config.segmentation_checkpoint
     if seg_ckpt:
         ckpt = torch.load(seg_ckpt, map_location=device, weights_only=False)

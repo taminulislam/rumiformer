@@ -6,6 +6,7 @@ Each config includes resume, checkpoint saving, and ETA tracking settings.
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
+import os
 
 
 PROJECT_ROOT = Path("/home/siu856569517/Taminul/co2_farm")
@@ -20,6 +21,19 @@ class BaseTrainConfig:
     clips_csv: str = str(PROJECT_ROOT / "annotations" / "clips.csv")
     checkpoint_dir: str = str(PROJECT_ROOT / "outputs" / "checkpoints")
     log_dir: str = str(PROJECT_ROOT / "outputs" / "logs")
+
+    def __post_init__(self):
+        """Override paths from environment variables for experiment isolation."""
+        if os.environ.get("ANNOTATIONS_CSV"):
+            self.annotations_csv = os.environ["ANNOTATIONS_CSV"]
+        if os.environ.get("CLIPS_CSV"):
+            self.clips_csv = os.environ["CLIPS_CSV"]
+        if os.environ.get("CHECKPOINT_DIR"):
+            self.checkpoint_dir = os.environ["CHECKPOINT_DIR"]
+        if os.environ.get("LOG_DIR"):
+            self.log_dir = os.environ["LOG_DIR"]
+        if os.environ.get("WANDB_DISABLED") == "true":
+            self.use_wandb = False
 
     # Training basics
     seed: int = 42
@@ -62,6 +76,13 @@ class SegmentationConfig(BaseTrainConfig):
     substage_1b_epochs: int = 15
     substage_1b_lr: float = 1e-5
 
+    def __post_init__(self):
+        super().__post_init__()
+        if os.environ.get("SEG_1A_EPOCHS"):
+            self.substage_1a_epochs = int(os.environ["SEG_1A_EPOCHS"])
+        if os.environ.get("SEG_1B_EPOCHS"):
+            self.substage_1b_epochs = int(os.environ["SEG_1B_EPOCHS"])
+
     # Data
     img_size: tuple = (256, 320)
     batch_size: int = 32
@@ -90,6 +111,13 @@ class TemporalConfig(BaseTrainConfig):
     substage_2b_epochs: int = 12
     substage_2b_lr: float = 1e-5
 
+    def __post_init__(self):
+        super().__post_init__()
+        if os.environ.get("TEMP_2A_EPOCHS"):
+            self.substage_2a_epochs = int(os.environ["TEMP_2A_EPOCHS"])
+        if os.environ.get("TEMP_2B_EPOCHS"):
+            self.substage_2b_epochs = int(os.environ["TEMP_2B_EPOCHS"])
+
     # Data
     clip_img_size: tuple = (224, 224)
     clip_length: int = 16
@@ -116,6 +144,13 @@ class FusionConfig(BaseTrainConfig):
     epochs: int = 15
     lr: float = 1e-4
     batch_size: int = 16
+
+    def __post_init__(self):
+        super().__post_init__()
+        if os.environ.get("FUSION_EPOCHS"):
+            self.epochs = int(os.environ["FUSION_EPOCHS"])
+        if os.environ.get("STAGE4_CHANNELS"):
+            self.stage4_channels = int(os.environ["STAGE4_CHANNELS"])
 
     # Loss
     ce_weight: float = 1.0
@@ -170,6 +205,11 @@ class EndToEndConfig(BaseTrainConfig):
 
     epochs: int = 8
     batch_size: int = 8
+
+    def __post_init__(self):
+        super().__post_init__()
+        if os.environ.get("E2E_EPOCHS"):
+            self.epochs = int(os.environ["E2E_EPOCHS"])
 
     # Differential learning rates
     tgaa_encoder_lr: float = 1e-5

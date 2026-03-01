@@ -1,0 +1,23 @@
+{
+  "seg/iou": 0.9999997186174882,
+  "seg/dice": 0.9999998592915693,
+  "seg/precision": 0.9999999997677412,
+  "seg/recall": 0.9999997186174882,
+  "seg/boundary_f1": 0.999998932629529,
+  "seg/hausdorff": 0.0011507479861910242,
+  "seg/centroid_err": 1.4601477658014441e-05,
+  "seg/plume_area_rel_err": 2.81382511851901e-07,
+  "seg/n_samples": 869,
+  "cls/accuracy": 0.4807692307692308,
+  "cls/balanced_accuracy": 0.5263157894736842,
+  "cls/macro_f1": 0.44794125360608444,
+  "cls/cohen_kappa": 0.1912442396313364,
+  "cls/n_samples": 104,
+  "cls/precision_High-Flux (HF)": 0.9166666666666666,
+  "cls/recall_High-Flux (HF)": 0.5789473684210527,
+  "cls/precision_Control": 0.0,
+  "cls/recall_Control": 0.0,
+  "cls/precision_Low-Flux (LF)": 0.4642857142857143,
+  "cls/recall_Low-Flux (LF)": 1.0,
+  "cls/macro_auc_roc": 0.8958571042395705
+}

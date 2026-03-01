@@ -1,0 +1,385 @@
+nohup: ignoring input
+=========================================
+  Stage 5: E2E (no LLaVA) + Eval
+=========================================
+
+>>>>> STAGE 5: E2E Fine-tuning <<<<<
+/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py:217: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/launch/builder/build.py:11: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+wandb: Currently logged in as: taminul. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.25.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/siu856569517/Taminul/co2_farm/wandb/run-20260228_153447-rebw0v1l
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run e2e
+wandb: ⭐️ View project at https://wandb.ai/taminul/rumiformer
+wandb: 🚀 View run at https://wandb.ai/taminul/rumiformer/runs/rebw0v1l
+============================================================
+  RumiFormer — Stage 5: End-to-End Joint Fine-tuning
+============================================================
+  project_root: /home/siu856569517/Taminul/co2_farm
+  annotations_csv: /home/siu856569517/Taminul/co2_farm/annotations/annotations.csv
+  clips_csv: /home/siu856569517/Taminul/co2_farm/annotations/clips.csv
+  checkpoint_dir: /home/siu856569517/Taminul/co2_farm/outputs/checkpoints
+  log_dir: /home/siu856569517/Taminul/co2_farm/outputs/logs
+  seed: 42
+  precision: bf16
+  num_workers: 8
+  pin_memory: True
+  use_compile: True
+  gradient_checkpointing: True
+  optimizer: adamw
+  weight_decay: 0.01
+  resume_from: None
+  save_every_n_epochs: 1
+  save_every_n_steps: None
+  keep_last_n_checkpoints: 3
+  use_wandb: True
+  wandb_project: rumiformer
+  wandb_run_name: None
+  log_every_n_steps: 10
+  show_eta: True
+  stage_name: e2e
+  epochs: 8
+  batch_size: 8
+  tgaa_encoder_lr: 1e-05
+  atf_lr: 0.0001
+  temporal_adapter_lr: 5e-06
+  lora_lr: 0.0002
+  projection_lr: 0.0001
+  seg_loss_weight: 1.0
+  cls_loss_weight: 0.5
+  lm_loss_weight: 0.5
+  segmentation_checkpoint: None
+  temporal_checkpoint: None
+  fusion_checkpoint: None
+  llava_checkpoint: None
+============================================================
+World size: 1 GPUs
+Loaded seg: outputs/checkpoints/segmentation/segmentation_latest.pt
+Loaded temporal: outputs/checkpoints/temporal/temporal_2b_epoch0019_step001100.pt
+Loaded ATF: outputs/checkpoints/fusion/fusion_epoch0014_step003495.pt
+  ℹ Running without LLaVA (seg + classification only)
+Train: 3734, Val: 1402
+/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py:251: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+Thread SenderThread:
+Traceback (most recent call last):
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 100, in _run
+    self._process(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/internal.py", line 328, in _process
+    self._sm.send(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 387, in send
+    send_handler(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 409, in send_request
+    send_handler(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 1146, in send_request_summary_record
+    self._update_summary_record(record.request.summary_record.summary)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 1140, in _update_summary_record
+    self._update_summary()
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 1160, in _update_summary
+    with open(summary_path, "w") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/siu856569517/Taminul/co2_farm/wandb/run-20260228_153447-rebw0v1l/files/wandb-summary.json'
+wandb: ERROR Internal wandb error: file data was not synced
+  [E00 S00010] loss=0.6858 seg=0.0520 cls=1.2676 ETA=1h 14m 41s
+  [E00 S00020] loss=0.6325 seg=0.0377 cls=1.1895 ETA=47m 25s
+  [E00 S00030] loss=0.6238 seg=0.0222 cls=1.2031 ETA=38m 20s
+  [E00 S00040] loss=0.3847 seg=0.0116 cls=0.7463 ETA=33m 43s
+  [E00 S00050] loss=0.4579 seg=0.0163 cls=0.8831 ETA=30m 57s
+  [E00 S00060] loss=0.5780 seg=0.0191 cls=1.1179 ETA=29m 03s
+  [E00 S00070] loss=0.5014 seg=0.0226 cls=0.9578 ETA=27m 41s
+  [E00 S00080] loss=0.6724 seg=0.0245 cls=1.2959 ETA=26m 39s
+  [E00 S00090] loss=0.6453 seg=0.0249 cls=1.2407 ETA=25m 51s
+  [E00 S00100] loss=0.4387 seg=0.0132 cls=0.8511 ETA=25m 11s
+  [E00 S00110] loss=0.4914 seg=0.0570 cls=0.8687 ETA=24m 38s
+  [E00 S00120] loss=0.6553 seg=0.0305 cls=1.2495 ETA=24m 10s
+  [E00 S00130] loss=0.5485 seg=0.0171 cls=1.0627 ETA=23m 45s
+  [E00 S00140] loss=0.6229 seg=0.0458 cls=1.1541 ETA=23m 24s
+  [E00 S00150] loss=0.4641 seg=0.0237 cls=0.8809 ETA=23m 05s
+  [E00 S00160] loss=0.4878 seg=0.0142 cls=0.9473 ETA=22m 49s
+  [E00 S00170] loss=0.5209 seg=0.0287 cls=0.9844 ETA=22m 34s
+  [E00 S00180] loss=0.4768 seg=0.0477 cls=0.8582 ETA=22m 20s
+  [E00 S00190] loss=0.5108 seg=0.0296 cls=0.9624 ETA=22m 08s
+  [E00 S00200] loss=0.6530 seg=0.0246 cls=1.2568 ETA=21m 56s
+  [E00 S00210] loss=0.5045 seg=0.0191 cls=0.9707 ETA=21m 46s
+  [E00 S00220] loss=0.4227 seg=0.0195 cls=0.8064 ETA=21m 36s
+  [E00 S00230] loss=0.3914 seg=0.0384 cls=0.7062 ETA=21m 26s
+  [E00 S00240] loss=0.3660 seg=0.0324 cls=0.6672 ETA=21m 18s
+  [E00 S00250] loss=0.4685 seg=0.0223 cls=0.8923 ETA=21m 09s
+  [E00 S00260] loss=0.4172 seg=0.1159 cls=0.6027 ETA=21m 01s
+  [E00 S00270] loss=0.5746 seg=0.0850 cls=0.9792 ETA=20m 53s
+  [E00 S00280] loss=0.3581 seg=0.0110 cls=0.6942 ETA=20m 45s
+  [E00 S00290] loss=0.6151 seg=0.0860 cls=1.0582 ETA=20m 38s
+  [E00 S00300] loss=0.6506 seg=0.0578 cls=1.1855 ETA=20m 31s
+Traceback (most recent call last):
+  File "/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py", line 366, in <module>
+    main()
+  File "/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py", line 273, in main
+    logger.log({"train/loss": loss.item(), "train/seg_loss": seg_loss.item(),
+  File "/home/siu856569517/Taminul/co2_farm/src/utils/trainer.py", line 239, in log
+    wandb.log(metrics, step=step)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 419, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 370, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 360, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1792, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1567, in _log
+    self._partial_history_callback(data, step, commit)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1439, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 546, in publish_partial_history
+    self._publish_partial_history(partial_history)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 89, in _publish_partial_history
+    self._publish(rec)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+Traceback (most recent call last):
+  File "/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py", line 366, in <module>
+    main()
+  File "/home/siu856569517/Taminul/co2_farm/src/train/train_e2e.py", line 273, in main
+    logger.log({"train/loss": loss.item(), "train/seg_loss": seg_loss.item(),
+  File "/home/siu856569517/Taminul/co2_farm/src/utils/trainer.py", line 239, in log
+    wandb.log(metrics, step=step)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 419, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 370, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 360, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1792, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1567, in _log
+    self._partial_history_callback(data, step, commit)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1439, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 546, in publish_partial_history
+    self._publish_partial_history(partial_history)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface_shared.py", line 89, in _publish_partial_history
+    self._publish(rec)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/interface/interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/home/siu856569517/.conda/envs/rumiformer/lib/python3.9/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+wandb: While tearing down the service manager. The following error has occurred: [Errno 32] Broken pipe
+Stage 5 finished at: Sat Feb 28 03:36:34 PM CST 2026
+
+>>>>> EVALUATION <<<<<
+=========================================
+  RumiFormer Evaluation Pipeline
+=========================================
+  Seg checkpoint: outputs/checkpoints/segmentation/segmentation_latest.pt
+  Temporal checkpoint: outputs/checkpoints/temporal/temporal_2b_epoch0019_step001100.pt
+  Fusion checkpoint: outputs/checkpoints/fusion/fusion_epoch0014_step003495.pt
+=========================================
+
+>>> Step 1: Quantitative Evaluation <<<
+
+🔬 Evaluating Segmentation...
+[ WARN:0@2.038] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00005.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.058] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00006.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.064] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00013.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.069] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00019.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.075] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00025.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.080] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00030.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.086] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00031.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.091] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00055.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.096] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00056.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.102] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00086.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.107] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00092.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.113] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00098.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.118] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00103.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.124] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00104.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.129] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00116.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.133] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00000.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.135] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00123.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.138] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00001.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.143] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00004.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.174] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00566.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.178] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00571.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.180] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00130.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.181] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00423.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.181] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00506.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.182] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00577.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.184] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00131.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.185] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00456.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.185] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00507.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.186] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00578.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.187] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00135.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.189] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00461.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.189] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00512.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.189] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00586.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.191] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00136.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.193] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00463.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.193] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00587.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.193] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00513.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.194] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00155.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.196] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00468.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.197] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00518.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.197] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00593.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.198] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00156.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.200] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00476.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.201] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00519.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.201] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00597.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.202] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00168.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.204] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00478.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.205] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00520.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.205] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00598.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.205] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00169.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.207] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00479.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.209] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00527.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.209] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00603.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.209] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00175.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.211] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00482.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.212] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00528.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.213] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00350.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.213] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00604.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.214] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00483.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.216] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00535.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.217] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00610.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.217] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00351.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.217] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00484.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.220] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00540.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.220] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00611.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.221] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00364.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.221] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00490.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.224] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00542.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.224] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00369.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.225] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00617.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.227] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00491.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.227] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00544.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.228] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00374.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.229] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00618.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.231] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00492.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.231] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00546.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.232] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00383.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.235] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00557.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.236] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00623.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.236] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00389.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.237] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00500.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.239] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00562.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.242] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00505.png'): can't open/read file: check file path/integrity
+/home/siu856569517/Taminul/co2_farm/src/eval/evaluate.py:95: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+[ WARN:0@2.275] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00624.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.279] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00630.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.283] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00635.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.286] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00636.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.289] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00637.png'): can't open/read file: check file path/integrity
+[ WARN:0@2.293] global loadsave.cpp:248 findDecoder imread_('/home/siu856569517/Taminul/co2_farm/dataset/SEQ_0492/images/SEQ_0492_frame_00643.png'): can't open/read file: check file path/integrity
+
+============================================================
+  Segmentation Metrics
+============================================================
+  seg/boundary_f1                     1.0000
+  seg/centroid_err                    0.0000
+  seg/dice                            1.0000
+  seg/hausdorff                       0.0012
+  seg/iou                             1.0000
+  seg/n_samples                       869
+  seg/plume_area_rel_err              0.0000
+  seg/precision                       1.0000
+  seg/recall                          1.0000
+
+
+🕐 Evaluating Temporal Classification...
+/home/siu856569517/Taminul/co2_farm/src/eval/evaluate.py:130: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+
+============================================================
+  Temporal Classification Metrics
+============================================================
+  cls/accuracy                        0.4808
+  cls/balanced_accuracy               0.5263
+  cls/cohen_kappa                     0.1912
+  cls/macro_auc_roc                   0.8959
+  cls/macro_f1                        0.4479
+  cls/n_samples                       104
+  cls/precision_Control               0.0000
+  cls/precision_High-Flux (HF)        0.9167
+  cls/precision_Low-Flux (LF)         0.4643
+  cls/recall_Control                  0.0000
+  cls/recall_High-Flux (HF)           0.5789
+  cls/recall_Low-Flux (LF)            1.0000
+
+
+📄 Results saved to: /home/siu856569517/Taminul/co2_farm/outputs/eval_results/eval_results.json
+
+>>> Step 2: Generating Visualizations <<<
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:81: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:325: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:488: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+============================================================
+  RumiFormer — Generating CVPR Visualizations
+============================================================
+
+📈 Training curves...
+  ✅ Training curves (segmentation) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_segmentation.png
+  ✅ Training curves (temporal) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_temporal.png
+  ✅ Training curves (fusion) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_fusion.png
+
+📊 Per-class performance bars...
+  ✅ Classification bars → /home/siu856569517/Taminul/co2_farm/outputs/figures/classification_bars.png
+
+🔬 Loading segmentation model...
+
+🖼️  Segmentation grid...
+  ✅ Segmentation grid → /home/siu856569517/Taminul/co2_farm/outputs/figures/segmentation_grid.png
+
+🔲 Boundary quality...
+  ✅ Boundary quality → /home/siu856569517/Taminul/co2_farm/outputs/figures/boundary_quality.png
+
+🔥 GradCAM attention heatmaps...
+  ⚠ Could not find model stages, skipping heatmaps
+
+📋 Qualitative grid...
+  ✅ Qualitative grid → /home/siu856569517/Taminul/co2_farm/outputs/figures/qualitative_grid.png
+
+📊 Loading classification results...
+  Confusion matrix...
+  ✅ Confusion matrix → /home/siu856569517/Taminul/co2_farm/outputs/figures/confusion_matrix.png
+  ROC curves...
+  ✅ ROC curves → /home/siu856569517/Taminul/co2_farm/outputs/figures/roc_curves.png
+  PR curves...
+  ✅ PR curves → /home/siu856569517/Taminul/co2_farm/outputs/figures/pr_curves.png
+
+🎉 All figures saved to: /home/siu856569517/Taminul/co2_farm/outputs/figures
+   Total figures: 10
+
+=========================================
+  EVALUATION COMPLETE
+  Results: outputs/eval_results/
+  Figures: outputs/figures/
+=========================================
+
+=========================================
+PIPELINE COMPLETE
+=========================================

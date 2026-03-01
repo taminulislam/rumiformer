@@ -1,0 +1,102 @@
+/home/siu856569517/Taminul/co2_farm/src/eval/evaluate.py:95: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/evaluate.py:130: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:81: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:325: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+/home/siu856569517/Taminul/co2_farm/src/eval/visualize.py:488: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), autocast(dtype=torch.bfloat16):
+
+=========================================
+  RumiFormer Evaluation Pipeline
+=========================================
+  Seg checkpoint: outputs/checkpoints/segmentation/segmentation_latest.pt
+  Temporal checkpoint: outputs/checkpoints/temporal/temporal_2b_epoch0019_step001100.pt
+  Fusion checkpoint: outputs/checkpoints/fusion/fusion_epoch0014_step003495.pt
+=========================================
+
+>>> Step 1: Quantitative Evaluation <<<
+
+🔬 Evaluating Segmentation...
+
+============================================================
+  Segmentation Metrics
+============================================================
+  seg/boundary_f1                     1.0000
+  seg/centroid_err                    0.0000
+  seg/dice                            1.0000
+  seg/hausdorff                       0.0012
+  seg/iou                             1.0000
+  seg/n_samples                       869
+  seg/plume_area_rel_err              0.0000
+  seg/precision                       1.0000
+  seg/recall                          1.0000
+
+
+🕐 Evaluating Temporal Classification...
+
+============================================================
+  Temporal Classification Metrics
+============================================================
+  cls/accuracy                        0.4808
+  cls/balanced_accuracy               0.5263
+  cls/cohen_kappa                     0.1912
+  cls/macro_auc_roc                   0.8959
+  cls/macro_f1                        0.4479
+  cls/n_samples                       104
+  cls/precision_Control               0.0000
+  cls/precision_High-Flux (HF)        0.9167
+  cls/precision_Low-Flux (LF)         0.4643
+  cls/recall_Control                  0.0000
+  cls/recall_High-Flux (HF)           0.5789
+  cls/recall_Low-Flux (LF)            1.0000
+
+
+📄 Results saved to: /home/siu856569517/Taminul/co2_farm/outputs/eval_results/eval_results.json
+
+>>> Step 2: Generating Visualizations <<<
+============================================================
+  RumiFormer — Generating CVPR Visualizations
+============================================================
+
+📈 Training curves...
+  ✅ Training curves (segmentation) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_segmentation.png
+  ✅ Training curves (temporal) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_temporal.png
+  ✅ Training curves (fusion) → /home/siu856569517/Taminul/co2_farm/outputs/figures/training_curves_fusion.png
+
+📊 Per-class performance bars...
+  ✅ Classification bars → /home/siu856569517/Taminul/co2_farm/outputs/figures/classification_bars.png
+
+🔬 Loading segmentation model...
+
+🖼️  Segmentation grid...
+  ✅ Segmentation grid → /home/siu856569517/Taminul/co2_farm/outputs/figures/segmentation_grid.png
+
+🔲 Boundary quality...
+  ✅ Boundary quality → /home/siu856569517/Taminul/co2_farm/outputs/figures/boundary_quality.png
+
+🔥 GradCAM attention heatmaps...
+  ⚠ Could not find model stages, skipping heatmaps
+
+📋 Qualitative grid...
+  ✅ Qualitative grid → /home/siu856569517/Taminul/co2_farm/outputs/figures/qualitative_grid.png
+
+📊 Loading classification results...
+  Confusion matrix...
+  ✅ Confusion matrix → /home/siu856569517/Taminul/co2_farm/outputs/figures/confusion_matrix.png
+  ROC curves...
+  ✅ ROC curves → /home/siu856569517/Taminul/co2_farm/outputs/figures/roc_curves.png
+  PR curves...
+  ✅ PR curves → /home/siu856569517/Taminul/co2_farm/outputs/figures/pr_curves.png
+
+🎉 All figures saved to: /home/siu856569517/Taminul/co2_farm/outputs/figures
+   Total figures: 10
+
+=========================================
+  EVALUATION COMPLETE
+  Results: outputs/eval_results/
+  Figures: outputs/figures/
+=========================================
+

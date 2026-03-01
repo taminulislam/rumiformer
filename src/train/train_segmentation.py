@@ -226,9 +226,15 @@ def main():
     if is_main_process():
         print(f"Train: {len(train_ds)} frames, Val: {len(val_ds)} frames")
 
-    # Model
-    model = RumiFormer(num_seg_classes=1, decode_dim=config.decode_dim,
-                       use_aux_mask=config.use_aux_mask)
+    # Model — use factory to support different backbones
+    import os
+    model_name = os.environ.get("MODEL_NAME", "rumiformer")
+    from src.models.model_factory import create_model
+    model = create_model(model_name, num_seg_classes=1, decode_dim=config.decode_dim,
+                         use_aux_mask=config.use_aux_mask)
+    if is_main_process():
+        total_p = sum(p.numel() for p in model.parameters())
+        print(f"Model: {model_name} ({total_p/1e6:.1f}M params)")
     model = wrap_model_ddp(model, device)
     scaler = GradScaler()
     ckpt_mgr = CheckpointManager(config.checkpoint_dir, config.stage_name,
@@ -242,8 +248,14 @@ def main():
         print("\n--- Sub-stage 1a: Freeze backbone ---")
     raw_model = unwrap_model(model)
     for name, param in raw_model.named_parameters():
-        if "tgaa" not in name.lower() and "decode_head" not in name and "mask_encoder" not in name:
-            param.requires_grad = False
+        # For RumiFormer: keep TGAA + decode_head + mask_encoder trainable
+        # For other models: keep only decode_head trainable (freeze backbone)
+        if model_name == "rumiformer":
+            if "tgaa" not in name.lower() and "decode_head" not in name and "mask_encoder" not in name:
+                param.requires_grad = False
+        else:
+            if "decode_head" not in name:
+                param.requires_grad = False
     trainable = sum(p.numel() for p in raw_model.parameters() if p.requires_grad)
     total = sum(p.numel() for p in raw_model.parameters())
     if is_main_process():
